@@ -1,0 +1,206 @@
+{
+  "main": {
+    "id": "41f9b0789da54713",
+    "type": "split",
+    "children": [
+      {
+        "id": "422f518949d18e1d",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "5f5640c8a58c50e3",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "JavaScript/클래스(class).md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "003391b88b273696",
+            "type": "leaf",
+            "state": {
+              "type": "graph",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "56061eb476080e2f",
+    "type": "split",
+    "children": [
+      {
+        "id": "77ede7323b6233e3",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "edc002dfb78ff5ff",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "c7b66afbe4b4fb9c",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "2f0aee990ff1ba98",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 299.5
+  },
+  "right": {
+    "id": "84986afa53e23371",
+    "type": "split",
+    "children": [
+      {
+        "id": "5aafa4364abc1727",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "ffec422825df7692",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "JavaScript/클래스(class).md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "a49e6a1179dc5192",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "JavaScript/클래스(class).md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "3768f1d6818aa340",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "f221564cf52b2dbf",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "JavaScript/클래스(class).md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:퀵 스위처 열기": false,
+      "graph:그래프 뷰 열기": false,
+      "canvas:새 캔버스 만들기": false,
+      "daily-notes:오늘의 데일리 노트 열기": false,
+      "templates:템플릿 삽입": false,
+      "command-palette:명령어 팔레트 열기": false
+    }
+  },
+  "active": "5f5640c8a58c50e3",
+  "lastOpenFiles": [
+    "JavaScript/prototype.md",
+    "JavaScript/클래스(class).md",
+    "JavaScript/메서드(Method).md",
+    "JavaScript/인스턴스(Instance).md",
+    "JavaScript/this.md",
+    "JavaScript/window.md",
+    "JavaScript/생성자 함수(Constructor Function).md",
+    "생성자 함수(Constructor Function) 1.md",
+    "JavaScript/function.md",
+    "JavaScript/속성(Property).md",
+    "생성자 함수(Constructor Function)에 의해서 [[함수(Function).md",
+    "JavaScript/함수(Function).md",
+    "JavaScript/생성자(Constructor).md",
+    "JavaScript/constructor().md",
+    "JavaScript/참조 타입(Reference Type).md",
+    "JavaScript/일급 객체(First Class Object).md",
+    "JavaScript/고차함수(Higher Order Function).md",
+    "React.js/Libaray/axios.md",
+    "고차함수(Higher order function).md",
+    "JavaScript/콜백 함수(Callback Function).md",
+    "JavaScript/매개변수(parameter).md",
+    "JavaScript/일급 함수(First Class Function).md",
+    "JavaScript/비구조화 할당.md",
+    "React.js/props.md",
+    "React.js/children.md",
+    "React.js/Libaray/react-router-dom/<NavLink>.md",
+    "React.js/Libaray/axios",
+    "React.js/Libaray/react-router-dom",
+    "image/Pasted image 20240215192907.png",
+    "React.js/Next.js",
+    "image/Pasted image 20240202024338.png",
+    "image/Pasted image 20240202022302.png",
+    "image/Pasted image 20240202021721.png",
+    "CSS/SCSS",
+    "image/Pasted image 20240201231316.png",
+    "image/Pasted image 20240201201746.png",
+    "image/Pasted image 20240131165727.png",
+    "image/Pasted image 20240131165530.png",
+    "image/Pasted image 20240131165408.png",
+    "image/Pasted image 20240131165355.png",
+    "React.js/Libaray/Redux",
+    "React.js/Libaray",
+    "HTML/property",
+    "async",
+    "TypeScript",
+    "JavaScript"
+  ]
+}
