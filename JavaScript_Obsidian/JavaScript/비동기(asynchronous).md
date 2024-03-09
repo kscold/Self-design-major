@@ -17,11 +17,11 @@
 
 ## 비동기(asynchronous) 동작 원리
 
-1. [[콜 스택(Call Stack)]]에서 비동기 함수가 호출되면 Call Stack에 먼저 쌓였다가 [[Web API]](혹은 백그라운드라고도 한다)로 이동한 후 해당 함수가 등록되고 Call Stack에서 사라진다.
+1. [[호출 스택(Call Stack)]]에서 비동기 함수가 호출되면 Call Stack에 먼저 쌓였다가 [[Web API]](혹은 백그라운드라고도 한다)로 이동한 후 해당 함수가 등록되고 Call Stack에서 사라진다.
     
 2. Web API(백그라운드)에서 비동기 함수의 [[이벤트(event)]]가 발생하면, 해당 [[콜백 함수(Callback Function)]]는 Callback Queue에 push(이동) 된다.
     
-3. 이제 [[콜 스택(Call Stack)]]이 비어있는지 [[이벤트 루프(Event Loop)]]가 확인을 하는데 만약 비어있으면, Call Stack에 [[테스크 큐(Task Queue)]]Callback Queue에 있는 콜백 함수를 넘겨준다.(push)
+3. 이제 [[호출 스택(Call Stack)]]이 비어있는지 [[이벤트 루프(Event Loop)]]가 확인을 하는데 만약 비어있으면, Call Stack에 [[테스크 큐(Task Queue)]]Callback Queue에 있는 콜백 함수를 넘겨준다.(push)
     
 4. Call Stack에 들어온 함수는 실행이 되고 실행이 끝나면 Call Stack에서 사라진다.
 

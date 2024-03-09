@@ -6,7 +6,7 @@
 - Promise의 특징은 [[new]] Promise() [[메서드(Method)]]를 호출하는 동시에 바로 Promise 안에 내용이 호출되어 대기(Pending) 상태가 된다.
 
 - 따라서 원하는 때에만 Promise를 실행시키고 싶다면 상위에 [[함수(Function)]]를 선언하여 Promise 전체를 넣어 주면 된다.
-- 만약 함수 호출이라면 promise 객체를 return 해줘어야한다.
+- 만약 함수 호출이라면 Promise [[객체(Object)]]를 return 해줘어야한다.
 
 ```js
 new Promise(내용); // 바로 실행
@@ -43,7 +43,7 @@ const promise = new Promise((resolve, reject) => {
 // >> 비동기 작업
 ```
 
-## 예시
+## Promise의 데이터 처리
 
 - 밑의 코드는 기본적인 Promise의 동작 예시이다.
 
@@ -76,6 +76,11 @@ setTimeout(() => {
 
 - 그러나 위의 코드의 경우 데이터를 받아 왔을 때, 후처리가 어렵다.
 - 따라서 Promise는 [[then()]], [[catch()]], [[finally()]]라는 [[메서드(Method)]]를 제공하여 [[Promise chainning]]을 할 수 있다.
+
+- 여기서 또한 중요한 사실은 Promise 생성 후 [[콜백 함수(Callback Function)]] 실행까지는 [[동기(Synchronous)]]적이나,  [[then()]], [[catch()]], [[finally()]] 후처리 [[메서드(Method)]]를 만나는 순간 [[비동기(asynchronous)]] 함수가 된다.
+- 즉, [[이벤트 루프(Event Loop)]]의 백그라운드([[Web API]]) 작업으로 넘어가는 시점인 것이다.
+
+- 또한 [[setTimeout()]]와 같은 작업이 같이 [[테스크 큐(Task Queue)]]에 들어 있다면, 일반 [[비동기(asynchronous)]] [[함수(Function)]]보다 우선 순위가 높기 때문에 Promise가 먼저 실행된다.
 
 ```js
 function getData() {
