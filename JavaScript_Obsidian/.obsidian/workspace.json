@@ -13,13 +13,22 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "JavaScript/이벤트 루프(Event Loop).md",
+                "file": "JavaScript/비구조화 할당.md",
                 "mode": "source",
                 "source": false
               }
             }
+          },
+          {
+            "id": "cb57ff67c8a8e127",
+            "type": "leaf",
+            "state": {
+              "type": "graph",
+              "state": {}
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -85,7 +94,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "JavaScript/이벤트 루프(Event Loop).md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +110,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "JavaScript/이벤트 루프(Event Loop).md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -124,9 +131,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "JavaScript/이벤트 루프(Event Loop).md"
-              }
+              "state": {}
             }
           }
         ]
@@ -146,10 +151,24 @@
       "command-palette:명령어 팔레트 열기": false
     }
   },
-  "active": "003391b88b273696",
+  "active": "cb57ff67c8a8e127",
   "lastOpenFiles": [
-    "JavaScript/Promise.md",
+    "JavaScript/비구조화 할당.md",
+    "JavaScript/배열(Array).md",
+    "JavaScript/화살표 함수(Arrow function).md",
+    "JavaScript/전역 객체(Global Object).md",
+    "JavaScript/함수(Function).md",
+    "JavaScript/생성자 함수(Constructor Function).md",
+    "instanceof.md",
+    "JavaScript/인스턴스(Instance).md",
+    "JavaScript/원시 타입(Primitive type).md",
+    "image/Pasted image 20240310030355.png",
+    "JavaScript/객체(Object).md",
+    "JavaScript/리터럴(literal).md",
+    "JavaScript/var.md",
+    "JavaScript/const.md",
     "JavaScript/이벤트 루프(Event Loop).md",
+    "JavaScript/Promise.md",
     "JavaScript/콜백 함수(Callback Function).md",
     "JavaScript/호출 스택(Call Stack).md",
     "image/Pasted image 20240310015130.png",
@@ -163,19 +182,6 @@
     "React.js/Libaray/react-router-dom/중첩 라우팅.md",
     "JavaScript/클래스(class).md",
     "JavaScript/prototype.md",
-    "JavaScript/메서드(Method).md",
-    "JavaScript/인스턴스(Instance).md",
-    "JavaScript/this.md",
-    "JavaScript/window.md",
-    "JavaScript/생성자 함수(Constructor Function).md",
-    "생성자 함수(Constructor Function) 1.md",
-    "JavaScript/function.md",
-    "JavaScript/속성(Property).md",
-    "생성자 함수(Constructor Function)에 의해서 [[함수(Function).md",
-    "JavaScript/함수(Function).md",
-    "JavaScript/생성자(Constructor).md",
-    "JavaScript/constructor().md",
-    "JavaScript/참조 타입(Reference Type).md",
     "React.js/Libaray/axios",
     "React.js/Libaray/react-router-dom",
     "image/Pasted image 20240215192907.png",
@@ -187,7 +193,6 @@
     "image/Pasted image 20240201231316.png",
     "image/Pasted image 20240201201746.png",
     "image/Pasted image 20240131165727.png",
-    "image/Pasted image 20240131165530.png",
     "React.js/Libaray/Redux",
     "React.js/Libaray",
     "HTML/property",

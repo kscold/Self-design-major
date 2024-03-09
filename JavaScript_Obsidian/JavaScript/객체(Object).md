@@ -6,9 +6,7 @@
 
 - 객체 하나만 사용하는 것이 아니라 [[배열(Array)]]을 통한 또 하나의 덩어리를 통해 접근하여 사용하기도 한다.
 
-
-
-## 객체의 예시
+## 객체 문법
 
 - 객체의 key와 value의 형태의 딕셔너리를 [[속성(Property)]]이라고 한다.
 
@@ -23,3 +21,26 @@ var zero = {
 - 속성끼리는 쉼표로 구분해준다. 
 - [[클래스(class)]] 내부에 정의 된 [[함수(Function)]]를 [[메서드(Method)]]라고 부르는 것 뿐만 아니라 [[속성(Property)]]값이 [[함수(Function)]]인 것을 우리는 [[메서드(Method)]]라고 부른다.
 
+## 객체 [[리터럴(literal)]]
+
+- ES6 문법부터 객체의 [[메서드(Method)]]에 :funtcion을 붙이지 않아도 되게 바뀌었다.
+- 또한 shorthand property를 사용하여 { sayNode: sayNode }를 { sayNode }로 축약 가능해졌다.
+- `[`[[변수(Variable)]] + 값`]` 등의 형식으로 통해 [[속성(Property)]]명을 객체 [[속성(Property)]] 명으로 사용가능해졌다.
+
+```js
+const sayNode = {
+	console.log('Node');
+}
+
+const newObject = {
+	sayJS() {
+		console.log('JS');
+	},
+	sayNode,
+	[es + 6]: 'Fantastic',
+};
+
+newObject.sayNode(); // Node
+newObject.sayJS(); // JS
+console.log(newObject.ES6); // Fantasitc
+```
