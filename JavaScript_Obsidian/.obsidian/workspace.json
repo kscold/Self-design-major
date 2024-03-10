@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "JavaScript/비구조화 할당.md",
+                "file": "JavaScript/비동기(asynchronous).md",
                 "mode": "source",
                 "source": false
               }
@@ -27,8 +27,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -94,6 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "JavaScript/비동기(asynchronous).md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,6 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "JavaScript/비동기(asynchronous).md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -131,7 +132,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "JavaScript/비동기(asynchronous).md"
+              }
             }
           }
         ]
@@ -151,8 +154,19 @@
       "command-palette:명령어 팔레트 열기": false
     }
   },
-  "active": "cb57ff67c8a8e127",
+  "active": "003391b88b273696",
   "lastOpenFiles": [
+    "JavaScript/Web API.md",
+    "JavaScript/비동기(asynchronous).md",
+    "JavaScript/Promise.md",
+    "JavaScript/Promise.allSettled().md",
+    "JavaScript/Promise.all().md",
+    "JavaScript/클래스(class).md",
+    "JavaScript/상속(Inheritance).md",
+    "prototype.apply().md",
+    "JavaScript/객체(Object).md",
+    "JavaScript/바인딩(binding).md",
+    "HTML/property/class.md",
     "JavaScript/비구조화 할당.md",
     "JavaScript/배열(Array).md",
     "JavaScript/화살표 함수(Arrow function).md",
@@ -163,25 +177,14 @@
     "JavaScript/인스턴스(Instance).md",
     "JavaScript/원시 타입(Primitive type).md",
     "image/Pasted image 20240310030355.png",
-    "JavaScript/객체(Object).md",
     "JavaScript/리터럴(literal).md",
     "JavaScript/var.md",
     "JavaScript/const.md",
     "JavaScript/이벤트 루프(Event Loop).md",
-    "JavaScript/Promise.md",
     "JavaScript/콜백 함수(Callback Function).md",
     "JavaScript/호출 스택(Call Stack).md",
     "image/Pasted image 20240310015130.png",
     "image/Pasted image 20240310015046.png",
-    "Node.js/Node.js.md",
-    "JavaScript/런타임(runtime).md",
-    "React.js/Libaray/react-router-dom/<Link>.md",
-    "React.js/Libaray/react-router-dom/<Navigate>.md",
-    "React.js/Libaray/react-router-dom/<Suspense>.md",
-    "React.js/Libaray/react-router-dom/<Routes>.md",
-    "React.js/Libaray/react-router-dom/중첩 라우팅.md",
-    "JavaScript/클래스(class).md",
-    "JavaScript/prototype.md",
     "React.js/Libaray/axios",
     "React.js/Libaray/react-router-dom",
     "image/Pasted image 20240215192907.png",

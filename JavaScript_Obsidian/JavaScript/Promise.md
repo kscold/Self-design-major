@@ -1,6 +1,34 @@
 - [[비동기(asynchronous)]] 처리에 사용되는 자바스크립트 [[객체(Object)]]이다.
 - [[비동기(asynchronous)]] 작업이 맞이할 성공 혹은 실패를 나타낸다.
 
+- 프로미스와 [[콜백 함수(Callback Function)]]와의 가장 큰 차이점은 코드를 분리하여 원하는 때에 실행시킬 수 있다는 점이다.
+- 또한 [[콜백 함수(Callback Function)]]을 사용할 때의 콜백 지옥을 방지할 수 있다.
+
+## Promise의 동작과정
+
+- Promise는 상자([[객체(Object)]])에 비유할 수 있다.
+- Promise는 [[비동기(asynchronous)]] 작업이 시작될 때 이 상자도 생성이 되는데, 처음에는 비어있다가 [[비동기(asynchronous)]] 완료될 때 결과물로 상자가 채워지게 된다.
+
+- 즉, Promise는 비동기 작업의 상태([[state]])를 나타낸다.
+
+![[Pasted image 20240131165114.png]]
+
+- 따라서 Promise는 [[비동기(asynchronous)]] 작업이 맞이할 성공 혹은 실패를 나타낸다.
+
+![[Pasted image 20240131165408.png]]
+
+- Promise [[객체(Object)]]는 아래 이미지와 같이 구성된다.
+
+![[Pasted image 20240131165530.png]]
+
+- Promise 상태([[state]])가 가질 수 있는 종류는 총 3가지이다.
+
+![[Pasted image 20240131165727.png]]
+
+- Promise 상태([[state]])가 Pending(대기)일 때는 Result가 undefined가 된다.
+- Promise 상태([[state]])가 Fulfilled(성공)일 때는 Result가 결과값(보통 [[JSON(Java Script Object Notation)]]과 같은 데이터)가 된다.
+- Promise 상태([[state]])가 Rejected(실패)일 때는 Result가 Error [[객체(Object)]]가 들어간다.
+
 ## Promise 문법
 
 - Promise의 특징은 [[new]] Promise() [[메서드(Method)]]를 호출하는 동시에 바로 Promise 안에 내용이 호출되어 대기(Pending) 상태가 된다.
@@ -116,32 +144,13 @@ getData().then((data) => {
 
 ## Promise 메서드
 
-- [[Promise.all()]]
-- [[Promise.allSettled()]]
-- [[Promise.any()]]
-- [[Promise.race()]]
+- Promise가 지원하는 [[메서드(Method)]]는 다음과 같다.
 
-## Promise의 작동원리
+### [[Promise.all()]]
 
-- Promise는 상자([[객체(Object)]])에 비유할 수 있다.
-- Promise는 [[비동기(asynchronous)]] 작업이 시작될 때 이 상자도 생성이 되는데, 처음에는 비어있다가 [[비동기(asynchronous)]] 완료될 때 결과물로 상자가 채워지게 된다.
+### [[Promise.allSettled()]]
 
-- 즉, Promise는 비동기 작업의 상태([[state]])를 나타낸다.
+### [[Promise.any()]]
 
-![[Pasted image 20240131165114.png]]
+### [[Promise.race()]]
 
-- 따라서 Promise는 [[비동기(asynchronous)]] 작업이 맞이할 성공 혹은 실패를 나타낸다.
-
-![[Pasted image 20240131165408.png]]
-
-- Promise [[객체(Object)]]는 아래 이미지와 같이 구성된다.
-
-![[Pasted image 20240131165530.png]]
-
-- Promise 상태([[state]])가 가질 수 있는 종류는 총 3가지이다.
-
-![[Pasted image 20240131165727.png]]
-
-- Promise 상태([[state]])가 Pending(대기)일 때는 Result가 undefined가 된다.
-- Promise 상태([[state]])가 Fulfilled(성공)일 때는 Result가 결과값(보통 JSON과 같은 데이터)가 된다.
-- Promise 상태([[state]])가 Rejected(실패)일 때는 Result가 Error [[객체(Object)]]가 들어간다.
