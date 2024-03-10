@@ -1,16 +1,19 @@
+- Koa나 Express의 Context는 [[HTTP]] 요청(request), 응답(response) [[객체(Object)]]를 단일 [[객체(Object)]]로 캡슐화하여 웹 애플리케이션 및 API 작성에 유용한 많은 [[메서드(Method)]]를 제공한다.
 
-Koa Context는 HTTP 요청(request), 응답(response) 오브젝트를 단일 오브젝트로 캡슐화하여 웹 애플리케이션 및 API 작성에 유용한 많은 메소드를 제공한다. Context는 HTTP 요청마다 생성되며 아래와 같은 형태로 미들웨어에서 참조된다.
+- Context는 [[HTTP]] 요청마다 생성되며 아래와 같은 형태로 [[미들웨어(Middleware)]]에서 참조된다.
+
+## 문법
 
 ```js
-app.use(async ctx => ({ 
+app.use(async ctx => ({ // 미들웨어로 비동기 콜백 함수를 사용
 	ctx, // context 
 	ctx.request, // Koa Request
 	ctx.response // Koa Response 
 });
 ```
 
+### Request 접근자
 
-**Request 접근자**
 ```js
 ctx.header 
 ctx.headers 
@@ -45,8 +48,7 @@ ctx.acceptsLanguages()
 ctx.get()
 ```
 
-
-**Response 접근자**
+### Response 접근자
 
 ```js
 ctx.body 
@@ -70,23 +72,38 @@ ctx.etag=
 ```
 
 
-1. ctx.req, ctx.res
+## ctx.req, ctx.res
 
-Node.js의 request와 response 객체를 의미한다.
+- Express의 request와 response [[객체(Object)]]를 의미한다.
 
-2. ctx.request, ctx.response
+## ctx.request, ctx.response
 
-Koa의 request와 response 객체를 의미한다.
+- Koa의 request와 response [[객체(Object)]]를 의미한다.
 
-위 예제의 Koa.request와 Koa.response의 객체를 출력하면 아래와 같다.
-```
+- Koa.request와 Koa.response의 객체를 출력하면 아래와 같다.
+
+```json
+// Request
 { 
 	method: 'GET', 
 	url: '/hello',
-	header:
-	{ 
+	header: { 
 		'user-agent': 'vscode-restclient',
 		'accept-encoding': 'gzip, deflate',
-		host: 'localhost:3002', connection: 'close' } } { status: 200, message: 'OK', header: [Object: null prototype] { 'content-type': 'text/plain; charset=utf-8', 'content-length': '11' }, body: 'Hello World' }
+		host: 'localhost:3002', 
+		connection: 'close' 
+	} 
+}
+
+// Response
+{ 
+	status: 200, 
+	message: 'OK', 
+	header: [Object: null prototype] { 
+		'content-type': 'text/plain; charset=utf-8',
+		'content-length': '11' 
+	},
+	body: 'Hello World' 
+}
 ```
 

@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "JavaScript/비동기(asynchronous).md",
+                "file": "JavaScript/Map.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "JavaScript/비동기(asynchronous).md",
+                "file": "JavaScript/Map.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "JavaScript/비동기(asynchronous).md",
+                "file": "JavaScript/Map.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "JavaScript/비동기(asynchronous).md"
+                "file": "JavaScript/Map.md"
               }
             }
           }
@@ -156,33 +156,33 @@
   },
   "active": "003391b88b273696",
   "lastOpenFiles": [
+    "JavaScript/Set.md",
+    "JavaScript/배열(Array).md",
+    "JavaScript/Map.md",
+    "forEach().md",
+    "JavaScript/for.md",
+    "JavaScript/객체(Object).md",
+    "JavaScript/set().md",
+    "Node.js/ctx.get().md",
+    "Node.js/params.md",
+    "Node.js/ctx.md",
+    "Node.js/ctx.set().md",
+    "JavaScript/map().md",
+    "JavaScript/async await.md",
     "JavaScript/Web API.md",
-    "JavaScript/비동기(asynchronous).md",
+    "JavaScript/변수(Variable).md",
     "JavaScript/Promise.md",
+    "JavaScript/then().md",
+    "JavaScript/비동기(asynchronous).md",
     "JavaScript/Promise.allSettled().md",
     "JavaScript/Promise.all().md",
     "JavaScript/클래스(class).md",
     "JavaScript/상속(Inheritance).md",
-    "prototype.apply().md",
-    "JavaScript/객체(Object).md",
+    "JavaScript/prototype.apply().md",
     "JavaScript/바인딩(binding).md",
     "HTML/property/class.md",
     "JavaScript/비구조화 할당.md",
-    "JavaScript/배열(Array).md",
-    "JavaScript/화살표 함수(Arrow function).md",
-    "JavaScript/전역 객체(Global Object).md",
-    "JavaScript/함수(Function).md",
-    "JavaScript/생성자 함수(Constructor Function).md",
-    "instanceof.md",
-    "JavaScript/인스턴스(Instance).md",
-    "JavaScript/원시 타입(Primitive type).md",
     "image/Pasted image 20240310030355.png",
-    "JavaScript/리터럴(literal).md",
-    "JavaScript/var.md",
-    "JavaScript/const.md",
-    "JavaScript/이벤트 루프(Event Loop).md",
-    "JavaScript/콜백 함수(Callback Function).md",
-    "JavaScript/호출 스택(Call Stack).md",
     "image/Pasted image 20240310015130.png",
     "image/Pasted image 20240310015046.png",
     "React.js/Libaray/axios",

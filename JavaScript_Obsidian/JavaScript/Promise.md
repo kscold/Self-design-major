@@ -4,6 +4,8 @@
 - 프로미스와 [[콜백 함수(Callback Function)]]와의 가장 큰 차이점은 코드를 분리하여 원하는 때에 실행시킬 수 있다는 점이다.
 - 또한 [[콜백 함수(Callback Function)]]을 사용할 때의 콜백 지옥을 방지할 수 있다.
 
+- [[then()]]을 사용한 [[Promise chainning]]를 [[async await]]를 사용하여 더욱 간결하게 만들 수 있다.
+
 ## Promise의 동작과정
 
 - Promise는 상자([[객체(Object)]])에 비유할 수 있다.
