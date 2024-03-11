@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "JavaScript/Map.md",
+                "file": "Node.js/require().md",
                 "mode": "source",
                 "source": false
               }
@@ -27,7 +27,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -93,7 +94,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "JavaScript/Map.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +110,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "JavaScript/Map.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -132,9 +131,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "JavaScript/Map.md"
-              }
+              "state": {}
             }
           }
         ]
@@ -154,34 +151,36 @@
       "command-palette:명령어 팔레트 열기": false
     }
   },
-  "active": "003391b88b273696",
+  "active": "cb57ff67c8a8e127",
   "lastOpenFiles": [
-    "JavaScript/Set.md",
-    "JavaScript/배열(Array).md",
+    "Node.js/require().md",
+    "Node.js/웹 서버(Web Server).md",
+    "Node.js/module.exports().md",
+    "JavaScript/this.md",
+    "JavaScript/웹(web).md",
+    "Node.js/WAS(Web Application Server).md",
+    "웹.md",
+    "React.js/Next.js/넥스트(Next.js).md",
+    "JavaScript/전역 객체(Global Object).md",
+    "Node.js/모듈(Module).md",
+    "React.js/import.md",
+    "React.js/웹팩(webpack).md",
+    "Node.js/노드(Node.js).md",
+    "image/Pasted image 20240311030142.png",
+    "JavaScript/REPL.md",
+    "image/Pasted image 20240311025219.png",
+    "Node.js/encodeURIComponet.md",
+    "Node.js/FormData.md",
+    "JavaScript/옵셔널 체이닝(Optional Chaning).md",
+    "HTML/property/value.md",
+    "JavaScript/속성(Property).md",
+    "HTML/<input>.md",
+    "HTML/property/name.md",
+    "HTML/HTML.md",
+    "React.js/Libaray/axios.md",
+    "JavaScript/AJAX(Asynchronous JavaScript and XML).md",
+    "JavaScript/널 병합(nullish coalescing).md",
     "JavaScript/Map.md",
-    "forEach().md",
-    "JavaScript/for.md",
-    "JavaScript/객체(Object).md",
-    "JavaScript/set().md",
-    "Node.js/ctx.get().md",
-    "Node.js/params.md",
-    "Node.js/ctx.md",
-    "Node.js/ctx.set().md",
-    "JavaScript/map().md",
-    "JavaScript/async await.md",
-    "JavaScript/Web API.md",
-    "JavaScript/변수(Variable).md",
-    "JavaScript/Promise.md",
-    "JavaScript/then().md",
-    "JavaScript/비동기(asynchronous).md",
-    "JavaScript/Promise.allSettled().md",
-    "JavaScript/Promise.all().md",
-    "JavaScript/클래스(class).md",
-    "JavaScript/상속(Inheritance).md",
-    "JavaScript/prototype.apply().md",
-    "JavaScript/바인딩(binding).md",
-    "HTML/property/class.md",
-    "JavaScript/비구조화 할당.md",
     "image/Pasted image 20240310030355.png",
     "image/Pasted image 20240310015130.png",
     "image/Pasted image 20240310015046.png",
@@ -194,8 +193,6 @@
     "image/Pasted image 20240202021721.png",
     "CSS/SCSS",
     "image/Pasted image 20240201231316.png",
-    "image/Pasted image 20240201201746.png",
-    "image/Pasted image 20240131165727.png",
     "React.js/Libaray/Redux",
     "React.js/Libaray",
     "HTML/property",

@@ -70,6 +70,7 @@ m.forEach((v, k) => { // forEach도 사용가능
 ## WeakMap
 
 - 메모리에서 [[가비지 콜렉터(garbage collector)]]가 작동이 잘되는 Map [[객체(Object)]]이다.
+- 즉, [[가비지 콜렉터(garbage collector)]]가 작동될 때 WeakMap [[객체(Object)]]로 연관된 key와 value가 같이 메모리에서 정리되게 만들 수 있다.
 
 ```js
 const wm = new WeakMap(); // WeakMap 객체 생성

@@ -5,9 +5,13 @@
 
 ## 단독으로 쓴 this
 
-- 단독으로 this를 호출하는 경우엔 global object(전역 객체)를 가리킨다.
-- 브라우저에서 호출하는 경우 object [[window]]가 된다.
+- 단독으로 this를 호출하는 경우엔 [[전역 객체(Global Object)]])를 가리킨다.
+- 브라우저에서 호출하는 경우의 [[객체(Object)]]는 [[window]]가 된다.
 
+- [[노드(Node.js)]]에서 호출하는 경우 [[객체(Object)]]는 빈 [[객체(Object)]](`{}`)인 Anonymous가 된다.
+- 이는 브라우저와는 전혀 다른 [[런타임(runtime)]] 환경이기 때문에, 브라우저 관련 객체 (window 등) 에는 접근할 수 없다.  
+- 대신, [[웹 서버(Web Server)]]를 구축할 때 필요한 다른 변수들 (환경변수 등) 에 접근할 수 있도록 설정되어 있다.
+ 
 - 이는 ES5에서 추가된 strict mode(엄격 모드)에서도 마찬가지이다.
 
 ![](https://blog.kakaocdn.net/dn/duY8YT/btqDKUV2At7/shsc6qD3lLN9gpxQgeqKi0/img.png)
