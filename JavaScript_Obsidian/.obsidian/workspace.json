@@ -23,12 +23,28 @@
             "id": "cb57ff67c8a8e127",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "Node.js/FormData.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "1b7552d90d4736d0",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "JavaScript/Ajax(Asynchronous JavaScript and XML).md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -94,6 +110,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "JavaScript/Ajax(Asynchronous JavaScript and XML).md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,6 +127,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "JavaScript/Ajax(Asynchronous JavaScript and XML).md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -131,7 +149,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "JavaScript/Ajax(Asynchronous JavaScript and XML).md"
+              }
             }
           }
         ]
@@ -151,10 +171,23 @@
       "command-palette:명령어 팔레트 열기": false
     }
   },
-  "active": "cb57ff67c8a8e127",
+  "active": "1b7552d90d4736d0",
   "lastOpenFiles": [
-    "Node.js/require().md",
+    "Jquery.md",
+    "JavaScript/DOM(Document Object Model).md",
+    "JavaScript/Ajax(Asynchronous JavaScript and XML).md",
+    "Node.js/노드(Node.js).md",
     "Node.js/웹 서버(Web Server).md",
+    "Node.js/FormData.md",
+    "React.js/CSR(Client Side Rendering).md",
+    "React.js/SPA(Single Page Application).md",
+    "React.js/MPA(Multiple Page Application).md",
+    "React.js/Jest/toEqual().md",
+    "JavaScript/객체(Object).md",
+    "JavaScript/인스턴스(Instance).md",
+    "JavaScript/메서드(Method).md",
+    "HTML/property/onClick.md",
+    "Node.js/require().md",
     "Node.js/module.exports().md",
     "JavaScript/this.md",
     "JavaScript/웹(web).md",
@@ -165,22 +198,9 @@
     "Node.js/모듈(Module).md",
     "React.js/import.md",
     "React.js/웹팩(webpack).md",
-    "Node.js/노드(Node.js).md",
     "image/Pasted image 20240311030142.png",
     "JavaScript/REPL.md",
     "image/Pasted image 20240311025219.png",
-    "Node.js/encodeURIComponet.md",
-    "Node.js/FormData.md",
-    "JavaScript/옵셔널 체이닝(Optional Chaning).md",
-    "HTML/property/value.md",
-    "JavaScript/속성(Property).md",
-    "HTML/<input>.md",
-    "HTML/property/name.md",
-    "HTML/HTML.md",
-    "React.js/Libaray/axios.md",
-    "JavaScript/AJAX(Asynchronous JavaScript and XML).md",
-    "JavaScript/널 병합(nullish coalescing).md",
-    "JavaScript/Map.md",
     "image/Pasted image 20240310030355.png",
     "image/Pasted image 20240310015130.png",
     "image/Pasted image 20240310015046.png",
