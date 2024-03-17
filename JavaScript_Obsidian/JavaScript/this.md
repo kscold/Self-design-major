@@ -3,6 +3,9 @@
 
 - 즉, 선언이 아닌 호출에 따라 달라진다.
 
+- [[노드(Node.js)]]에서 this는 [[module.exports()]]와 같다.
+
+
 ## 단독으로 쓴 this
 
 - 단독으로 this를 호출하는 경우엔 [[전역 객체(Global Object)]])를 가리킨다.
