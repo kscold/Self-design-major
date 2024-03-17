@@ -37,7 +37,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "JavaScript/Ajax(Asynchronous JavaScript and XML).md",
+                "file": "JavaScript/async await.md",
                 "mode": "source",
                 "source": false
               }
@@ -110,7 +110,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "JavaScript/Ajax(Asynchronous JavaScript and XML).md",
+                "file": "JavaScript/async await.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -127,7 +127,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "JavaScript/Ajax(Asynchronous JavaScript and XML).md",
+                "file": "JavaScript/async await.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -150,7 +150,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "JavaScript/Ajax(Asynchronous JavaScript and XML).md"
+                "file": "JavaScript/async await.md"
               }
             }
           }
@@ -173,9 +173,21 @@
   },
   "active": "1b7552d90d4736d0",
   "lastOpenFiles": [
-    "Jquery.md",
-    "JavaScript/DOM(Document Object Model).md",
+    "Node.js/Top-level await.md",
+    "JavaScript/async await.md",
+    "Node.js/import.md",
+    "Node.js/모듈(Module).md",
+    "Node.js/ES module.md",
+    "Node.js/export.md",
+    "Node.js/CommonJS.md",
+    "Node.js/cors.md",
+    "Node.js/Jquery.md",
+    "Node.js/module.exports().md",
+    "Node.js/require().md",
+    "Node.js/ctx.get().md",
+    "JavaScript/this.md",
     "JavaScript/Ajax(Asynchronous JavaScript and XML).md",
+    "JavaScript/DOM(Document Object Model).md",
     "Node.js/노드(Node.js).md",
     "Node.js/웹 서버(Web Server).md",
     "Node.js/FormData.md",
@@ -187,19 +199,7 @@
     "JavaScript/인스턴스(Instance).md",
     "JavaScript/메서드(Method).md",
     "HTML/property/onClick.md",
-    "Node.js/require().md",
-    "Node.js/module.exports().md",
-    "JavaScript/this.md",
-    "JavaScript/웹(web).md",
-    "Node.js/WAS(Web Application Server).md",
-    "웹.md",
-    "React.js/Next.js/넥스트(Next.js).md",
-    "JavaScript/전역 객체(Global Object).md",
-    "Node.js/모듈(Module).md",
-    "React.js/import.md",
-    "React.js/웹팩(webpack).md",
     "image/Pasted image 20240311030142.png",
-    "JavaScript/REPL.md",
     "image/Pasted image 20240311025219.png",
     "image/Pasted image 20240310030355.png",
     "image/Pasted image 20240310015130.png",

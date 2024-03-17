@@ -9,6 +9,9 @@
 
 - 순수 [[Promise]] 방식과 다르게 async await를 사용하면 reject된 상황을 처리하기 힘들기 때문에 꼭 try/catch로 블럭을 잡아주는 것이 좋다.
 
+- 최신 [[노드(Node.js)]]에서는 [[Top-level await]]를 사용할 수 있다.
+
+
 ## async await를 사용한 [[비동기(asynchronous)]] 처리
 
 
@@ -80,3 +83,5 @@ async function fetchData() {
 
 fetchData()
 ```
+
+

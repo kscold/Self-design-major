@@ -1,4 +1,4 @@
-- 브라우저 지원에서, 모든 주요 브라우저들은 ES module문법을 지원하고 [[리액트(React)]]와 Vue.js 같은 프레임워크에서 [[import]]/[[export]]를 사용할 수 있다. 이 프레임워크들은 바벨과 같은 트랜스파일을 사용해서 import/export를 이전 Node.js버전이 기본적으로 지원하는 [[require()]]로 바꿔서 컴파일합니다.
+- 브라우저 지원에서, 모든 주요 브라우저들은 ES module문법을 지원하고 [[리액트(React)]]와 Vue.js 같은 프레임워크에서 [[import]]/[[export]]를 사용할 수 있다. 이 프레임워크들은 바벨과 같은 트랜스파일을 사용해서 import/export를 이전 [[노드(Node.js)]] 버전이 기본적으로 지원하는 [[require()]]로 바꿔서 컴파일합니다.
 
 
 ## 노드에서 ES modeles의 사용
