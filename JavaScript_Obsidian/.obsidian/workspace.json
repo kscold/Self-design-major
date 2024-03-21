@@ -37,7 +37,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "JavaScript/async await.md",
+                "file": "Node.js/서버(Server).md",
                 "mode": "source",
                 "source": false
               }
@@ -110,7 +110,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "JavaScript/async await.md",
+                "file": "Node.js/서버(Server).md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -127,7 +127,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "JavaScript/async await.md",
+                "file": "Node.js/서버(Server).md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -150,7 +150,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "JavaScript/async await.md"
+                "file": "Node.js/서버(Server).md"
               }
             }
           }
@@ -173,32 +173,32 @@
   },
   "active": "1b7552d90d4736d0",
   "lastOpenFiles": [
-    "Node.js/Top-level await.md",
-    "JavaScript/async await.md",
-    "Node.js/import.md",
+    "React.js/라우팅(Routing).md",
+    "Node.js/서버(Server).md",
+    "이벤트 리스너.md",
+    "JavaScript/HTTP.md",
+    "end().md",
+    "Node.js/write().md",
+    "Node.js/createServer().md",
+    "Node.js/listen().md",
+    "React.js/useState().md",
+    "JavaScript/일급 함수(First Class Function).md",
+    "React.js/props.md",
+    "HTML/<img>.md",
+    "Node.js/path.md",
     "Node.js/모듈(Module).md",
-    "Node.js/ES module.md",
-    "Node.js/export.md",
     "Node.js/CommonJS.md",
-    "Node.js/cors.md",
-    "Node.js/Jquery.md",
-    "Node.js/module.exports().md",
-    "Node.js/require().md",
-    "Node.js/ctx.get().md",
-    "JavaScript/this.md",
-    "JavaScript/Ajax(Asynchronous JavaScript and XML).md",
-    "JavaScript/DOM(Document Object Model).md",
-    "Node.js/노드(Node.js).md",
-    "Node.js/웹 서버(Web Server).md",
-    "Node.js/FormData.md",
-    "React.js/CSR(Client Side Rendering).md",
-    "React.js/SPA(Single Page Application).md",
-    "React.js/MPA(Multiple Page Application).md",
-    "React.js/Jest/toEqual().md",
-    "JavaScript/객체(Object).md",
-    "JavaScript/인스턴스(Instance).md",
-    "JavaScript/메서드(Method).md",
-    "HTML/property/onClick.md",
+    "Node.js/os.md",
+    "Node.js/process.md",
+    "JavaScript/setImmediate().md",
+    "JavaScript/then().md",
+    "JavaScript/console.time().md",
+    "React.js/BOM(Browser Object Model).md",
+    "JavaScript/async await.md",
+    "Node.js/Top-level await.md",
+    "Node.js/전역 객체(Global Object).md",
+    "JavaScript/window.md",
+    "Node.js/import.md",
     "image/Pasted image 20240311030142.png",
     "image/Pasted image 20240311025219.png",
     "image/Pasted image 20240310030355.png",
