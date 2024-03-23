@@ -10,6 +10,7 @@ const server = http
         } catch (error) {
             console.log(error);
             res.writeHead(200, { 'Content-Type': 'text/plain; charset=utf-8' }); // 일반 문자열을 알려줄 때에는 plain으로 설정함
+            res.end(err.message);
         }
     })
     .listen(8080);
