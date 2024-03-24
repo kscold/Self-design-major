@@ -37,7 +37,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Node.js/서버(Server).md",
+                "file": "Node.js/writeHead().md",
                 "mode": "source",
                 "source": false
               }
@@ -110,7 +110,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Node.js/서버(Server).md",
+                "file": "Node.js/writeHead().md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -127,7 +127,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Node.js/서버(Server).md",
+                "file": "Node.js/writeHead().md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -150,7 +150,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Node.js/서버(Server).md"
+                "file": "Node.js/writeHead().md"
               }
             }
           }
@@ -173,12 +173,23 @@
   },
   "active": "1b7552d90d4736d0",
   "lastOpenFiles": [
-    "React.js/라우팅(Routing).md",
+    "writeHead().md",
+    "Node.js/writeHead().md",
+    "Node.js/parse().md",
+    "Node.js/encodeURIComponet.md",
+    "JavaScript/reduce().md",
+    "Node.js/쿠키(Cookie).md",
+    "Node.js/write().md",
+    "image/Pasted image 20240323212657.png",
+    "Node.js/req.on().md",
+    "Node.js/무제 폴더",
+    "콜백함수에서 데이터 chunk를 인자로 받아서, 만들어놓은 [[배열(Array).md",
+    "Node.js/end().md",
+    "Node.js/REST API.md",
     "Node.js/서버(Server).md",
+    "React.js/라우팅(Routing).md",
     "이벤트 리스너.md",
     "JavaScript/HTTP.md",
-    "end().md",
-    "Node.js/write().md",
     "Node.js/createServer().md",
     "Node.js/listen().md",
     "React.js/useState().md",
@@ -190,15 +201,6 @@
     "Node.js/CommonJS.md",
     "Node.js/os.md",
     "Node.js/process.md",
-    "JavaScript/setImmediate().md",
-    "JavaScript/then().md",
-    "JavaScript/console.time().md",
-    "React.js/BOM(Browser Object Model).md",
-    "JavaScript/async await.md",
-    "Node.js/Top-level await.md",
-    "Node.js/전역 객체(Global Object).md",
-    "JavaScript/window.md",
-    "Node.js/import.md",
     "image/Pasted image 20240311030142.png",
     "image/Pasted image 20240311025219.png",
     "image/Pasted image 20240310030355.png",
@@ -212,12 +214,10 @@
     "image/Pasted image 20240202022302.png",
     "image/Pasted image 20240202021721.png",
     "CSS/SCSS",
-    "image/Pasted image 20240201231316.png",
     "React.js/Libaray/Redux",
     "React.js/Libaray",
     "HTML/property",
     "async",
-    "TypeScript",
-    "JavaScript"
+    "TypeScript"
   ]
 }

@@ -23,7 +23,7 @@ array.reduce(function(prev, cur) {
 
 - 다음 4가지의 인수를 가진다.
     1. accumulator 
-		- accumulator는 [[콜백 함수(callback)]]의 값을 반환값을 누적한다.
+		- accumulator는 [[콜백 함수(Callback Function)]]의 값을 반환값을 누적한다.
     2. currentValue
 	    - 배열의 현재 요소이다.
     3. index(Optional) 
