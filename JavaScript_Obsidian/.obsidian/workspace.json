@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Node.js/Cluster.md",
+                "file": "Node.js/util.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Node.js/Cluster.md",
+                "file": "Node.js/util.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Node.js/Cluster.md",
+                "file": "Node.js/util.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Node.js/Cluster.md"
+                "file": "Node.js/util.md"
               }
             }
           }
@@ -148,13 +148,20 @@
   },
   "active": "9b63a1c224ad510b",
   "lastOpenFiles": [
+    "Node.js/이벤트 에밋(Event Emit).md",
+    "Node.js/util.md",
+    "JavaScript/상속(Inheritance).md",
+    "Node.js/URLSearchParams.md",
+    "Node.js/url.md",
+    "Node.js/FormData.md",
+    "React.js/Libaray/react-router-dom/useSearchParams().md",
+    "image/Pasted image 20240328235448.png",
+    "Node.js/Cluster.md",
     "Node.js/모듈(Module).md",
     "Node.js/노드(Node.js).md",
-    "이벤트 에밋(Event Emit).md",
     "Node.js/process.md",
     "Node.js/이벤트 리스너(Event Listener).md",
     "Node.js/on().md",
-    "Node.js/Cluster.md",
     "writeHead().md",
     "Node.js/writeHead().md",
     "Node.js/parse().md",
@@ -170,12 +177,6 @@
     "Node.js/서버(Server).md",
     "React.js/라우팅(Routing).md",
     "JavaScript/HTTP.md",
-    "Node.js/createServer().md",
-    "Node.js/listen().md",
-    "React.js/useState().md",
-    "JavaScript/일급 함수(First Class Function).md",
-    "React.js/props.md",
-    "HTML/<img>.md",
     "image/Pasted image 20240311030142.png",
     "image/Pasted image 20240311025219.png",
     "image/Pasted image 20240310030355.png",
@@ -187,7 +188,6 @@
     "React.js/Next.js",
     "image/Pasted image 20240202024338.png",
     "image/Pasted image 20240202022302.png",
-    "image/Pasted image 20240202021721.png",
     "CSS/SCSS",
     "React.js/Libaray/Redux",
     "React.js/Libaray",
