@@ -8,43 +8,18 @@
         "type": "tabs",
         "children": [
           {
-            "id": "003391b88b273696",
+            "id": "9b63a1c224ad510b",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Node.js/require().md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "cb57ff67c8a8e127",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Node.js/FormData.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "1b7552d90d4736d0",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Node.js/writeHead().md",
+                "file": "Node.js/Cluster.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -110,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Node.js/writeHead().md",
+                "file": "Node.js/Cluster.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -127,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Node.js/writeHead().md",
+                "file": "Node.js/Cluster.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -150,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Node.js/writeHead().md"
+                "file": "Node.js/Cluster.md"
               }
             }
           }
@@ -171,8 +146,15 @@
       "command-palette:명령어 팔레트 열기": false
     }
   },
-  "active": "1b7552d90d4736d0",
+  "active": "9b63a1c224ad510b",
   "lastOpenFiles": [
+    "Node.js/모듈(Module).md",
+    "Node.js/노드(Node.js).md",
+    "이벤트 에밋(Event Emit).md",
+    "Node.js/process.md",
+    "Node.js/이벤트 리스너(Event Listener).md",
+    "Node.js/on().md",
+    "Node.js/Cluster.md",
     "writeHead().md",
     "Node.js/writeHead().md",
     "Node.js/parse().md",
@@ -181,14 +163,12 @@
     "Node.js/쿠키(Cookie).md",
     "Node.js/write().md",
     "image/Pasted image 20240323212657.png",
-    "Node.js/req.on().md",
     "Node.js/무제 폴더",
     "콜백함수에서 데이터 chunk를 인자로 받아서, 만들어놓은 [[배열(Array).md",
     "Node.js/end().md",
     "Node.js/REST API.md",
     "Node.js/서버(Server).md",
     "React.js/라우팅(Routing).md",
-    "이벤트 리스너.md",
     "JavaScript/HTTP.md",
     "Node.js/createServer().md",
     "Node.js/listen().md",
@@ -196,11 +176,6 @@
     "JavaScript/일급 함수(First Class Function).md",
     "React.js/props.md",
     "HTML/<img>.md",
-    "Node.js/path.md",
-    "Node.js/모듈(Module).md",
-    "Node.js/CommonJS.md",
-    "Node.js/os.md",
-    "Node.js/process.md",
     "image/Pasted image 20240311030142.png",
     "image/Pasted image 20240311025219.png",
     "image/Pasted image 20240310030355.png",

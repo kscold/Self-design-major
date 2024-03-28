@@ -1,4 +1,4 @@
-- [[노드(Node.js)]]의 request에는 on [[메서드(Method)]]가 있다.
+- [[노드(Node.js)]]의 request에는 on() [[메서드(Method)]]가 있다.
 
 - on [[메서드(Method)]]는 특정 [[이벤트(event)]]를 [[listen()]] 할 수 있게 해주는 기능을 가지는데, 여기서 인자로 'data'와 [[콜백 함수(Callback Function)]]를 넣어줌으로써 'data event'가 발생할 때마다 해당 [[함수(Function)]]를 수행한다.
 

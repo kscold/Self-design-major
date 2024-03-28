@@ -72,7 +72,7 @@ server.on('error', (error) => {
 });
 ```
 
-- [[listen()]] [[메서드(Method)]]에 [[콜백 함수(Callback Function)]]을 넣지 않고 listening, error등의 [[이벤트 리스너]]를 붙여도 된다.
+- [[listen()]] [[메서드(Method)]]에 [[콜백 함수(Callback Function)]]을 넣지 않고 listening, error등의 [[이벤트 리스너(Event Listener)]]를 붙여도 된다.
 
 ```js
 const http = require('http');

@@ -6,8 +6,12 @@
 - [[노드(Node.js)]]에는 이런 [[이벤트(event)]]를 보내고 받을 수 있도록 EventEmitter [[클래스(class)]]가 정의되어 있다. 
 - 객체들은 EventEmitter를 [[상속(Inheritance)]]받아, on()과 emit() [[메서드(Method)]] 등을 사용하여 [[이벤트(event)]]를 주고 받는다.
 
+
+
+
+
 ## [[노드(Node.js)]]의 [[이벤트(event)]] 핸들링  [[메서드(Method)]]
-### on(eventName, listener)
+### [[on()]] 메개변수, (eventName, listener)
 
 - 지정한 이벤트의 리스너를 추가한다.
 ### once(eventName, listener)
@@ -19,3 +23,4 @@
 ### emit(eventName, `[,...args]`)
 
 - 이벤트를 다른 쪽에 전달한다.
+
