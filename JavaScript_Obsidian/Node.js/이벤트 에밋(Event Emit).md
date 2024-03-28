@@ -1,11 +1,14 @@
 - [[노드(Node.js)]]는 대부분 [[이벤트(event)]]를 기반으로 하는 [[비동기(asynchronous)]] 방식으로 처리한다.
-- 그리고 비동기 방식으로 처리하기 위해서 서로 다른 이벤트를 전달한다.
+- 그리고 [[비동기(asynchronous)]] 방식으로 처리하기 위해서 서로 다른 [[이벤트(event)]]를 전달한다.
 
-- 예를 들어, 어떤 함수를 실행한 결과물도 이벤트로 전달한다. 
-- 이벤트는 한쪽에서 다른 쪽으로 알림 메세지를 보내는 것과 비슷하다. 
+- 예를 들어, 어떤 [[함수(Function)]]를 실행한 결과물도 [[이벤트(event)]]로 전달한다. 
+- [[이벤트(event)]]는 한쪽에서 다른 쪽으로 알림 메세지를 보내는 것과 비슷하다. 
 
 - 즉, '지금 이쪽의 상태는 이렇다' 는 정보를 다른 쪽으로 보내는 것이다.
+
 - [[노드(Node.js)]]에서는 이런 이벤트를 보낼 수 있도록 EventEmitter 라는 것이 만들어져 있다.
+- EventEmitter 는 events [[모듈(Module)]] 안에 정의되어 있다.
+
 
 ## EventEmitter의 동작 구조
 
@@ -60,7 +63,7 @@ setTimeout(function() {
 
 - process 객체의 on() 메소드를 호출하면서 이벤트 이름을 exit 로 지정하면 프로세스가 끝날 때를 알 수 있다.
 
-- 그 아래 코드는 setTimeout() 메소드를 호출하여 2초 후 프로그램을 끝낸다. 
+- 그 아래 코드는 [[setTimeout()]] [[메서드(Method)]]를 호출하여 2초 후 프로그램을 끝낸다. 
 - 이를 실행하면 콘솔 창에 결과가 출력된다.
 
 - 그렇다면, 미리 정의되어 있는 이벤트가 아니라 우리가 직접 만든 이벤트는 어떻게 처리할 수 있을까?
@@ -96,6 +99,7 @@ setTimeout(function() {
 - 그러면 앞에서 다룬 모듈 구성 방법을 잘 생각하면서 새로운 모듈을 만들어본다.
 
 ```js
+// calc3.js
 var util = require('util');
 var EventEmitter = require('events').EventEmitter;
 
@@ -103,59 +107,55 @@ var Calc = function(){
 	var self = this;
 	
 	this.on('stop', function(){
-
-        console.log('Calc에 stop event 전달됨.');
-
-    });
-
+		console.log('Calc에 stop event 전달됨.');
+	});
 };
 
-util.inherits(Calc,EventEmitter);
+util.inherits(Calc, EventEmitter); // Calc 함수를 EventEmitter에 상속함
 
-Calc.prototype.add = function(a,b){
-
-    return a+b;
-
+Calc.prototype.add = function(a, b){ // add 함수를 오버라이딩
+	return a + b;
 }
 
 module.exports = Calc;
-
-module.exports.title = 'calculator';
+module.exports.title = 'calculator'; // title 속성 값으로 calculator로 설정
 ```
 
-EventEmitter 는 events 모듈 안에 정의되어 있다. 따라서, require() 메소드를 호출하여 events 모듈을 불러들인 후 그 안에 속성으로 들어 있는 EventEmitter 객체를 참조한다.
 
-Calc 객체는 계산기 객체로서 function 키워드를 사용해 프로토타입 객체(Prototype Object)로 만든다.
+- [[require()]] [[메서드(Method)]]를 호출하여 events [[모듈(Module)]]을 불러들인 후 그 안에 [[속성(Property)]]으로 들어 있는 EventEmitter [[객체(Object)]]를 참조한다.
 
-프로토타입 객체 안에서는 **this** 키워드를 이용해 자기 자신을 가리킬 수 있으며, 그 객체 안에 정의된 속성에 접근할 수 있다. 
+- Calc 객체는 계산기 객체로서 [[function]] [[키워드(Keyword)]]를 사용해 프로토타입([[prototype]]) [[객체(Object)]]로 만든다.
+- 프로토타입 객체 안에서는 [[this]] [[키워드(Keyword)]]를 이용해 자기 자신을 가리킬 수 있으며, 그 [[객체(Object)]] 안에 정의된 [[속성(Property)]]에 접근할 수 있다. 
 
-그런 다음 Calc 객체가 이벤트 처리를 할 수 있도록 **EventEmitter**를 상속하도록 만든다. 상속은 util 모듈에 있는 inherits() 메소드를 사용하면 쉽게 정의할 수 있다.
+- 그런 다음 Calc 객체가 이벤트 처리를 할 수 있도록 EventEmitter를 [[상속(Inheritance)]]하도록 만든다. 
+- 상속은 util 모듈에 있는 inherits() 메소드를 사용하면 쉽게 정의할 수 있다.
 
-코드의 가장 위쪽에서 **require()**메소드를 호출하여 util 모듈을 불러왔기 때문에 **util.inherits()** 메소드를 호출하는 코드를 넣어도 오류는 발생하지 않는다.
+- 코드의 가장 위쪽에서 require() [[메서드(Method)]]를 호출하여 util 모듈을 불러왔기 때문에 util.inherits() [[메서드(Method)]]를 호출하는 코드를 넣어도 오류는 발생하지 않는다.
 
-Calc 객체 안에 들어있는 prototype 객체의 속성으로 add 함수를 추가하면 new 연산자를 이용해 Calc 객체의 인스턴스 객체를 만들었을 때, add()함수를 사용할 수 있다.
+- Calc 객체 안에 들어있는 [[prototype]] 객체의 속성으로 add 함수를 추가하면 [[new]] 연산자를 이용해 Calc 객체의 [[인스턴스(Instance)]] [[객체(Object)]]를 만들었을 때, add()함수를 사용할 수 있다.
 
-코드으이 마지막 부분에는 calc3.js 파일에 정의한 모듈을 불러들이는 쪽에서 Calc 객체를 참조할 수 있도록 module.exports  에 Calc 객체를 지정한다.
+- 코드의 마지막 부분에는 calc3.js 파일에 정의한 모듈을 불러들이는 쪽에서 Calc 객체를 참조할 수 있도록 module.exports에 Calc 객체를 지정한다.
+- 추가적으로 title 속성 값으로 calculator 라는 이름을 설정한다.
 
-추가적으로 title 속성 값으로 calculator 라는 이름을 설정한다.
+- 이 계산기 객체로 전달되는 stop 이벤트를 처리하기 위해서 Calc 객체 안에서 [[on()]] [[메서드(Method)]]를 호출하는 부분도 눈여겨볼 수 있다.
 
-이 계산기 객체로 전달되는 stop 이벤트를 처리하기 위해서 Calc 객체 안에서 on() 메소드를 호출하는 부분도 눈여겨볼 수 있다.
+- 이렇게 만든 [[모듈(Module)]]을 사용하는 코드는 다음과 같이 별도의 파일에 입력한다.
 
-이렇게 만든 모듈을 사용하는 코드는 다음과 같이 별도의 파일에 입력한다.
+```js
+var Calc = require('./calc3');
+var calc = new Calc();
 
-|   |   |   |
-|---|---|---|
-|1<br><br>2<br><br>3<br><br>4<br><br>5<br><br>6|var Calc = require('./calc3');<br><br>var calc = new Calc();<br><br>calc.emit('stop');<br><br>console.log(Calc.title + '에 stop 이벤트 전달함.');|[cs](http://colorscripter.com/info#e)|
+calc.emit('stop'); // calc3.js 내부의 Calc의 stop 이벤트를 실행시킴
 
-**require()** 메소드를 호출하면서 **./calc3** 을 파라미터로 전달하면 별도의 모듈 파일에 정의해둔 Calc 객체를 변수로 사용할 수 있다.
+console.log(Calc.title + '에 stop 이벤트 전달함.');
 
-Calc 객체는 프로토타입 객체로 계산기 기능을 정의한 것이므로 먼저 **new** 연산자를 이용해 인스턴스 객체를 만든다.
+// >> Calc에 stop event 전달됨.  
+// >> calculator에 stop 이벤트 전달함.
+```
 
-Calc 객체가 EventEmitter 를 상속하므로 인스턴스 객체의 emit() 메소드를 호출하여 stop 이벤트를 전달한다.
+- [[require()]] [[메서드(Method)]]를 호출하면서 `./calc3` 을 [[매개변수(parameter)]] 전달하면 별도의 모듈 파일에 정의해둔 Calc [[객체(Object)]]를 [[변수(Variable)]]로 사용할 수 있다.
 
-> Calc에 stop event 전달됨.  
-> calculator에 stop 이벤트 전달함.
+- Calc 객체는 프로토타입([[prototype]]) 객체로 계산기 기능을 정의한 것이므로 먼저 [[new]] 연산자를 이용해 인스턴스 객체를 만든다.
+- Calc 객체가 EventEmitter를 [[상속(Inheritance)]]하므로 [[인스턴스(Instance)]] 객체의 emit() [[메서드(Method)]]를 호출하여 stop 이벤트를 전달한다.
 
-stop 이벤트가 정상적으로 전달된 것을 볼 수 있다.
-
-프로그램을 만들 때는 이벤트를 받아서 처리하는 경우가 많다. 그러므로 지금 만들어 본 코드에 들어있는 on() 과 emit() 메소드에 대해서 잘 알아두는 것이 좋다.
+- stop 이벤트가 정상적으로 전달된 것을 볼 수 있다.
