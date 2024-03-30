@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Node.js/util.md",
+                "file": "Node.js/child_process.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Node.js/util.md",
+                "file": "Node.js/child_process.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Node.js/util.md",
+                "file": "Node.js/child_process.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Node.js/util.md"
+                "file": "Node.js/child_process.md"
               }
             }
           }
@@ -148,8 +148,9 @@
   },
   "active": "9b63a1c224ad510b",
   "lastOpenFiles": [
-    "Node.js/이벤트 에밋(Event Emit).md",
     "Node.js/util.md",
+    "Node.js/child_process.md",
+    "Node.js/이벤트 에밋(Event Emit).md",
     "JavaScript/상속(Inheritance).md",
     "Node.js/URLSearchParams.md",
     "Node.js/url.md",
@@ -176,7 +177,6 @@
     "Node.js/REST API.md",
     "Node.js/서버(Server).md",
     "React.js/라우팅(Routing).md",
-    "JavaScript/HTTP.md",
     "image/Pasted image 20240311030142.png",
     "image/Pasted image 20240311025219.png",
     "image/Pasted image 20240310030355.png",
