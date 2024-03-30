@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Node.js/child_process.md",
+                "file": "JavaScript/스트림(Stream).md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Node.js/child_process.md",
+                "file": "JavaScript/스트림(Stream).md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Node.js/child_process.md",
+                "file": "JavaScript/스트림(Stream).md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Node.js/child_process.md"
+                "file": "JavaScript/스트림(Stream).md"
               }
             }
           }
@@ -148,8 +148,13 @@
   },
   "active": "9b63a1c224ad510b",
   "lastOpenFiles": [
-    "Node.js/util.md",
+    "image/Pasted image 20240330180401.png",
+    "JavaScript/버퍼(buffer).md",
+    "JavaScript/스트림(Stream).md",
+    "image/Pasted image 20240330180142.png",
+    "Node.js/fs.md",
     "Node.js/child_process.md",
+    "Node.js/util.md",
     "Node.js/이벤트 에밋(Event Emit).md",
     "JavaScript/상속(Inheritance).md",
     "Node.js/URLSearchParams.md",
@@ -173,10 +178,6 @@
     "image/Pasted image 20240323212657.png",
     "Node.js/무제 폴더",
     "콜백함수에서 데이터 chunk를 인자로 받아서, 만들어놓은 [[배열(Array).md",
-    "Node.js/end().md",
-    "Node.js/REST API.md",
-    "Node.js/서버(Server).md",
-    "React.js/라우팅(Routing).md",
     "image/Pasted image 20240311030142.png",
     "image/Pasted image 20240311025219.png",
     "image/Pasted image 20240310030355.png",
@@ -187,7 +188,6 @@
     "image/Pasted image 20240215192907.png",
     "React.js/Next.js",
     "image/Pasted image 20240202024338.png",
-    "image/Pasted image 20240202022302.png",
     "CSS/SCSS",
     "React.js/Libaray/Redux",
     "React.js/Libaray",
