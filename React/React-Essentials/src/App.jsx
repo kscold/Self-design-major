@@ -20,13 +20,9 @@ function App() {
         <section id="core-concepts">
           <h2>Core Concept</h2>
           <ul>
-            {CORE_CONCEPTS.map((coreConcept, i) => (
-              <CoreConcept
-                key={i}
-                title={coreConcept.title}
-                description={coreConcept.description}
-                image={coreConcept.image}
-              />
+            {CORE_CONCEPTS.map((conceptItem) => (
+              // ... 확산연사자를 사용해서 객체의 모든 속성을 렌더링시킬 수 있음
+              <CoreConcept key={conceptItem.title} {...conceptItem} />
             ))}
           </ul>
         </section>
