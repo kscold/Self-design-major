@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Node.js/스레드 풀(Thread Pool).md",
+                "file": "Node.js/에러(error).md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Node.js/스레드 풀(Thread Pool).md",
+                "file": "Node.js/에러(error).md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Node.js/스레드 풀(Thread Pool).md",
+                "file": "Node.js/에러(error).md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Node.js/스레드 풀(Thread Pool).md"
+                "file": "Node.js/에러(error).md"
               }
             }
           }
@@ -148,8 +148,13 @@
   },
   "active": "9b63a1c224ad510b",
   "lastOpenFiles": [
-    "JavaScript/실행 컨텍스트(execution context).md",
+    "Node.js/이벤트 에밋(Event Emit).md",
+    "Node.js/에러(error).md",
+    "Node.js/process.md",
+    "JavaScript/콜백 함수(Callback Function).md",
+    "Node.js/이벤트 리스너(Event Listener).md",
     "Node.js/스레드 풀(Thread Pool).md",
+    "JavaScript/실행 컨텍스트(execution context).md",
     "JavaScript/스트림(Stream).md",
     "image/Pasted image 20240330180401.png",
     "JavaScript/버퍼(buffer).md",
@@ -157,7 +162,6 @@
     "Node.js/fs.md",
     "Node.js/child_process.md",
     "Node.js/util.md",
-    "Node.js/이벤트 에밋(Event Emit).md",
     "JavaScript/상속(Inheritance).md",
     "Node.js/URLSearchParams.md",
     "Node.js/url.md",
@@ -167,16 +171,12 @@
     "Node.js/Cluster.md",
     "Node.js/모듈(Module).md",
     "Node.js/노드(Node.js).md",
-    "Node.js/process.md",
-    "Node.js/이벤트 리스너(Event Listener).md",
     "Node.js/on().md",
     "writeHead().md",
     "Node.js/writeHead().md",
     "Node.js/parse().md",
     "Node.js/encodeURIComponet.md",
     "JavaScript/reduce().md",
-    "Node.js/쿠키(Cookie).md",
-    "Node.js/write().md",
     "image/Pasted image 20240323212657.png",
     "Node.js/무제 폴더",
     "image/Pasted image 20240311030142.png",

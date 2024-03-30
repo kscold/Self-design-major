@@ -20,33 +20,34 @@
 
 - 노드의 객체는 EventEmitter를 상속받을 수 있으며, 상속받은 후에 EventEmitter [[객체(Object)]]의 [[on()]]과 emit() [[메서드(Method)]]를 사용할 수 있다.
 
-### on()
+### addListener() [[매개변수(parameter)]] ('이벤트 이름', [[콜백 함수(Callback Function)]])
 
-- 메소드는, [[이벤트(event)]]가 전달된 [[객체(Object)]] [[이벤트 리스너(Event Listener)]]를 설정하는 역할을 한다.
+- on() 메서드와 똑같이 설정된 [[이벤트(event)]] 이름에 [[콜백 함수(Callback Function)]]을 실행하는 형태로 사용한다.
+### on() [[매개변수(parameter)]] ('이벤트 이름', [[콜백 함수(Callback Function)]])
+
+- 메서드는, [[이벤트(event)]]가 전달된 [[객체(Object)]] [[이벤트 리스너(Event Listener)]]를 설정하는 역할을 한다.
 - 이 리스너 함수는 객체로 전달된 이벤트를 받아서 처리할 수 있다. 
 
 - 보통은 노드 내부에서 미리 만들어 제공하는 이벤트를 받아 처리하지만, 필요할 때는 직접 이벤트를 만들어 전달할 수 있다.
 
-- on() 메소드 외에 once() 메소드를 사용할 수 있다.
-
-### once()
+- on() 메서드 외에 once() 메소드를 사용할 수 있다.
+### once() [[매개변수(parameter)]] ('이벤트 이름', [[콜백 함수(Callback Function)]])
 
 - [[메서드(Method)]]를 사용할 때는 [[이벤트 리스너(Event Listener)]] 함수가 한 번이라도 실행하고 나면 자동으로 제거되므로 이벤트를 딱 한 번만 받아서 처리할 수 있다.
+### emit() [[매개변수(parameter)]]('이벤트 이름')
 
-### emit()
-
+- [[이벤트(event)]]를 실질적으로 호출하는 [[메서드(Method)]]이다.
 - 이벤트를 다른 쪽으로 전달하고 싶다면 emit() [[메서드(Method)]]를 사용한다.
 
-| 메소드 이름                          | 설명                                               |
-| ------------------------------- | ------------------------------------------------ |
-| on(event, listener)             | 지정한 이벤트의 리스너를 추가한다.                              |
-| once(event, listener)           | 지정한 이벤트의 리스너를 추가하지만 한 번만 실행한 후에는 자동으로 리스너가 제거된다. |
-| removeListener(event, listener) | 지정한 이벤트에 대한 리스너를 제거한다.                           |
+## removeListener() [[매개변수(parameter)]]('이벤트 이름')
 
-## 예시
+- 지정한 [[이벤트(event)]]에 대한 리스너를 제거한다.
+
+
+## [[on()]]을 사용하는 예시
 
 ```js
-process.on('exit', function(){
+process.on('exit', function() {
 	console.log('exit 이벤트 발생함.');
 });
 
@@ -61,9 +62,9 @@ setTimeout(function() {
 
 - [[process]] [[객체(Object)]]는 [[노드(Node.js)]]에서 언제든지 사용할 수 있는 [[객체(Object)]]인데, 이미 내부적으로 EventEmitter를 [[상속(Inheritance)]]하도록 만들어져 있어서 [[on()]]과 emit() [[메서드(Method)]]를 바로 사용할 수 있다.
 
-- process 객체의 on() 메소드를 호출하면서 이벤트 이름을 exit 로 지정하면 프로세스가 끝날 때를 알 수 있다.
+- process 객체의 [[on()]] [[메서드(Method)]]를 호출하면서 이벤트 이름을 exit 로 지정하면 프로세스가 끝날 때를 알 수 있다.
 
-- 그 아래 코드는 [[setTimeout()]] [[메서드(Method)]]를 호출하여 2초 후 프로그램을 끝낸다. 
+- 그 아래 코드는 [[setTimeout()]] [[메서드(Method)]]를 호출하여 2초 후 프로그램을 끝낸다.
 - 이를 실행하면 콘솔 창에 결과가 출력된다.
 
 - 그렇다면, 미리 정의되어 있는 이벤트가 아니라 우리가 직접 만든 이벤트는 어떻게 처리할 수 있을까?
