@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Node.js/에러(error).md",
+                "file": "React.js/JSX.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Node.js/에러(error).md",
+                "file": "React.js/JSX.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Node.js/에러(error).md",
+                "file": "React.js/JSX.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Node.js/에러(error).md"
+                "file": "React.js/JSX.md"
               }
             }
           }
@@ -148,8 +148,11 @@
   },
   "active": "9b63a1c224ad510b",
   "lastOpenFiles": [
-    "Node.js/이벤트 에밋(Event Emit).md",
+    "JavaScript/속성(Property).md",
+    "React.js/JSX.md",
+    "React.js/조건부 렌더링.md",
     "Node.js/에러(error).md",
+    "Node.js/이벤트 에밋(Event Emit).md",
     "Node.js/process.md",
     "JavaScript/콜백 함수(Callback Function).md",
     "Node.js/이벤트 리스너(Event Listener).md",
@@ -174,9 +177,6 @@
     "Node.js/on().md",
     "writeHead().md",
     "Node.js/writeHead().md",
-    "Node.js/parse().md",
-    "Node.js/encodeURIComponet.md",
-    "JavaScript/reduce().md",
     "image/Pasted image 20240323212657.png",
     "Node.js/무제 폴더",
     "image/Pasted image 20240311030142.png",
