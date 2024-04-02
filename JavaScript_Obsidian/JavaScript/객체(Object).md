@@ -9,6 +9,9 @@
 
 - 참고로 객체에는 .length() [[메서드(Method)]]를 사용할 수 없다.
 
+- 또란 객체 안에 선언된 [[메서드(Method)]]에서 [[this]]는 객체의 [[속성(Property)]]을 가리킬 수 있다.
+
+
 ## 객체 문법
 
 - 객체의 key와 value의 형태의 딕셔너리를 [[속성(Property)]]이라고 한다.
@@ -23,7 +26,8 @@ var zero = {
 - 따라서 zero 객체에는 `firstName: 'Zero'`와 `lastName: 'Cho'`까지 두 개의 [[속성(Property)]]이 있다.
 - [[속성(Property)]]끼리는 쉼표로 구분해준다. 
 
-- 자바스크립트는 [[클래스(class)]] 내부에 정의 된 [[함수(Function)]]를 [[메서드(Method)]]라고 부르는 것 뿐만 아니라 [[속성(Property)]]값이 [[함수(Function)]]인 것을 [[메서드(Method)]]라고 부른다.
+- 자바스크립트는 [[클래스(Class)]] 내부에 정의 된 [[함수(Function)]]를 [[메서드(Method)]]라고 부르는 것 뿐만 아니라 [[속성(Property)]]값이 [[함수(Function)]]인 것을 [[메서드(Method)]]라고 부른다.
+
 
 ## 객체 [[리터럴(literal)]]
 
@@ -37,9 +41,11 @@ const sayNode = {
 }
 
 const newObject = {
+	
 	sayJS() {
 		console.log('JS');
 	},
+	
 	sayNode,
 	[es + 6]: 'Fantastic',
 };
@@ -47,4 +53,20 @@ const newObject = {
 newObject.sayNode(); // Node
 newObject.sayJS(); // JS
 console.log(newObject.ES6); // Fantasitc
+```
+
+## 객체 [[메서드(Method)]]
+
+```js
+const user = {
+	name: "김승찬",
+	age: 25,
+	greet() {
+		console.log("Hello!");
+		console.log(this.age); // this.age는 25와 연결됨
+	}
+};
+
+console.log(user.name);
+user.greet()
 ```

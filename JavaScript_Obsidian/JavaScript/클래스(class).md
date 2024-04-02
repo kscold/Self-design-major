@@ -6,13 +6,14 @@
 - ES6부터 추가된 class [[키워드(Keyword)]]는 직관적으로 쉽게 코드를 읽을 수 있게 만들어 줄 뿐만 아니라, 작성하기도 쉽고 또 class 기반 언어에 익숙한 개발자가 더 빠르게 적응할 수 있다.
 - 즉, 자바와 비슷하게 코딩이 가능해졌다.
 
+
 ## 클래스 사용 이유
 
 - 클래스를 사용하지 않아도 [[new]] 연산자와 [[생성자(Constructor)]] 함수인 new function을 사용할 수 있다.
 - 그러나 실무에선 사용자나 물건같이 동일한 종류의 [[객체(Object)]]를 여러 개 생성해야 하는 경우가 잦다.
 - 따라서 클래스(class) 문법을 사용하면 객체 지향 프로그래밍에서 사용되는 다양한 기능을 자바스크립트에서도 사용할 수 있다.
 
-- 밑의 예시는 클래스 키워드를 사용하지 않고 [[new]]를 이용해 [[객체(Object)]]를 만드는 코드이다.
+- 밑의 예시는 클래스 [[키워드(Keyword)]]를 사용하지 않고 [[new]]를 이용해 [[객체(Object)]]를 만드는 코드이다.
 - 즉, 클래스가 등장 이전에는 [[prototype]]를 사용하여 클래스처럼 동작하게 만들었다.
 
 ```javascript
@@ -104,7 +105,7 @@ let kim = new Korean("KIMJINYOUNG", 24);
 
 ## 자바스크립트의 [[상속(Inheritance)]]
 
-- [[클래스(class)]] 문법 이전에 [[상속(Inheritance)]]을 하기 위해서는 밑의 코드처럼 [[prototype]]의 create() [[메서드(Method)]]를 이용해서 사용을 해야 했다.
+- [[클래스(Class)]] 문법 이전에 [[상속(Inheritance)]]을 하기 위해서는 밑의 코드처럼 [[prototype]]의 create() [[메서드(Method)]]를 이용해서 사용을 해야 했다.
 
 ```js
 var Human = function(type) {
@@ -135,7 +136,7 @@ var oldZero = new Zero('human', 'Zero', 'Cho');
 Human.isHuman(oldZero); // true
 ```
 
-- [[클래스(class)]] 문법 이후는 더 직관적으로 지바와 비슷하게 extends [[키워드(Keyword)]]를 이용해서 [[상속(Inheritance)]] 관계 확인이 가능해졌고 훨신 적은 코드로 [[상속(Inheritance)]]이 가능해졌다.
+- [[클래스(Class)]] 문법 이후는 더 직관적으로 지바와 비슷하게 extends [[키워드(Keyword)]]를 이용해서 [[상속(Inheritance)]] 관계 확인이 가능해졌고 훨신 적은 코드로 [[상속(Inheritance)]]이 가능해졌다.
 - [[super()]]를 통해 부모 클래스의 [[생성자(Constructor)]]([[생성자 함수(Constructor Function)]])를 가져올 수 있다.
 
 ```js
