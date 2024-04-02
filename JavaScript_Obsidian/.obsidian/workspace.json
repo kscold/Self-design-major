@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "JavaScript/확산 연산자(spread operator).md",
+                "file": "React.js/프래그먼트(Fragment).md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "JavaScript/확산 연산자(spread operator).md",
+                "file": "React.js/프래그먼트(Fragment).md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "JavaScript/확산 연산자(spread operator).md",
+                "file": "React.js/프래그먼트(Fragment).md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "JavaScript/확산 연산자(spread operator).md"
+                "file": "React.js/프래그먼트(Fragment).md"
               }
             }
           }
@@ -148,9 +148,23 @@
   },
   "active": "9b63a1c224ad510b",
   "lastOpenFiles": [
+    "JavaScript/확산 연산자(spread operator).md",
+    "JavaScript/얕은 복사.md",
     "React.js/프래그먼트(Fragment).md",
     "React.js/createElement().md",
     "React.js/JSX.md",
+    "JavaScript/참조 타입(Reference Type).md",
+    "JavaScript/깊은 복사(Deep Copy).md",
+    "JavaScript/localStorage.md",
+    "JavaScript/for.md",
+    "JavaScript/JSON(Java Script Object Notation).md",
+    "JavaScript/JSON.stringify().md",
+    "JavaScript/stringify().md",
+    "JavaScript/리터럴(literal).md",
+    "JavaScript/slice().md",
+    "JavaScript/2.md",
+    "JavaScript/컴포넌트(component).md",
+    "컴포넌트(component).md",
     "image/Pasted image 20240402174940.png",
     "JavaScript/map().md",
     "JavaScript/Map.md",
@@ -161,22 +175,8 @@
     "HTML/<input>.md",
     "JavaScript/클래스(Class).md",
     "JavaScript/속성(Property).md",
-    "React.js/조건부 렌더링.md",
-    "Node.js/에러(error).md",
-    "Node.js/이벤트 에밋(Event Emit).md",
-    "Node.js/process.md",
-    "JavaScript/콜백 함수(Callback Function).md",
-    "Node.js/이벤트 리스너(Event Listener).md",
-    "Node.js/스레드 풀(Thread Pool).md",
-    "JavaScript/실행 컨텍스트(execution context).md",
-    "JavaScript/스트림(Stream).md",
     "image/Pasted image 20240330180401.png",
-    "JavaScript/버퍼(buffer).md",
     "image/Pasted image 20240330180142.png",
-    "Node.js/fs.md",
-    "Node.js/child_process.md",
-    "Node.js/util.md",
-    "JavaScript/상속(Inheritance).md",
     "image/Pasted image 20240328235448.png",
     "image/Pasted image 20240323212657.png",
     "Node.js/무제 폴더",
