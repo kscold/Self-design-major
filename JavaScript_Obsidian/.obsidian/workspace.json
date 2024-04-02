@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "JavaScript/map().md",
+                "file": "JavaScript/확산 연산자(spread operator).md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "JavaScript/map().md",
+                "file": "JavaScript/확산 연산자(spread operator).md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "JavaScript/map().md",
+                "file": "JavaScript/확산 연산자(spread operator).md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "JavaScript/map().md"
+                "file": "JavaScript/확산 연산자(spread operator).md"
               }
             }
           }
@@ -148,15 +148,18 @@
   },
   "active": "9b63a1c224ad510b",
   "lastOpenFiles": [
-    "JavaScript/Map.md",
+    "React.js/프래그먼트(Fragment).md",
+    "React.js/createElement().md",
+    "React.js/JSX.md",
+    "image/Pasted image 20240402174940.png",
     "JavaScript/map().md",
+    "JavaScript/Map.md",
     "JavaScript/findIndex().md",
     "JavaScript/객체(Object).md",
     "JavaScript/push().md",
     "HTML/<form>.md",
     "HTML/<input>.md",
     "JavaScript/클래스(Class).md",
-    "React.js/JSX.md",
     "JavaScript/속성(Property).md",
     "React.js/조건부 렌더링.md",
     "Node.js/에러(error).md",
@@ -174,8 +177,6 @@
     "Node.js/child_process.md",
     "Node.js/util.md",
     "JavaScript/상속(Inheritance).md",
-    "Node.js/URLSearchParams.md",
-    "Node.js/url.md",
     "image/Pasted image 20240328235448.png",
     "image/Pasted image 20240323212657.png",
     "Node.js/무제 폴더",
@@ -186,7 +187,6 @@
     "image/Pasted image 20240310015046.png",
     "React.js/Libaray/axios",
     "React.js/Libaray/react-router-dom",
-    "image/Pasted image 20240215192907.png",
     "React.js/Next.js",
     "CSS/SCSS",
     "React.js/Libaray/Redux",
