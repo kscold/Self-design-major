@@ -2,7 +2,7 @@
 
 - 웹은 클라이언트(사용자)와 서버(웹 서버, 웹 어플리케이션 서버) 간의 통신을 통해 정보를 전송하고 표시한다.
 
-- 웹은 [[HTML]], CSS, JavaScript 등의 웹 기술을 사용하여 다양한 종류의 콘텐츠를 제공한다.
+- 웹은 [[HTML(Hyper Text Markup Language)]], CSS, JavaScript 등의 웹 기술을 사용하여 다양한 종류의 콘텐츠를 제공한다.
 - 웹은 월드 와이드 웹(World Wide Web)의 준말로, 인터넷을 통해 접근할 수 있는 전 세계적인 정보 공간을 가리킨다.
 
 - 웹 애플리케이션을 만들기 위해  [[웹 서버(Web Server)]]와 [[WAS(Web Application Server)]]가 사용된다.

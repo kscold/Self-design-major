@@ -106,7 +106,7 @@ var num = 0; function showNum() {  console.log(this.num);} showNum(); //0 var ob
 
 ## 4. [[이벤트(event)]] 핸들러 안에서 쓴 this
 
-- 이벤트 핸들러에서 this는 이벤트를 받는 [[HTML]] 요소를 가리킨다.
+- 이벤트 핸들러에서 this는 이벤트를 받는 [[HTML(Hyper Text Markup Language)]] 요소를 가리킨다.
 
 ```javascript
 var btn = document.querySelector('#btn')

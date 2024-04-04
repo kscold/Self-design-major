@@ -41,9 +41,9 @@ console.log(complexObject.objectInside === nextComplexObject.objectInside) // fa
 
 ## [[리액트(React)]]의 확산 연산자 사용
 
-- [[리액트(React)]]에서는 [[컴포넌트(component)]] [[props]]에서도 확산연산자가 사용가능하다.
+- [[리액트(React)]]에서는 [[컴포넌트(Component)]] [[props]]에서도 확산연산자가 사용가능하다.
 
-- 아래 코드처럼 상위에서 호출하는 부모 [[컴포넌트(component)]]
+- 아래 코드처럼 상위에서 호출하는 부모 [[컴포넌트(Component)]]
 에서 title과 children을 제외한 모든 [[props]]를 넘긴다고 가정했을 때, `...` 연산자를 통해 [[props]] [[객체(Object)]]를 가져올 수 있고, [[JSX]]에서 태그의 [[props]]로 또 넘겨줄 수 있다.
 
 - 이 때 주의해야할 점은 ...props의 경우 가장 마지막 [[매개변수(parameter)]]에 위치해야 한다.

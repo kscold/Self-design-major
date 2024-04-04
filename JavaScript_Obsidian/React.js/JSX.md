@@ -2,7 +2,7 @@
 
 - JSX는 [[리액트(React)]]로 프로젝트를 개발할 때 사용되므로 공식적인 자바스크립트 문법은 아니며, 개발자들이 babel에서 여러 문법을 지원할 수 있도록 preset 및 plugin을 설정한 것이다.
 
-- [[HTML]]의 [[class]]의 [[속성(Property)]]의 경우 [[리액트(React)]]에서는 [[className]]으로 사용되며 [[id]]와 같은 [[속성(Property)]]의 경우 그대로 사용한다.
+- [[HTML(Hyper Text Markup Language)]]의 [[class]]의 [[속성(Property)]]의 경우 [[리액트(React)]]에서는 [[className]]으로 사용되며 [[id]]와 같은 [[속성(Property)]]의 경우 그대로 사용한다.
 
 
 ## JSX의 컴파일

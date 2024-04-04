@@ -28,7 +28,7 @@
 
 ![](https://blog.kakaocdn.net/dn/LGSXW/btrDPjAr3Mb/SZ9mkhj8wFiZT7Efkvrzt1/img.png)
 
-- 위 사진처럼 [[HTML]]을 미리 렌더링하고, 그 뒤에 요청이 오면 Chunk 단위로 자바스크립트를 보내주어 이벤트가 작동하게 되는 것이 [[Hydration]]이며, [[넥스트(Next.js)]]에서 사용되는 방법이다.
+- 위 사진처럼 [[HTML(Hyper Text Markup Language)]]을 미리 렌더링하고, 그 뒤에 요청이 오면 Chunk 단위로 자바스크립트를 보내주어 이벤트가 작동하게 되는 것이 [[Hydration]]이며, [[넥스트(Next.js)]]에서 사용되는 방법이다.
 
 - 이러한 빌드 과정, [[웹(web)]]페이지 요청 과정이 [[SSR(Server Side Rendering)]]인 것은 아니다.
 - 서버에서 [[pre-rendering]]하는 것까지가 [[넥스트(Next.js)]]의 특징인 것이고, [[pre-rendering]]을 동적으로 해서 페이지를 생성하느냐, 정적으로 페이지를 생성하느냐의 차이가 [[SSR(Server Side Rendering)]]과 [[SSG(Static Site Generation)]]의 차이라고 생각하면 된다.

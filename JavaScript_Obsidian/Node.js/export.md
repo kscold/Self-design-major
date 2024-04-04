@@ -1,6 +1,6 @@
 - [[ES module]]의 [[키워드(Keyword)]]로써 [[CommonJS]]처럼 세부적인 설정을 변경할 수 없다.
 
-- [[리액트(React)]]로 개발할 때 하나의 파일에 하나의 [[컴포넌트(component)]]만 있다면 보통 해당 컴포넌트 명으로 export한다.
+- [[리액트(React)]]로 개발할 때 하나의 파일에 하나의 [[컴포넌트(Component)]]만 있다면 보통 해당 컴포넌트 명으로 export한다.
 
 
 ## export default

@@ -6,7 +6,7 @@
 
 ## 예시
 
-- 밑의 코드와 같이 reducer 부분을 함수와 시킨 커스텀 [[Hooks]]를 만들어, dispatch를 통해 [[이벤트(event)]]를 갱신하여 부모 [[컴포넌트(component)]]로 부터 받은 [[state]]를 반환할 수 있다.
+- 밑의 코드와 같이 reducer 부분을 함수와 시킨 커스텀 [[Hooks]]를 만들어, dispatch를 통해 [[이벤트(event)]]를 갱신하여 부모 [[컴포넌트(Component)]]로 부터 받은 [[state]]를 반환할 수 있다.
 
 ```jsx
 // 리듀서 커스텀 훅 선언

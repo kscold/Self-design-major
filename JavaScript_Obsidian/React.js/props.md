@@ -1,4 +1,4 @@
-- [[리액트(React)]]에서 props는 properties를 줄인 표현으로 [[컴포넌트(component)]] 속성을 선정할 때 사용하는 요소이다.
+- [[리액트(React)]]에서 props는 properties를 줄인 표현으로 [[컴포넌트(Component)]] 속성을 선정할 때 사용하는 요소이다.
 
 
 ## JSX 내부에서 props 렌더링
@@ -77,7 +77,7 @@ function App() {
 }	
 ```
 
-- 또한 위의 코드처럼 사용하면 자식 [[컴포넌트(component)]]로 onSelect로 [[함수(Function)]]를 props로 보낸때 [[매개변수(parameter)]]를 넣어 [[함수(Function)]] 호출할 수 있고 자식 [[컴포넌트(component)]]에서 원하는 때에 이 [[함수(Function)]]를 호출할 수 있게 된다.
+- 또한 위의 코드처럼 사용하면 자식 [[컴포넌트(Component)]]로 onSelect로 [[함수(Function)]]를 props로 보낸때 [[매개변수(parameter)]]를 넣어 [[함수(Function)]] 호출할 수 있고 자식 [[컴포넌트(Component)]]에서 원하는 때에 이 [[함수(Function)]]를 호출할 수 있게 된다.
 
 ```jsx
 // App.js

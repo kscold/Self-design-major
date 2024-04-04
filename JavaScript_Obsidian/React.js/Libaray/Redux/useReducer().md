@@ -1,4 +1,4 @@
-- useReducer()는 [[useState()]]보다 더 다양한 [[컴포넌트(component)]] 상황에 따라 다양한 상태([[state]])를 다른 값으로 업데이트해 주고 싶을 때 사용하는 [[Hooks]]이다.
+- useReducer()는 [[useState()]]보다 더 다양한 [[컴포넌트(Component)]] 상황에 따라 다양한 상태([[state]])를 다른 값으로 업데이트해 주고 싶을 때 사용하는 [[Hooks]]이다.
 - 리액트의 [[리덕스(Redux)]]의 동작과정에 포함된다.
 
 ## 문법

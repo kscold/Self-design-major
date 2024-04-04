@@ -18,8 +18,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "c955e4548e9e14a5",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "React.js/데이터 바인딩.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -85,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "React.js/프래그먼트(Fragment).md",
+                "file": "React.js/데이터 바인딩.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "React.js/프래그먼트(Fragment).md",
+                "file": "React.js/데이터 바인딩.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "React.js/프래그먼트(Fragment).md"
+                "file": "React.js/데이터 바인딩.md"
               }
             }
           }
@@ -146,13 +159,24 @@
       "command-palette:명령어 팔레트 열기": false
     }
   },
-  "active": "9b63a1c224ad510b",
+  "active": "c955e4548e9e14a5",
   "lastOpenFiles": [
+    "HTML/HTML(Hyper Text Markup Language).md",
+    "React.js/데이터 바인딩.md",
+    "React.js/MPA(Multiple Page Application).md",
+    "React.js/Virtual DOM.md",
+    "React.js/useEffect().md",
+    "HTML/<input>.md",
+    "React.js/JSX.md",
+    "React.js/BOM(Browser Object Model).md",
+    "React.js/컴포넌트(Component).md",
+    "React.js/클래스형 컴포넌트(Class Component).md",
+    "React.js/함수형 컴포넌트(Functional Component).md",
+    "React.js/public 폴더.md",
+    "React.js/프래그먼트(Fragment).md",
     "JavaScript/확산 연산자(spread operator).md",
     "JavaScript/얕은 복사.md",
-    "React.js/프래그먼트(Fragment).md",
     "React.js/createElement().md",
-    "React.js/JSX.md",
     "JavaScript/참조 타입(Reference Type).md",
     "JavaScript/깊은 복사(Deep Copy).md",
     "JavaScript/localStorage.md",
@@ -163,18 +187,7 @@
     "JavaScript/리터럴(literal).md",
     "JavaScript/slice().md",
     "JavaScript/2.md",
-    "JavaScript/컴포넌트(component).md",
-    "컴포넌트(component).md",
     "image/Pasted image 20240402174940.png",
-    "JavaScript/map().md",
-    "JavaScript/Map.md",
-    "JavaScript/findIndex().md",
-    "JavaScript/객체(Object).md",
-    "JavaScript/push().md",
-    "HTML/<form>.md",
-    "HTML/<input>.md",
-    "JavaScript/클래스(Class).md",
-    "JavaScript/속성(Property).md",
     "image/Pasted image 20240330180401.png",
     "image/Pasted image 20240330180142.png",
     "image/Pasted image 20240328235448.png",
