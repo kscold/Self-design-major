@@ -5,7 +5,7 @@
 - 항상 html을 요구할 필요는 없다.
 - [[서버(Server)]]가 이해하기 쉬운 주소가 좋다.
 
-- [[HTTP]] 요청 메서드를 사용한다.
+- [[HTTP(Hyper Tranfer Protocol)]] 요청 메서드를 사용한다.
 
 ## RESTful
 

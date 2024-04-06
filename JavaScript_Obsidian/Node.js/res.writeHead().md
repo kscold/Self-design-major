@@ -1,4 +1,4 @@
-- [[노드(Node.js)]]에서 writeHead()는 [[HTTP]] response의 header를 설정하기 위한 [[HTTP]] [[모듈(Module)]]의 [[메서드(Method)]]이며 두 개의 인자를 받는다.
+- [[노드(Node.js)]]에서 writeHead()는 [[HTTP(Hyper Tranfer Protocol)]] response의 header를 설정하기 위한 [[HTTP(Hyper Tranfer Protocol)]] [[모듈(Module)]]의 [[메서드(Method)]]이며 두 개의 인자를 받는다.
 
 
 ## 문법

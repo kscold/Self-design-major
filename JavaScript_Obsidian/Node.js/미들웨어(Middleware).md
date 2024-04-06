@@ -1,19 +1,22 @@
+- [[노드(Node.js)]]의 [[express]] 또는 koa의 미들웨어(Middleware)는 [[HTTP(Hyper Tranfer Protocol)]] 요청이 들어온 순간부터 순차적으로 시작이 된다.
+- 미들웨어는 [[HTTP(Hyper Tranfer Protocol)]] 요청과 응답 [[객체(Object)]]를 처리하거나, 다음 미들웨어를 실행할 수 있다.
 
-- Express.js 또는 koa.js의 미들웨어는 HTTP 요청이 들어온 순간부터 순차적으로 시작이 된다.
-- 미들웨어는 HTTP 요청과 응답 객체를 처리하거나, 다음 미들웨어를 실행할 수 있다.
-- HTTP 응답이 마무리될 때까지 미들웨어 동작 사이클이 실행된다.
+- [[HTTP(Hyper Tranfer Protocol)]] 응답이 마무리될 때까지 미들웨어 동작 사이클이 실행된다.
 
-##  Route Handler
+## Route Handler
 
-- Route Handler도 미들웨어의 한 종류이다. 라우팅 함수(get, post, put, delete 등)에 적용된 미들웨어이다.
+- Route Handler도 미들웨어의 한 종류이다.
+
+- 라우팅 함수(get, post, put, delete 등)에 적용된 미들웨어이다.
 - 일반적인 미들웨어와는 다르게 path parameter를 사용할 수 있다.
 
-## 미들웨어의 작성법
+## 미들웨어의 사용법
 
-- req, res, next를 가진 함수를 작성하면 해당 함수는 미들웨어로 동작할 수 있다.
-- [[req]] : HTTP 요청을 처리하는 객체(request)
-- [[res]] : HTTP 응답을 처리하는 객체(response)
-- next : 다음 미들웨어를 실행하는 함수
+- req, res, next를 [[매개변수(parameter)]]로  가지는 [[콜백 함수(Callback Function)]]를 작성하면 해당 [[함수(Function)]]는 미들웨어로 동작할 수 있다.
+
+- [[res]]는 [[HTTP(Hyper Tranfer Protocol)]] 요청을 처리하는 [[객체(Object)]](request)이다.
+- [[req]]는[[HTTP(Hyper Tranfer Protocol)]] 응답을 처리하는 [[객체(Object)]](response)이다.
+- next는 다음 미들웨어를 실행하는 [[함수(Function)]]이다.
 
 ```jsx
 const logger = (req, res, next) => {
@@ -31,23 +34,15 @@ const auth = (req, res, next) => {
 ```
 
 - req, res, next를 인자로 갖는 함수를 작성하면 미들웨어가 된다.
+
 - req, res 객체를 통해 HTTP 요청과 응답을 처리하거나 next 함수를 통해 다음 미들웨어를 호출해야 한다.
+
 - next() 함수가 호출되지 않으면 미들웨어 사이클이 멈추기 때문에 주의해야 된다.
+
 - 미들웨어는 적용되는 위치에 따라서 애플리케이션 미들웨어, 라우터 미들웨어, 오류처리 미들웨어로 분류가 가능하다.
 - 필요한 동작 방식에 따라 미들웨어를 적용할 위치를 결정해야 된다.
 
 
-## req, res의 객체의 매소드
-###  **req** 
-
-- **req.app** - app 객체에 접근할 수 있다. ex) req.app.get('port')
-- **req.body** - body-parser 미들웨어가 만드는 요청의 본문을 해석한 객체
-- **req.cookies** - cookie-parser 미들웨어가 만드는 요청의 쿠키를 해석한 객체
-- **req.ip** - 요청의 ip 주소
-- **req.params** - 라우트 매개변수에 대한 정보가 담긴 객체
-- **req.query** - 쿼리스트링에 대한 정보가 담긴 객체
-- **req.signedCookies** - 서명된 쿠키들
-- **req.get(헤더 이름)** - 헤더의 값
 ## 애플리케이션 미들웨어
 
 ```js

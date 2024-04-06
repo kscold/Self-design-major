@@ -1,12 +1,12 @@
-- [[노드(Node.js)]]의 write()는 추가 프레임워크 express 없이,기본 [[모듈(Module)]]인 [[HTTP]]만으로 가능한 기초 전송 함수이다.
+- [[노드(Node.js)]]의 write()는 추가 프레임워크 [[express]] 없이,기본 [[모듈(Module)]]인 [[HTTP(Hyper Tranfer Protocol)]]만으로 가능한 기초 전송 [[메서드(Method)]]이다.
 
 - 특징으로는 여러 번 보낼 수 있다.
 - 즉, 호출할 수 있다.
 
 - 하지만 장점이자 단점으로 head 와 전송을 끝낸다는
-- [[end()]]함수를 직접 지정 해줘야 한다는 점이 있다.
+- [[res.end()]] [[메서드(Method)]]를 직접 지정 해줘야 한다는 점이 있다.
 
-- [[writeHead()]] [[메서드(Method)]]를 통해 header 설정을 할 수 있다.
+- [[res.writeHead()]] [[메서드(Method)]]를 통해 header 설정을 할 수 있다.
 
 ## 예시
 

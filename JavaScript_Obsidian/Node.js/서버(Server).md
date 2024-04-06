@@ -2,12 +2,12 @@
 
 - 요청과 응답은 이벤트 방식이다. 
 - 요청이 왔을 때 어떤 작업을 수행할지 [[이벤트(event)]] 리스너를 미리 등록해두어야 한다.
-- [[웹(web)]] 브라우저에서 요청을 처리하기 위해서 [[HTTP]] 서버가 있어야 한다.
+- [[웹(web)]] 브라우저에서 요청을 처리하기 위해서 [[HTTP(Hyper Tranfer Protocol)]] 서버가 있어야 한다.
 
 
 ## 요청과 응답
 
-- [[HTTP]] [[모듈(Module)]]의 [[createServer()]] [[메서드(Method)]]를 사용해보자.
+- [[HTTP(Hyper Tranfer Protocol)]] [[모듈(Module)]]의 [[http.createServer()]] [[메서드(Method)]]를 사용해보자.
 
 ```js
 const http = require('http');
@@ -38,7 +38,7 @@ http.createServer((req, res) => {
 
 - 리눅스와 맥에서는 1024번 이하의 포트에 연결할 때 관리자 권한이 필요하다. (sudo node server)
 
-- [[createServer()]] 뒤에 [[listen()]] [[메서드(Method)]]를 붙인다. 
+- [[http.createServer()]] 뒤에 [[listen()]] [[메서드(Method)]]를 붙인다. 
 - 인자로 공개할 포트번호와 [[콜백 함수(Callback Function)]]을 넣어준다.
 
 - 즉 8080포트로 요청을 기다리고 있는 상태이다.

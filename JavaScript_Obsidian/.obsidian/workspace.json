@@ -8,31 +8,18 @@
         "type": "tabs",
         "children": [
           {
-            "id": "9b63a1c224ad510b",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "React.js/프래그먼트(Fragment).md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
             "id": "c955e4548e9e14a5",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Node.js/app.set().md",
+                "file": "Node.js/노드(Node.js).md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -98,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Node.js/app.set().md",
+                "file": "Node.js/노드(Node.js).md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Node.js/app.set().md",
+                "file": "Node.js/노드(Node.js).md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Node.js/app.set().md"
+                "file": "Node.js/노드(Node.js).md"
               }
             }
           }
@@ -161,32 +148,32 @@
   },
   "active": "c955e4548e9e14a5",
   "lastOpenFiles": [
-    "Node.js/app.get().md",
-    "Node.js/CRUD.md",
-    "Node.js/koa-router.md",
-    "Node.js/app.set().md",
-    "React.js/데이터 바인딩.md",
+    "Node.js/미들웨어(Middleware).md",
     "Node.js/express.md",
-    "Node.js/ES module.md",
-    "HTML/HTML(Hyper Text Markup Language).md",
-    "React.js/MPA(Multiple Page Application).md",
-    "React.js/Virtual DOM.md",
-    "React.js/useEffect().md",
-    "HTML/<input>.md",
-    "React.js/JSX.md",
-    "React.js/BOM(Browser Object Model).md",
-    "React.js/컴포넌트(Component).md",
-    "React.js/클래스형 컴포넌트(Class Component).md",
-    "React.js/함수형 컴포넌트(Functional Component).md",
-    "React.js/public 폴더.md",
-    "React.js/프래그먼트(Fragment).md",
-    "JavaScript/확산 연산자(spread operator).md",
-    "JavaScript/얕은 복사.md",
-    "React.js/createElement().md",
-    "JavaScript/참조 타입(Reference Type).md",
-    "JavaScript/깊은 복사(Deep Copy).md",
-    "JavaScript/localStorage.md",
-    "JavaScript/for.md",
+    "Node.js/req.md",
+    "Node.js/res.md",
+    "Node.js/req.body.md",
+    "Node.js/req.params.md",
+    "Node.js/ctx.md",
+    "Node.js/모듈(Module).md",
+    "Node.js/res.send().md",
+    "res.json().md",
+    "JavaScript/객체(Object).md",
+    "Node.js/쿠키(Cookie).md",
+    "Node.js/http.md",
+    "Node.js/res.end().md",
+    "Node.js/res.write().md",
+    "Node.js/res.writeHead().md",
+    "Node.js/listen().md",
+    "JavaScript/HTTP(Hyper Tranfer Protocol).md",
+    "Node.js/http.createServer().md",
+    "Node.js/노드(Node.js).md",
+    "Node.js/res.sendFile().md",
+    "Node.js/서버(Server).md",
+    "Node.js/path.md",
+    "JavaScript/버퍼(Buffer).md",
+    "Node.js/Top-level await.md",
+    "Node.js/app.set().md",
     "image/Pasted image 20240402174940.png",
     "image/Pasted image 20240330180401.png",
     "image/Pasted image 20240330180142.png",
