@@ -1,7 +1,9 @@
-- app = [[express()]] 혹은 app = require('Koa')로 연결을 만들어 사용한다.
+- [[express]]나 koa 라이브러리에서 const app = require('express') 혹은 require('Koa')로 연결을 만들어 사용한다.
 
-- [[CRUD]]의 중의 [[메서드(Method)]]인 Get 방식을 이용하여 주소창에서 데이터를 전달하는 방식이다.
-- 이후 백엔드 API를 통해 Response를 받는데 그 과정을 만들기 위해 사용하는 [[메서드(Method)]]이다.
+- [[HTTP]] [[메서드(Method)]]중에서 Get 방식을 이용하여 주소창에서 데이터를 전달하는 방식이다.
+- 즉, 백엔드 API를 통해 Response를 받는데 그 과정을 만들기 위해 사용하는 [[메서드(Method)]]이다.
+
+- 또한 [[app.set()]]으로 설정한 [[속성(Property)]]을 받을 수 있는 [[메서드(Method)]]이기도 하다.
 
 ## 문법
 

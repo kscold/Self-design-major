@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "React.js/데이터 바인딩.md",
+                "file": "Node.js/app.set().md",
                 "mode": "source",
                 "source": false
               }
@@ -98,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "React.js/데이터 바인딩.md",
+                "file": "Node.js/app.set().md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "React.js/데이터 바인딩.md",
+                "file": "Node.js/app.set().md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "React.js/데이터 바인딩.md"
+                "file": "Node.js/app.set().md"
               }
             }
           }
@@ -161,8 +161,14 @@
   },
   "active": "c955e4548e9e14a5",
   "lastOpenFiles": [
-    "HTML/HTML(Hyper Text Markup Language).md",
+    "Node.js/app.get().md",
+    "Node.js/CRUD.md",
+    "Node.js/koa-router.md",
+    "Node.js/app.set().md",
     "React.js/데이터 바인딩.md",
+    "Node.js/express.md",
+    "Node.js/ES module.md",
+    "HTML/HTML(Hyper Text Markup Language).md",
     "React.js/MPA(Multiple Page Application).md",
     "React.js/Virtual DOM.md",
     "React.js/useEffect().md",
@@ -181,12 +187,6 @@
     "JavaScript/깊은 복사(Deep Copy).md",
     "JavaScript/localStorage.md",
     "JavaScript/for.md",
-    "JavaScript/JSON(Java Script Object Notation).md",
-    "JavaScript/JSON.stringify().md",
-    "JavaScript/stringify().md",
-    "JavaScript/리터럴(literal).md",
-    "JavaScript/slice().md",
-    "JavaScript/2.md",
     "image/Pasted image 20240402174940.png",
     "image/Pasted image 20240330180401.png",
     "image/Pasted image 20240330180142.png",
