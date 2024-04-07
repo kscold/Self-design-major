@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Node.js/Module/Express/express.static().md",
+                "file": "Node.js/Module/Express/express-session.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Node.js/Module/Express/express.static().md",
+                "file": "Node.js/Module/Express/express-session.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Node.js/Module/Express/express.static().md",
+                "file": "Node.js/Module/Express/express-session.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Node.js/Module/Express/express.static().md"
+                "file": "Node.js/Module/Express/express-session.md"
               }
             }
           }
@@ -156,8 +156,17 @@
   },
   "active": "1426bb13e79a12e5",
   "lastOpenFiles": [
-    "Node.js/Module/Express/next().md",
+    "Node.js/Module/Express/app.set().md",
+    "Node.js/Module/Express/express-session.md",
+    "세션(Session).md",
+    "Node.js/쿠키(Cookie).md",
     "Node.js/Module/Express/express.static().md",
+    "Node.js/ctx.md",
+    "Node.js/app.set().md",
+    "Node.js/app.get().md",
+    "Node.js/app.use().md",
+    "JavaScript/Parsing.md",
+    "Node.js/Module/Express/next().md",
     "React.js/쿼리스트링(Querystring).md",
     "Node.js/Module/url.md",
     "Node.js/Module/qs.md",
@@ -173,16 +182,7 @@
     "Node.js/Cluster.md",
     "Node.js/ES module.md",
     "Node.js/export.md",
-    "Node.js/CRUD.md",
-    "Node.js/JWT.md",
-    "Node.js/Module/util.md",
-    "Node.js/parse().md",
-    "Node.js/Module/http/http.createServer().md",
-    "Node.js/Module/http/on().md",
-    "Node.js/Module/koa/ctx.md",
-    "Node.js/Module/http/res.end().md",
     "Node.js/Module/koa",
-    "Node.js/Module/http/listen().md",
     "Node.js/Module/http",
     "Node.js/Module/Express",
     "Node.js/Module",

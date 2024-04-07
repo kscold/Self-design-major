@@ -2,6 +2,7 @@ const express = require('express');
 const path = require('path');
 const morgan = require('morgan');
 const cookieParser = require('cookie-parser');
+const session = require('express-session');
 
 const app = express();
 
@@ -9,10 +10,30 @@ app.set('port', process.env.PORT || 8080);
 
 app.use(morgan('dev'));
 app.use(cookieParser('zerochpassword'));
+
+app.use(
+    session({
+        // 세션일 때 항상 세션쿠키를 사용하기 때문
+        resave: false,
+        saveUninitialized: false,
+        secret: 'zerochpassword',
+        cookie: {
+            httpOnly: true, // XSS 공격을 막기 위해 true로 설정
+        },
+        name: 'connect.sid',
+    })
+); // 로그인한 사람까지만 / 경로의 페이지를 보여주고 싶을 때 순서
+
+app.use('/', (req, res, next) => {
+    if (req.session.id) {
+        express.static({ __dirname: 'public' });
+    } else {
+        next();
+    }
+});
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-
-app.use('/', express.static({ __dirname: 'public' }));
 
 app.get('/', (req, res, next) => {
     // 쿠키 설정
@@ -31,6 +52,8 @@ app.get('/', (req, res, next) => {
     // });
 
     // req.body. 를 통해 객체를 접근할 수 있음
+
+    req.session.id = 'hello'; // 사용자에 대한 고유한 세션이 됨
 
     res.sendFile(path.join(__dirname, 'index.html'));
 });
