@@ -4,23 +4,23 @@
     "type": "split",
     "children": [
       {
-        "id": "422f518949d18e1d",
+        "id": "604f136700d3db1f",
         "type": "tabs",
         "children": [
           {
-            "id": "c955e4548e9e14a5",
+            "id": "1426bb13e79a12e5",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Node.js/next().md",
+                "file": "Node.js/Module/Express/express.static().md",
                 "mode": "source",
                 "source": false
               }
             }
           },
           {
-            "id": "904738debe7504e0",
+            "id": "141fec4a5f5ff64f",
             "type": "leaf",
             "state": {
               "type": "graph",
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Node.js/next().md",
+                "file": "Node.js/Module/Express/express.static().md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Node.js/next().md",
+                "file": "Node.js/Module/Express/express.static().md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Node.js/next().md"
+                "file": "Node.js/Module/Express/express.static().md"
               }
             }
           }
@@ -154,40 +154,43 @@
       "command-palette:명령어 팔레트 열기": false
     }
   },
-  "active": "c955e4548e9e14a5",
+  "active": "1426bb13e79a12e5",
   "lastOpenFiles": [
-    "Node.js/미들웨어(Middleware).md",
-    "Node.js/next().md",
-    "Node.js/에러 미들웨어(Error Middleware).md",
+    "Node.js/Module/Express/next().md",
+    "Node.js/Module/Express/express.static().md",
+    "React.js/쿼리스트링(Querystring).md",
+    "Node.js/Module/url.md",
+    "Node.js/Module/qs.md",
+    "JavaScript/History API.md",
+    "Node.js/Module/Express/req.body.md",
+    "Node.js/Module/Express/body-parser.md",
+    "Node.js/Module/Express/res.json().md",
+    "Node.js/Module/Express/express.json().md",
+    "Node.js/Module/http/http.md",
+    "Node.js/Module/Express/express.md",
     "Node.js/에러(error).md",
-    "res.json().md",
-    "Node.js/서버(Server).md",
-    "Node.js/res.send().md",
-    "JavaScript/JSON.stringify().md",
-    "Node.js/app.use().md",
-    "JavaScript/메서드(Method).md",
-    "Node.js/URLSearchParams.md",
-    "Node.js/노드(Node.js).md",
-    "Node.js/express.md",
-    "Node.js/req.md",
-    "Node.js/res.md",
-    "Node.js/req.body.md",
-    "Node.js/req.params.md",
-    "Node.js/ctx.md",
-    "Node.js/모듈(Module).md",
-    "JavaScript/객체(Object).md",
-    "Node.js/쿠키(Cookie).md",
-    "Node.js/http.md",
-    "Node.js/res.end().md",
-    "Node.js/res.write().md",
-    "Node.js/res.writeHead().md",
-    "Node.js/listen().md",
+    "Node.js/전역 객체(Global Object).md",
+    "Node.js/Cluster.md",
+    "Node.js/ES module.md",
+    "Node.js/export.md",
+    "Node.js/CRUD.md",
+    "Node.js/JWT.md",
+    "Node.js/Module/util.md",
+    "Node.js/parse().md",
+    "Node.js/Module/http/http.createServer().md",
+    "Node.js/Module/http/on().md",
+    "Node.js/Module/koa/ctx.md",
+    "Node.js/Module/http/res.end().md",
+    "Node.js/Module/koa",
+    "Node.js/Module/http/listen().md",
+    "Node.js/Module/http",
+    "Node.js/Module/Express",
+    "Node.js/Module",
     "image/Pasted image 20240402174940.png",
     "image/Pasted image 20240330180401.png",
     "image/Pasted image 20240330180142.png",
     "image/Pasted image 20240328235448.png",
     "image/Pasted image 20240323212657.png",
-    "Node.js/무제 폴더",
     "image/Pasted image 20240311030142.png",
     "image/Pasted image 20240311025219.png",
     "image/Pasted image 20240310030355.png",
@@ -198,9 +201,6 @@
     "React.js/Next.js",
     "CSS/SCSS",
     "React.js/Libaray/Redux",
-    "React.js/Libaray",
-    "HTML/property",
-    "async",
-    "TypeScript"
+    "React.js/Libaray"
   ]
 }

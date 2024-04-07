@@ -6,6 +6,7 @@
 - [[React Router]]에서 쿼리스트링을 사용할 때는 [[URL 파라미터]]와 달리 Route [[컴포넌트(Component)]]를 사용할 때 별도로 설정해야 되는 것은 없다.
 - [[React Router]]에서 [[쿼리스트링(Querystring)]]을 사용할려면 [[useLocation()]]을 이용한다.
 
+
 ## URL 형식
 
 ```
