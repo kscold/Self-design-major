@@ -90,7 +90,7 @@ const profiles = [
 - 일반적으로 API를 통해 데이터를 수신하거나 보낼 때 브라우저에서 JSON으로 작업하는 경우가 많다.
 
 - [[fetch()]] 함수 안에서 [[json()]] 메서드를 이용하여 JSON 구문 분석하는 방식이다.
-- 반대로 문자열를 JSON으로 변환하여 API 데이터로 보내고 싶다면 [[stringify()]] 메서드를 사용하면 된다.
+- 반대로 문자열를 JSON으로 변환하여 API 데이터로 보내고 싶다면 [[JSON.stringify()]] 메서드를 사용하면 된다.
 
 - 이렇게 가져온 JSON을 [[fetch()]]로 구문분석하고 JSON.stringify()를 사용해 자바스크립트 객체 리터럴을 JSON 문자열로 변환할 수 있다.
 ### 브라우저에서 로컬 JSON 파일 작업하기
@@ -340,7 +340,7 @@ Chuck Norris's keyboard doesn't have a Ctrl key because nothing controls Chuck N
 
 또한 `fs.readFile()`이 비동기적으로 작동하지만, 작업이 완료되면 읽히는 전체 파일을 메모리로 로딩한다는 점은 `fs.readFile()`과 같습니다. 대용량 파일이 있는 경우 대신 [Node.js 스트림(stream)](https://www.freecodecamp.org/news/node-js-streams-everything-you-need-to-know-c9141306be93/)을 사용하는 것을 추천합니다.
 
-### Node.js에서 [[stringify()]]를 사용해 JSON 문자열로 변환하기
+### Node.js에서 [[JSON.stringify()]]를 사용해 JSON 문자열로 변환하기
 
 마지막으로, Node.js로 JSON을 구문분석하면 API 응답으로 JSON을 반환해야 할 수도 있습니다.
 

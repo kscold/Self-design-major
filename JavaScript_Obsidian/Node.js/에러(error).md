@@ -16,6 +16,21 @@ setInterval(() => {
 }, 1000);
 ```
 
+- [[express]]와 같은 [[모듈(Module)]]에서는 err를 [[매개변수(parameter)]] next에 넣어준다.
+
+```js
+app.use((req, res, next) => {
+	console.log('요청을 실행')
+	next()
+}, (req, res, next) => {
+	try {
+		console.log("에러")
+	} catch(err){
+		next(err); // next로 err 객체로 이동되도록 만듬
+	}
+})
+```
+
 
 ## [[콜백 함수(Callback Function)]]의 첫번째 [[매개변수(parameter)]]로 예외를 처리
 

@@ -179,7 +179,7 @@ document.write('<br/>');
 - localStorage 에는 문자열만 저장된다.
 - 따라서, localStorage에 객체나 배열를 저장하기 위해서는 [[객체(Object)]]를 문자열로 변환해서 저장해야 한다.
 
-- 여기서는 [[stringify()]] 함수를 사용하여 객체와 배열을 JSON 문자열로 변환했다.
+- 여기서는 [[JSON.stringify()]] 함수를 사용하여 객체와 배열을 JSON 문자열로 변환했다.
 - JSON 문자열을 localStorage에 저장했다.
 
 

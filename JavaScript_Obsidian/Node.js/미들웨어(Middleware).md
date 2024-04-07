@@ -16,20 +16,23 @@
 
 - [[res]]는 [[HTTP(Hyper Tranfer Protocol)]] 요청을 처리하는 [[객체(Object)]](request)이다.
 - [[req]]는[[HTTP(Hyper Tranfer Protocol)]] 응답을 처리하는 [[객체(Object)]](response)이다.
-- next는 다음 미들웨어를 실행하는 [[함수(Function)]]이다.
+
+- [[next()]]는 다음 미들웨어를 실행하는 [[함수(Function)]]이다.
+- next의 경우 인자가 있으면 그 미들웨어로 이동한다.
+- 따라서 [[에러(error)]] [[객체(Object)]]을 넣어 바로 [[에러 미들웨어(Error Middleware)]]로 이동시키도록 사용한다.
 
 ```jsx
 const logger = (req, res, next) => {
-  console.log(`Request ${req.path}`); // 
-  next();
+	console.log(`Request ${req.path}`); 
+	next();
 };
  
 const auth = (req, res, next) => {
-  if (!isAdmin(req)) {
-    next(new Error("Not Authorized"));
-    return;
-  }
-  next();
+	if (!isAdmin(req)) {
+	    next(new Error("Not Authorized"));
+		return;
+	}
+	next();
 };
 ```
 

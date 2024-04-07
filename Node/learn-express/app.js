@@ -26,6 +26,7 @@ app.use(
 
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'index.html'));
+    // res.json({ hello: 'zerocho' });
 });
 
 app.post('/', (req, res) => {
@@ -46,6 +47,7 @@ app.use((req, res, next) => {
 });
 
 app.use((err, req, res, next) => {
+    // 에러처리 미들웨어
     console.error(err);
     res.send('에러났지롱. 근데 안알려주지롱');
 });

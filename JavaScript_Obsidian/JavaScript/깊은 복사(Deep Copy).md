@@ -47,9 +47,9 @@ console.log(b); // { one: 3, two: 2 } 출력
 
 - 복사를 하는 목적은 기존 객체의 값만 복사본으로 가져와 별도로 활용하기 위함이 대부분이라고 생각한다.
 
-### JSON.[[parse()]] && JSON.[[stringify()]] 
+### JSON.[[parse()]] && JSON.[[JSON.stringify()]] 
 
- - JSON.[[stringify()]]는 [[객체(Object)]]를 [[JSON(Java Script Object Notation)]] 문자열로 변환하는데 이 과정에서 원본 [[객체(Object)]]와의 참조가 모두 끊어진다.
+ - JSON.[[JSON.stringify()]]는 [[객체(Object)]]를 [[JSON(Java Script Object Notation)]] 문자열로 변환하는데 이 과정에서 원본 [[객체(Object)]]와의 참조가 모두 끊어진다.
 
 - [[객체(Object)]]를 [[JSON(Java Script Object Notation)]] 문자열로 변환 후, JSON.[[parse()]]를 이용해 다시 원래 객체(자바스크립트 객체)로 만들어준다.
 
