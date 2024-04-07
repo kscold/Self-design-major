@@ -13,10 +13,18 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Node.js/노드(Node.js).md",
+                "file": "Node.js/res.send().md",
                 "mode": "source",
                 "source": false
               }
+            }
+          },
+          {
+            "id": "904738debe7504e0",
+            "type": "leaf",
+            "state": {
+              "type": "graph",
+              "state": {}
             }
           }
         ]
@@ -85,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Node.js/노드(Node.js).md",
+                "file": "Node.js/res.send().md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Node.js/노드(Node.js).md",
+                "file": "Node.js/res.send().md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Node.js/노드(Node.js).md"
+                "file": "Node.js/res.send().md"
               }
             }
           }
@@ -148,6 +156,12 @@
   },
   "active": "c955e4548e9e14a5",
   "lastOpenFiles": [
+    "Node.js/에러 미들웨어(Error Middleware).md",
+    "Node.js/에러(error).md",
+    "Node.js/app.use().md",
+    "JavaScript/메서드(Method).md",
+    "Node.js/URLSearchParams.md",
+    "Node.js/노드(Node.js).md",
     "Node.js/미들웨어(Middleware).md",
     "Node.js/express.md",
     "Node.js/req.md",
@@ -167,13 +181,7 @@
     "Node.js/listen().md",
     "JavaScript/HTTP(Hyper Tranfer Protocol).md",
     "Node.js/http.createServer().md",
-    "Node.js/노드(Node.js).md",
     "Node.js/res.sendFile().md",
-    "Node.js/서버(Server).md",
-    "Node.js/path.md",
-    "JavaScript/버퍼(Buffer).md",
-    "Node.js/Top-level await.md",
-    "Node.js/app.set().md",
     "image/Pasted image 20240402174940.png",
     "image/Pasted image 20240330180401.png",
     "image/Pasted image 20240330180142.png",

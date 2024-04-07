@@ -1,7 +1,8 @@
 - res.send()는 [[노드(Node.js)]]의 [[express]] 라이브러리에서 response 보내는 역할을 한다.
 - 즉, 기본 응답 [[객체(Object)]]라고 생각하면 된다.
 
-- 원래 기본적으로 서버에서 response처리를 할 때 Content-Type을 지정해주어야 한다.
+- 원래 기본적으로 [[노드(Node.js)]] [[서버(Server)]]에서 [[http]] [[모듈(Module)]]에서 response처리를 할 때 Content-Type을 지정해주어야 한다.
+- 그러나 res.send()의 경우 [[res.writeHead()]]와 [[res.end()]]가 합쳐져 있는 형태이기 때문에 자동적으로 타입에 맞춰서 설정되고 반환해준다.
 
 - res.send는 우리가 어떤 데이터를 보내는지 파악을 해서 이에 알맞게 Contnet-Type을 지정해준다. 
 - 이는 [[버퍼(Buffer)]],String, [[객체(Object)]], [[배열(Array)]] 일 수 있다.
@@ -22,7 +23,16 @@ app.get("/api/login", (req, res) => {
 - 이때 res는 [[노드(Node.js)]]만의 업그레이드된 response object이다.
 
 
+## res.status(번호).send()
+
+- res.status(200).send()이 기본적으로 생략되어 있는 것이기 때문에 만약 일반적인 [[미들웨어(Middleware)]]를 통해 [[에러 미들웨어(Error Middleware)]]와 비슷하게 동작하게 하기 위해서 res.stauts(404).send()와 같이 바꿔줄 수 있다.
+- 추가적으로 보안적으로 힌트가 될 수도 있기 때문에 실무에서는 200대로 전부 통일하거나 400대만 사용하는 경우가 많다.
+
+
 ## res.send(), res.json(), res.end()의 차이
+
+- [[express]]에서 한 라우트(경로)에서 2번 이상의 res.send(), res.json(), res.end()가 중복되면 ERR_HTTP_HEADERS_SENT 오류가 난다.
+- 즉, 하나의 [[res]] [[객체(Object)]]의 응답을 해야 한다.
 
 ### res.send()
 
