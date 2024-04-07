@@ -1,32 +1,38 @@
 const express = require('express');
 const path = require('path');
+const morgan = require('morgan');
+const cookieParser = require('cookie-parser');
 
 const app = express();
 
 app.set('port', process.env.PORT || 8080);
 
-// next() 메서드를 이용해서 순차적으로 실행
-app.use(
-    (req, res, next) => {
-        console.log('1 요청에 실행하고 싶어요');
-        next();
-    },
-    (req, res, next) => {
-        console.log('2 요청에 실행하고 싶어요');
-        next();
-    },
-    (req, res, next) => {
-        console.log('3 요청에 실행하고 싶어요');
-        next();
-    }
-    // (req, res, next) => {
-    //     throw new Error('에러가 났어요');
-    // }
-);
+app.use(morgan('dev'));
+app.use(cookieParser('zerochpassword'));
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
-app.get('/', (req, res) => {
+app.use('/', express.static({ __dirname: 'public' }));
+
+app.get('/', (req, res, next) => {
+    // 쿠키 설정
+    // req.cookies; // { mycookie: 'test' }
+    // req.signedCookies;
+
+    // res.cookie('name', encodeURIComponent(name), {
+    //     expires: new Date(),
+    //     httpOnly: true,
+    //     path: '/',
+    // });
+
+    // res.clearCookie('name', encodeURIComponent(name), {
+    //     httpOnly: true,
+    //     path: '/',
+    // });
+
+    // req.body. 를 통해 객체를 접근할 수 있음
+
     res.sendFile(path.join(__dirname, 'index.html'));
-    // res.json({ hello: 'zerocho' });
 });
 
 app.post('/', (req, res) => {
