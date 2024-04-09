@@ -16,7 +16,7 @@
 - 
 ```js
 function greeting() {
-  console.log('Hello World');
+	console.log('Hello World');
 }
 
 // 함수 호출하기

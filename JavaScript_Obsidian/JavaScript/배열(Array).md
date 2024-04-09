@@ -57,8 +57,8 @@ array.join(':'); // "1:2:3"
 
 ```jsx
 var array = [1,2,3];
-array = array.concat(4,5); // [1,2,3,4,5]
-array.concat([6,7]); // [1,2,3,4,5,6,7]
+array = array.concat(4,5); // [1, 2, 3, 4, 5]
+array.concat([6,7]); // [1, 2, 3, 4, 5, 6, 7]
 ```
 
 - 배열을 합친 새 배열을 반환한다.
@@ -78,8 +78,8 @@ array.reverse(); // [4, 3, 2, 1]
 
 ```jsx
 var array = [1,2,3];
-array.push(5); // 4
-array; // [1,2,3,5]
+array.push(5); 
+array; // [1, 2, 3, 5]
 array.pop(); // 5
 ```
 
@@ -135,21 +135,27 @@ array; // [1,2,5,4];
 ```jsx
 var array = [1,2,3];
 array.map(function(x) {
-  return x+1;
+	return x+1;
 }); // [2,3,4]
 array.forEach(function(x, i) {
-  alert(x + ':' + i);
+	alert(x + ':' + i);
 });
 ```
 
-배열의 항목들을 반복하면서 조작하는 함수입니다. map과 forEach의 매개변수로 함수가 들어가는데 함수 안에 배열의 항목들을 어떻게 조작할 지 적어주면 됩니다. 예시에서는 각각 1을 더하는 것과 alert하는 조작을 했습니다. map과 forEach의 차이점은 map은 바뀐 새 배열을 반환하지만, forEach는 반환하지 않습니다. 따라서 forEach보다는 map이 활용성이 더 높습니다.
+- 배열의 항목들을 반복하면서 조작하는 함수이다.
+- map과 forEach의 매개변수로 함수가 들어가는데 함수 안에 배열의 항목들을 어떻게 조작할 지 적어주면 된다.
+- 위의 예시에서는 각각 1을 더하는 것과 alert하는 조작을 했다.
+
+- map과 forEach의 차이점은 map은 바뀐 새 배열을 반환하지만, forEach는 반환하지 않는다.
+- 따라서 forEach보다는 map이 활용성이 더 높다.
+- 주로 [[콜백 함수(Callback Function)]]를 사용한다.
 
 ### 배열.[[reduce()]] 매개변수(function(이전값, 현재) { 조건 }), 배열.reduceRight
 
 ```jsx
 var array = [1, 2, 3, 4, 5];
 array.reduce(function(prev, cur) {
-  return prev + cur;
+ return prev + cur;
 }); // 15
 ```
 
@@ -161,54 +167,72 @@ array.reduce(function(prev, cur) {
 - 간단히 말하면 조건에 따라, 1 + 2 + 3 + 4 + 5를 한 것이다. 
 - 오른쪽부터 줄여가고 싶으면 reduceRight 함수를 사용하면 된다.
 
-### **배열.filter(function(항목) { 조건 })**
+### 배열.[[filter()]], 매개변수(function(항목) { 조건 })
 
-```jsx
-var array = [1,2,3,4,5];
+```js
+var array = [1, 2, 3, 4, 5];
+
 array.filter(function(x) {
-  return x % 2 === 0;
-}); // [2,4]
+	return x % 2 === 0;
+}); // [2, 4]
 ```
 
-필터링한다는 말을 들어보셨죠? 특정 조건에 해당하는 배열만을 걸러내 새 배열로 만듭니다. 역시 매개변수로 있는 함수 안에 조건을 적으면 됩니다. 여기서는 조건이 항목을 2로 나눈 나머지가 0인 것(짝수)만 걸러내라고 되어있네요.
+- 특정 조건에 해당하는 배열만을 걸러내 새 배열로 만든다.
+- 역시 매개변수로 있는 함수 안에 조건을 적으면 된다.
+- 위의 코드에서는 조건이 항목을 2로 나눈 나머지가 0인 것(짝수)만 걸러내라고 되어있다.
+- 주로 [[콜백 함수(Callback Function)]]를 사용한다.
 
 ### 배열.sort(function(이전 값, 다음 값) { 조건 })
 
 ```jsx
-var array = [5,2,3,4,1];
-array.sort(function(x,y) {
-  return x - y;
-}); // [1,2,3,4,5]
+var array = [5, 2, 3, 4, 1];
+
+array.sort(function(x, y) {
+	return x - y;
+}); // [1, 2, 3, 4, 5]
 ```
 
-배열을 특정 조건에 따라 정렬합니다. 조금 복잡합니다.
+- 배열을 특정 조건에 따라 정렬한다.
 
 ### 배열.indexOf(찾을 것), 배열.lastIndexOf(찾을 것)
 
-문자열처럼 배열에서 찾습니다. 여러 개가 있더라도 처음으로 찾은 위치만을 알려줍니다. lastIndexOf는 뒤에서부터 찾습니다.
+- 문자열처럼 배열에서 찾는다.
+- 여러 개가 있더라도 처음으로 찾은 위치만을 알려준다.
+- lastIndexOf는 뒤에서부터 찾는다.
 
 ### 배열.every(function(항목) { 조건 }), 배열.some(function(항목) { 조건 })
 
 ```jsx
 var array = [1, 3, 5, 7, 9];
+
 array.every(function(i) {
-  return i % 2 === 1;
+	return i % 2 === 1;
 }); // true
+
 array.every(function(i) {
-  return i < 9;
+	return i < 9;
 }); // false
+
 array.some(function(i) {
-  return i === 9;
+	return i === 9;
 }); // true
 ```
 
-최근에 추가된 함수인데 생각보다 유용해서 소개합니다. 각각 배열의 모든 항목 또는 일부 항목이 true면 true를 반환합니다. 즉 **every**는 모든 항목이 조건을 만족하면 true, **some**은 하나의 항목이라도 조건을 만족하면 true를 반환입니다. every의 첫 예는 array의 모든 값이 다 홀수이기 때문에 true가 됩니다. 하지만 그 다음 예는 `i < 9`를 다 만족하지는 않기 때문에 false가 되죠. some의 예시에서는 배열 요소 중 9인 게 하나 이상 있기 때문에 true를 반환합니다.
+- 최근에 추가된 함수이다. 
+- 각각 배열의 모든 항목 또는 일부 항목이 true면 true를 반환합니다.
+- 즉 every는 모든 항목이 조건을 만족하면 true, some은 하나의 항목이라도 조건을 만족하면 true를 반환이다.
+
+- every의 첫 예는 array의 모든 값이 다 홀수이기 때문에 true가 된다.
+- 하지만 그 다음 예는 `i < 9`를 다 만족하지는 않기 때문에 false가 된다.
+- some의 예시에서는 배열 요소 중 9인 게 하나 이상 있기 때문에 true를 반환한다.
 
 ### Array.isArray(값)
 
-```jsx
+```js
 Array.isArray('array?'); // false
 Array.isArray(['array?']); // true
 ```
 
-Array 객체 자체의 static 메소드입니다. 배열인지 아닌지 확인해주는 역할을 합니다. 생각보다 자주 쓰이니 기억해둡시다.
+- Array [[객체(Object)]] 자체의 static [[메서드(Method)]]이다.
+- 배열인지 아닌지 확인해주는 역할을 한다. 
+
