@@ -38,6 +38,7 @@ try {
     console.error('uploads 폴더가 없어 uploads 폴더를 생성합니다.');
     fs.mkdirSync('uploads');
 }
+
 const upload = multer({
     storage: multer.diskStorage({
         // 업로드한 파일을 어디에 저장할 것인지 설정
@@ -75,21 +76,26 @@ app.get('/upload', (req, res) => {
 // });
 
 // 여러개를 업로드할 때(이미지 선택을 여러개 할 때)
-app.post(
-    '/upload',
-    upload.fields(
-        { name: 'image1', limits: 5 }, // 최대 5까까지 한번에 올라감
-        { name: 'image2' },
-        { name: 'image3' }
-    ),
-    (req, res) => {
-        // 특정 라우터에서만 일어나기 때문에 upload.fields()(여러개)를 미들웨어처럼 적용
-        console.log(req.files.image1); // 따라서 files에 들어감
-        console.log(req.files.image2);
-        console.log(req.files.image3);
-        res.send('ok');
-    }
-);
+// app.post(
+//     '/upload',
+//     upload.fields(
+//         { name: 'image1', limits: 5 }, // 최대 5까까지 한번에 올라감
+//         { name: 'image2' },
+//         { name: 'image3' }
+//     ),
+//     (req, res) => {
+//         // 특정 라우터에서만 일어나기 때문에 upload.fields()(여러개)를 미들웨어처럼 적용
+//         console.log(req.files.image1); // 따라서 files에 들어감
+//         console.log(req.files.image2);
+//         console.log(req.files.image3);
+//         res.send('ok');
+//     }
+// );
+
+app.post('/upload', upload.none(), (req, res) => {
+    req.body.title;
+    res.send('ok');
+});
 
 app.get(
     '/',
