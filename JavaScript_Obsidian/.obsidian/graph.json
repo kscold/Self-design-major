@@ -1,6 +1,6 @@
 {
   "collapse-filter": false,
-  "search": "불변성",
+  "search": "",
   "showTags": false,
   "showAttachments": false,
   "hideUnresolved": false,
@@ -17,6 +17,6 @@
   "repelStrength": 10,
   "linkStrength": 1,
   "linkDistance": 250,
-  "scale": 0.9793622612313126,
-  "close": false
+  "scale": 1.2689033234359286,
+  "close": true
 }
