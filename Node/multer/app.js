@@ -1,11 +1,12 @@
+const dotenv = require('dotenv');
 const express = require('express');
 const morgan = require('morgan');
 const cookieParser = require('cookie-parser');
 const session = require('express-session');
-const dotenv = require('dotenv');
 const path = require('path');
 
-dotenv.config();
+dotenv.config(); // 실제사용하는 dotenv 모듈이 있다면 그 모듈보다 위에 올라가야함
+
 const app = express();
 app.set('port', process.env.PORT || 8080);
 
@@ -13,14 +14,14 @@ app.use(morgan('dev'));
 app.use('/', express.static(path.join(__dirname, 'public')));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
-app.use(cookieParser('zerochpassword'));
+app.use(cookieParser(process.env.COOKIE_SECRET));
 
 app.use(
     session({
         // 세션일 때 항상 세션쿠키를 사용하기 때문
         resave: false,
         saveUninitialized: false,
-        secret: 'zerochpassword',
+        secret: process.env.COOKIE_SECRET,
         cookie: {
             httpOnly: true, // XSS 공격을 막기 위해 true로 설정
         },
