@@ -55,8 +55,8 @@ exports.even = even;
 
 
 ## module.exports VS exports
-    
-- [[module.exports()]], exports 둘 다 모듈을 만들어 내보내는 방법이다.
+
+- module.exports(), exports 둘 다 모듈을 만들어 내보내는 방법이다.
 
 - module.exports가 원조이다.
 - exports는 일종의 축약형(shortcut)이다. 

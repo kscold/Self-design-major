@@ -10,3 +10,14 @@ app.use((err, req, res, next) => {
 	console.error(err);
 })
 ```
+
+
+## 404  미들웨어
+
+- 밑의 코드는 err [[미들웨어(Middleware)]]를 쓰지 않고 일반적인 [[미들웨어(Middleware)]]를 선언해서 404 경우를 대비한 라우터를 반드는 방법이다.
+
+```js
+app.use((req, res, next) =>{
+	res.status(404).send('Not Found');
+})
+```
