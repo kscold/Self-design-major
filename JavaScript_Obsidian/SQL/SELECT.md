@@ -5,17 +5,37 @@
 
 ## 문법
 
+- 일반적인 필드([[열(Column)]])를 조회해오는 문법이다.
+
+```sql
+SELECT * FROM 테이블명
+```
+
+### [[WHERE]]
+
+- 아래와 같이 [[WHERE]] 절에서도 이용한다.
+
 ```sql
 SELECT 
-	속성명1, 속성명2, 속성명3
+	필드명
 FROM
 	테이블명
 WHERE
 	조건;
 ```
 
+### ORDER BY
+
+- 아래 [[쿼리(Query)]]문과 같이 ORDER BY 필드명 DESC 형식으로 내림차순 및 오름차순을 선택할 수 있다.
+
 ```sql
-SELECT * FROM 테이블명
+SELECT 
+	필드명
+FROM
+	테이블명
+ORDER BY 필드명 ASC -- 또는 DESC
+LIMIT 1 -- 한개만 조회
+OFFSET 1; -- 특정 행(레코드)를 스킵 가능
 ```
 
 ## 유저 생성 및 확인(MySQL)
@@ -37,9 +57,10 @@ grant all on 'board'.* to 'kscold'@'localhost' with grant option; -- 모든 권�
 
 flush privileges; -- 정상적으로 동작하는지 log를 통해 확인할 수 있음
 ```
+
 ## 예시
 
-- 밑에 코드는 orders [[테이블(Table)]]에서 특정 [[속성(Attribute)]] order_no, created_at, payment_method의 데이터를 불러오는 예시이다.
+- 밑에 코드는 orders [[테이블(Table)]]에서 특정 [[열(Column)]] order_no, created_at, payment_method의 데이터를 불러오는 예시이다.
 
 ```sql
 SELECT order_no, created_at, payment_method FROM orders

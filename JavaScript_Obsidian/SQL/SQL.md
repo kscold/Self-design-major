@@ -1,7 +1,6 @@
 - SQL은 [[관계형 데이터베이스(Relational DataBase)]]를 관리하기 위해 설계된 프로그래밍 언어이다.
 - MySQL, Oracle, PosrgreSQL, MariaDB 등에서 사용한다.
 
-![[Pasted image 20240106023542.png]]
 
 ## SQL 문법
 
@@ -37,7 +36,7 @@
 ### [[SHOW]]
 
 - [[데이터베이스(DataBase)]] 보기
-### [[USE]]
+### USE
 
 - [[데이터베이스(DataBase)]] 사용
 

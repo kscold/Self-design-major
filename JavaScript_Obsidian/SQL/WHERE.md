@@ -4,11 +4,10 @@
 ## 예시
 
 ```sql
-WHERE payment_method = 'kakaopay' 
--- 필드명 payment_method가 'kakaopay' 라는 레코드를 가지고 있으면 반환
+WHERE payment_method = 'kakaopay' -- 필드명 payment_method가 'kakaopay' 라는 레코드(행)를 가지고 있으면 반환
 ```
 
-- payment_method [[Spring/SQL/필드(Field)|필드(Field)]]에 kakapay라는 값이 있으면 데이터를 가져온다.
+- payment_method 필드([[열(Column)]])에 kakapay라는 값이 있으면 데이터를 가져온다.
 - 여기서 주의할 점은 kakaopay는 필드명이 아니기 때문에 꼭 ''를 붙여서 사용해야 한다.
 
 - AND 혹은 OR를 사용하여 조건문을 추가적으로 걸 수 있다.
@@ -26,7 +25,7 @@ WHERE 'point' >= 300000
 
 ### 성이 이  씨인 유저만 추출하기
 
-- 원하는 [[테이블(Table)]](users)에서 조건(name = '이**')인 데이터를 보려면 아래와 같이 [[쿼리(query)]]문을 작성하면 된다.
+- 원하는 [[테이블(Table)]](users)에서 조건(name = '이**')인 데이터를 보려면 아래와 같이 [[쿼리(Query)]]문을 작성하면 된다.
 
 - [[SQL]]에서는 일반적인 코딩과 다르게 = 는 대입의 의미가 아니라 수학과 같이 같다는 의미이다.
 

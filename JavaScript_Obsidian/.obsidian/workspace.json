@@ -13,26 +13,21 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "SQL/기본 키(Primary Key).md",
+                "file": "Node.js/Module/시퀄라이즈(Sequelize).md",
                 "mode": "source",
                 "source": false
               }
             }
           },
           {
-            "id": "92077e8ddd2c8bb4",
+            "id": "b5606496fbc26717",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "CONSTRAINT.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "graph",
+              "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -98,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "CONSTRAINT.md",
+                "file": "Node.js/Module/시퀄라이즈(Sequelize).md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "CONSTRAINT.md",
+                "file": "Node.js/Module/시퀄라이즈(Sequelize).md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "CONSTRAINT.md"
+                "file": "Node.js/Module/시퀄라이즈(Sequelize).md"
               }
             }
           }
@@ -159,36 +154,36 @@
       "command-palette:명령어 팔레트 열기": false
     }
   },
-  "active": "92077e8ddd2c8bb4",
+  "active": "12010fcbee9d0907",
   "lastOpenFiles": [
-    "SQL/열(Colum).md",
-    "CONSTRAINT.md",
+    "SQL/ORM(Object Relational Mapping).md",
+    "Node.js/Module/시퀄라이즈(Sequelize).md",
+    "SQL/사용자(USER).md",
+    "SQL/Trigger (트리거).md",
+    "SQL/비정규화.md",
+    "SQL/스프링 DB 설정.md",
+    "SQL/쿼리(Query).md",
+    "SQL/다대일(ManyToOne).md",
+    "SQL/WHERE.md",
+    "SQL/INSERT.md",
+    "SQL/후보키(Candidate Key).md",
+    "SQL/대체키(Alternate Key).md",
+    "SQL/SQL.md",
+    "SQL/DELETE.md",
+    "SQL/UPDATE.md",
+    "SQL/SELECT.md",
+    "JavaScript/메서드(Method).md",
+    "SQL/정규화.md",
+    "SQL/외래 키(Foreign Key).md",
+    "SQL/제약조건(constraint).md",
+    "SQL/열(Column).md",
     "SQL/테이블(Table).md",
-    "SQL/행(Row).md",
-    "Spring/SQL/필드(Field).md",
-    "로우(low).md",
+    "SQL/연관 관계(Relationships).md",
+    "SQL/관계형 데이터베이스(Relational DataBase).md",
+    "SQL/기본 키(Primary Key).md",
+    "SQL/기호 문자(Wildcard Character).md",
     "Spring/SQL",
     "Spring",
-    "SQL/일대다(OnetoMany).md",
-    "SQL/속성(Attribute).md",
-    "SQL/?(Placeholder).md",
-    "SQL/연관 관계(Relationships).md",
-    "SQL/기본 키(Primary Key).md",
-    "SQL/관계형 데이터베이스(Relational DataBase).md",
-    "SQL/INSERT.md",
-    "SQL/DROP.md",
-    "SQL/DELETE.md",
-    "SQL/CREATE.md",
-    "Node.js/Module/multer.md",
-    "SQL/WHERE.md",
-    "SQL/쿼리(query).md",
-    "SQL/식별자(Identifier).md",
-    "SQL/다대다(ManyToMany).md",
-    "SQL/양방향.md",
-    "SQL/데이터베이스(DataBase).md",
-    "SQL/단방향.md",
-    "SQL/스키마(Schema).md",
-    "SQL/JOIN.md",
     "SQL",
     "image/Pasted image 20231115000101.png",
     "image/Pasted image 20231115000103.png",
