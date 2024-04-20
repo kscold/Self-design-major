@@ -5,12 +5,18 @@ import Log from './components/Log';
 import { WINNING_COMBINATIONS } from './winning-combinations';
 import GameOver from './components/GameOver';
 
-const initialGameBoard = [
+const PLAYERS = {
+  X: 'Player1',
+  O: 'Player2',
+};
+
+const INITAL_GAME_BOARD = [
   [null, null, null],
   [null, null, null],
   [null, null, null],
 ];
 
+// 유저 순서마다 symbol를 선택하는 메서드
 function deriveActivePlayer(game) {
   let currentPlayer = 'X';
 
@@ -21,14 +27,9 @@ function deriveActivePlayer(game) {
   return currentPlayer;
 }
 
-function App() {
-  const [players, setPlayers] = useState({ X: 'Player1', O: 'Player2' });
-  const [gameTurns, setGameTurns] = useState([]);
-  // const [hasWinner, setHasWinner] = useState(false);
-
-  const activePlayer = deriveActivePlayer(gameTurns);
-
-  let gameBoard = [...initialGameBoard.map((array) => [...array])]; // 깊은 복사를 하여 불변성을 유지함
+// 게임보드에 symbol를 추가하는 메서드
+function deriveGameBoard(gameTurns) {
+  let gameBoard = [...INITAL_GAME_BOARD.map((array) => [...array])]; // 깊은 복사를 하여 불변성을 유지함
 
   for (const turn of gameTurns) {
     const { square, player } = turn;
@@ -36,8 +37,12 @@ function App() {
 
     gameBoard[row][col] = player;
   }
+  return gameBoard;
+}
 
-  let winnner;
+// 이긴 유저를 판단하는 메서드
+function dervieWinner(gameBoard, players) {
+  let winner;
 
   // target 조합인지 검사하기 위한 symbol를 추출
   for (const combination of WINNING_COMBINATIONS) {
@@ -54,9 +59,19 @@ function App() {
       firstSquareSymbol === secondSquareSymbol &&
       firstSquareSymbol === thirdSquareSymbol
     ) {
-      winnner = players[firstSquareSymbol];
+      winner = players[firstSquareSymbol];
+      return winner;
     }
   }
+}
+
+function App() {
+  const [players, setPlayers] = useState(PLAYERS);
+  const [gameTurns, setGameTurns] = useState([]);
+
+  const activePlayer = deriveActivePlayer(gameTurns);
+  const gameBoard = deriveGameBoard(gameTurns);
+  const winnner = dervieWinner(gameBoard, players);
 
   const hasDraw = gameTurns.length === 9 && !winnner;
 
@@ -91,13 +106,13 @@ function App() {
       <div id="game-container">
         <ol id="players" className="highlight-player">
           <Player
-            initialName="Player 1"
+            initialName={PLAYERS.X}
             symbol="X"
             isActive={activePlayer === 'X'}
             onChangeName={handlePlayerNameChage}
           />
           <Player
-            initialName="Player 2"
+            initialName={PLAYERS.O}
             symbol="O"
             isActive={activePlayer === 'O'}
             onChangeName={handlePlayerNameChage}
