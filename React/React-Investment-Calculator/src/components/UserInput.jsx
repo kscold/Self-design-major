@@ -3,7 +3,7 @@ const UserInput = ({ onChange, userInput }) => {
     <section id="user-input">
       <div className="input-group">
         <p>
-          <label>Initial Investment</label>
+          <label>초기 투자</label>
           <input
             type="text"
             required
@@ -14,7 +14,7 @@ const UserInput = ({ onChange, userInput }) => {
           />
         </p>
         <p>
-          <label>Annual Investment</label>
+          <label>연간 투자</label>
           <input
             type="text"
             required
@@ -27,7 +27,7 @@ const UserInput = ({ onChange, userInput }) => {
       </div>
       <div className="input-group">
         <p>
-          <label>Expected Return</label>
+          <label>기대수익률</label>
           <input
             type="text"
             required
@@ -36,7 +36,7 @@ const UserInput = ({ onChange, userInput }) => {
           />
         </p>
         <p>
-          <label>Duration</label>
+          <label>기간</label>
           <input
             type="text"
             required
