@@ -6,7 +6,7 @@ const initialGameBoard = [
   [null, null, null],
 ];
 
-const GameBoard = () => {
+const GameBoard = ({ onSelectSquare, activePlayerSymbol }) => {
   const [gameBoard, setGameBoard] = useState(initialGameBoard);
 
   const handleSelectSquare = (rowIndex, colIndex) => {
@@ -14,9 +14,11 @@ const GameBoard = () => {
       const updatedBoard = [
         ...prevGameBoard.map((innerArray) => [...innerArray]),
       ]; // 이 코드를 통해 직전의 행렬 데이터를 복사
-      updatedBoard[rowIndex][colIndex] = 'X';
+      updatedBoard[rowIndex][colIndex] = activePlayerSymbol;
       return updatedBoard;
     });
+
+    onSelectSquare();
   };
 
   return (
