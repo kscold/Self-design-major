@@ -2,6 +2,14 @@ import { useState } from 'react';
 import GameBoard from './components/GameBoard';
 import Player from './components/Player';
 import Log from './components/Log';
+import { WINNING_COMBINATIONS } from './winning-combinations';
+import GameOver from './components/GameOver';
+
+const initialGameBoard = [
+  [null, null, null],
+  [null, null, null],
+  [null, null, null],
+];
 
 function deriveActivePlayer(game) {
   let currentPlayer = 'X';
@@ -15,8 +23,41 @@ function deriveActivePlayer(game) {
 
 function App() {
   const [gameTurns, setGameTurns] = useState([]);
+  // const [hasWinner, setHasWinner] = useState(false);
 
   const activePlayer = deriveActivePlayer(gameTurns);
+
+  let gameBoard = initialGameBoard;
+
+  for (const turn of gameTurns) {
+    const { square, player } = turn;
+    const { row, col } = square;
+
+    gameBoard[row][col] = player;
+  }
+
+  let winnner;
+
+  // target 조합인지 검사하기 위한 symbol를 추출
+  for (const combination of WINNING_COMBINATIONS) {
+    const firstSquareSymbol =
+      gameBoard[combination[0].row][combination[0].column];
+    const secondSquareSymbol =
+      gameBoard[combination[1].row][combination[1].column];
+    const thirdSquareSymbol =
+      gameBoard[combination[2].row][combination[2].column];
+
+    // 첫번째 두번째 세번째 심볼이 전부 같은 기호일 때
+    if (
+      firstSquareSymbol &&
+      firstSquareSymbol === secondSquareSymbol &&
+      firstSquareSymbol === thirdSquareSymbol
+    ) {
+      winnner = firstSquareSymbol;
+    }
+  }
+
+  const hasDraw = gameTurns.length === 9 && !winnner;
 
   function handleSelectSquare(rowIndex, colIndex) {
     setGameTurns((prevTurns) => {
@@ -46,7 +87,8 @@ function App() {
             isActive={activePlayer === 'O'}
           />
         </ol>
-        <GameBoard onSelectSquare={handleSelectSquare} turns={gameTurns} />
+        {(winnner || hasDraw) && <GameOver winner={winnner} />}
+        <GameBoard onSelectSquare={handleSelectSquare} board={gameBoard} />
       </div>
       <Log turns={gameTurns} />
     </main>
