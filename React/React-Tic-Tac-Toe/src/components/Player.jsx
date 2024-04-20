@@ -1,10 +1,18 @@
 import { useState } from 'react';
 
-const Player = ({ initialName, symbol, isActive }) => {
+const Player = ({ initialName, symbol, isActive, onChangeName }) => {
   const [playerName, setPlayerName] = useState(initialName);
   const [isEditing, setIsEditing] = useState(false);
 
-  const handleEditClick = () => setIsEditing((editing) => !editing);
+  const handleEditClick = () => {
+    setIsEditing((editing) => !editing);
+
+    // 아름을 수정할 때에만 동작을 하게하고 싶기 때문에
+    if (isEditing) {
+      onChangeName(symbol, playerName);
+    }
+  };
+
   const handleChange = (event) => setPlayerName(event.target.value);
 
   let editablePlayerName = <span className="player-name">{playerName}</span>;
