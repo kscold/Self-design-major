@@ -27,7 +27,7 @@ function App() {
 
   const activePlayer = deriveActivePlayer(gameTurns);
 
-  let gameBoard = initialGameBoard;
+  let gameBoard = [...initialGameBoard.map((array) => [...array])]; // 깊은 복사를 하여 불변성을 유지함
 
   for (const turn of gameTurns) {
     const { square, player } = turn;
@@ -72,6 +72,10 @@ function App() {
     });
   }
 
+  function handleRestart() {
+    setGameTurns([]);
+  }
+
   return (
     <main>
       <div id="game-container">
@@ -87,7 +91,9 @@ function App() {
             isActive={activePlayer === 'O'}
           />
         </ol>
-        {(winnner || hasDraw) && <GameOver winner={winnner} />}
+        {(winnner || hasDraw) && (
+          <GameOver winner={winnner} onRestart={handleRestart} />
+        )}
         <GameBoard onSelectSquare={handleSelectSquare} board={gameBoard} />
       </div>
       <Log turns={gameTurns} />
