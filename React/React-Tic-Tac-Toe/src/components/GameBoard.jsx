@@ -1,25 +1,31 @@
-import { useState } from 'react';
-
 const initialGameBoard = [
   [null, null, null],
   [null, null, null],
   [null, null, null],
 ];
 
-const GameBoard = ({ onSelectSquare, activePlayerSymbol }) => {
-  const [gameBoard, setGameBoard] = useState(initialGameBoard);
+const GameBoard = ({ onSelectSquare, turns }) => {
+  let gameBoard = initialGameBoard;
 
-  const handleSelectSquare = (rowIndex, colIndex) => {
-    setGameBoard((prevGameBoard) => {
-      const updatedBoard = [
-        ...prevGameBoard.map((innerArray) => [...innerArray]),
-      ]; // 이 코드를 통해 직전의 행렬 데이터를 복사
-      updatedBoard[rowIndex][colIndex] = activePlayerSymbol;
-      return updatedBoard;
-    });
+  for (const turn of turns) {
+    const { square, player } = turn;
+    const { row, col } = square;
 
-    onSelectSquare();
-  };
+    gameBoard[row][col] = player;
+  }
+  // const [gameBoard, setGameBoard] = useState(initialGameBoard);
+
+  // const handleSelectSquare = (rowIndex, colIndex) => {
+  //   setGameBoard((prevGameBoard) => {
+  //     const updatedBoard = [
+  //       ...prevGameBoard.map((innerArray) => [...innerArray]),
+  //     ]; // 이 코드를 통해 직전의 행렬 데이터를 복사
+  //     updatedBoard[rowIndex][colIndex] = activePlayerSymbol;
+  //     return updatedBoard;
+  //   });
+
+  //   onSelectSquare();
+  // };
 
   return (
     <ol id="game-board">
@@ -28,7 +34,7 @@ const GameBoard = ({ onSelectSquare, activePlayerSymbol }) => {
           <ol>
             {row.map((PlayerSymbol, colIndex) => (
               <li key={colIndex}>
-                <button onClick={() => handleSelectSquare(rowIndex, colIndex)}>
+                <button onClick={() => onSelectSquare(rowIndex, colIndex)}>
                   {PlayerSymbol}
                 </button>
               </li>
