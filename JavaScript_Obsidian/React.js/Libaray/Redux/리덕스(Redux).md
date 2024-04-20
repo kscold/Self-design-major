@@ -16,7 +16,7 @@
 
 - 변경은 순수함수로만 가능하다.
 - 리듀서와 연관되는 개념이다.
-- [[스토어(Store)]] – [[액션(Action)]] – [[리듀서(Reducer)]] 관계를 이룬다.
+- [[스토어(Store)]] – [[액션(Action)]] – [[Reducer]] 관계를 이룬다.
 
 ![[Pasted image 20240114222341.png]]
 
@@ -46,7 +46,7 @@
 ## Reducer(리듀서)
 
 - Action(액션)을 Store(스토어)에 바로 전달하는 것이 아니다.
-- Action(액션)을 [[리듀서(Reducer)]](리듀서)에 전달해야한다.
+- Action(액션)을 [[Reducer]](리듀서)에 전달해야한다.
 - Reducer(리듀서)가 주문을 보고 Store(스토어)의 상태를 업데이트하는 것이다.
 - Action(액션)을 Reducer(리듀서)에 전달하기 위해서는 dispatch() [[메서드(Method)]]를 사용해야한다.
 
