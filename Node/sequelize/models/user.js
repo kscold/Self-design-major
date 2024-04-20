@@ -44,9 +44,10 @@ class User extends Sequelize.Model {
     }
 
     static associate(db) {
+        // User가 Comment를 많이 가지고 있음(일대다 관계)
         db.User.hasMany(db.Comment, {
-            foreignKey: 'commenter',
-            sourceKey: 'id',
+            foreignKey: 'commenter', // Comment 테이블의 commenter 필드로 참고하고 있음
+            sourceKey: 'id', // User의 id 필드를
         });
     }
 }

@@ -3,8 +3,8 @@
 - [[외래 키(Foreign Key)]]를 가진 [[테이블(Table)]]을 매핑한 엔티티(Entity)에서 [[외래 키(Foreign Key)]]를 관리하는게 효율적이다.
 - 즉, 외래 키를 가진 엔티티(Entity)가 주인이라고 생각하면 쉽다.
 
-- [[일대다(OnetoMany)]], 다대일 관계에서 항상 '다'쪽이 [[외래 키(Foreign Key)]]를 가진다.
-- 즉, 1:N([[일대다(OnetoMany)]]), N:1([[다대일(ManyToOne)]]) 경우에 항상 N에 FK([[외래 키(Foreign Key)]])가 있으므로 N 쪽이 연관관계의 주인이다.
+- [[일대다(OneToMany)]], 다대일 관계에서 항상 '다'쪽이 [[외래 키(Foreign Key)]]를 가진다.
+- 즉, 1:N([[일대다(OneToMany)]]), N:1([[다대일(ManyToOne)]]) 경우에 항상 N에 FK([[외래 키(Foreign Key)]])가 있으므로 N 쪽이 연관관계의 주인이다.
 
 - 주인이 아닌 쪽은 [[외래 키(Foreign Key)]]를 변경할 수 없고 읽기만 가능하다.
 
