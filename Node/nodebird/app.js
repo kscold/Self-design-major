@@ -5,12 +5,20 @@ const path = require('path');
 const session = require('express-session');
 const nunjucks = require('nunjucks');
 const dotenv = require('dotenv');
-
-dotenv.config(); // process.env안에 들어감
-const pageRouter = require('./routes/page');
+const passport = require('passport');
 const { sequelize } = require('./models');
 
+dotenv.config(); // process.env안에 들어감
+
+const pageRouter = require('./routes/page');
+const authRouter = require('./routes/auth');
+
+const passportConfig = require('./passport'); // passport를 부름
+
 const app = express();
+
+passportConfig(); // passport를 실행
+
 app.set('port', process.env.PORT || 8080);
 app.set('view engine', 'html');
 nunjucks.configure('views', {
@@ -30,8 +38,8 @@ sequelize
 
 app.use(morgan('dev')); // 로깅을 개발모드로 설정 배포시에는 combine으로 설정해야함(메모리 이점)
 app.use(express.static(path.join(__dirname, 'public'))); // 프론트 연결설정
-app.use(express.json()); // json 요청을 받을 수 있게 만듬
-app.use(express.urlencoded({ extended: false })); // form 요청을 받을 수 있게 만듬
+app.use(express.json()); // req.body를 ajax json 요청을 받을 수 있게 만듬
+app.use(express.urlencoded({ extended: false })); // req.body 폼 요청을 받을 수 있게 만듬
 app.use(cookieParser(process.env.COOKIE_SECRET)); // cookie 키 설정과 쿠키 관련 설정을 할 수 있게 만듬
 app.use(
     session({
@@ -44,6 +52,10 @@ app.use(
         },
     })
 );
+
+// passport 미들웨어는 항상 express 세션 밑에 설정해야함
+app.use(passport.initialize()); // req.user, req.login, req.isAuthenticate, req.logout이 생성됨
+app.use(passport.session()); // connect.id라는 이름으로 세션 쿠키가 브라우저로 전송
 
 app.use('/', pageRouter); // pageRouter에 걸리면
 
