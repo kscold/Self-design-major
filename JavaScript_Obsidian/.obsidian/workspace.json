@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Node.js/Module/Sequelize/sequelize.query().md",
+                "file": "Node.js/Module/Sequelize/include.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Node.js/Module/Sequelize/sequelize.query().md",
+                "file": "Node.js/Module/Sequelize/include.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Node.js/Module/Sequelize/sequelize.query().md",
+                "file": "Node.js/Module/Sequelize/include.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Node.js/Module/Sequelize/sequelize.query().md"
+                "file": "Node.js/Module/Sequelize/include.md"
               }
             }
           }
@@ -156,13 +156,13 @@
   },
   "active": "b5606496fbc26717",
   "lastOpenFiles": [
-    "Node.js/Module/Sequelize/remove+모델명.md",
-    "Node.js/Module/Sequelize/sequelize.query().md",
     "Node.js/Module/Sequelize/get+모델명.md",
+    "Node.js/Module/Sequelize/시퀄라이즈(Sequelize).md",
+    "Node.js/Module/Sequelize/sequelize.query().md",
+    "Node.js/Module/Sequelize/remove+모델명.md",
     "Node.js/Module/Sequelize/set+모델명.md",
     "Node.js/Module/Sequelize/모델.create().md",
     "Node.js/Module/Sequelize/include.md",
-    "Node.js/Module/Sequelize/시퀄라이즈(Sequelize).md",
     "Node.js/모델(model).md",
     "SQL/다대다(ManyToMany).md",
     "Node.js/Module/Sequelize",
