@@ -1,0 +1,1 @@
+- 모델은 [[JavaScript/스키마(schema)]]를 사용하여 만드는 [[인스턴스(Instance)]]로, [[데이터베이스(DataBase)]]에서 실제 작업을 처리할 수 있는 [[함수(Function)]]들을 지니고 있는 [[객체(Object)]]이다.

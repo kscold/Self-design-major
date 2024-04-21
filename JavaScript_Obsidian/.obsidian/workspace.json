@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Node.js/Module/시퀄라이즈(Sequelize).md",
+                "file": "Node.js/Module/Sequelize/sequelize.query().md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Node.js/Module/시퀄라이즈(Sequelize).md",
+                "file": "Node.js/Module/Sequelize/sequelize.query().md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Node.js/Module/시퀄라이즈(Sequelize).md",
+                "file": "Node.js/Module/Sequelize/sequelize.query().md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Node.js/Module/시퀄라이즈(Sequelize).md"
+                "file": "Node.js/Module/Sequelize/sequelize.query().md"
               }
             }
           }
@@ -156,13 +156,21 @@
   },
   "active": "b5606496fbc26717",
   "lastOpenFiles": [
+    "Node.js/Module/Sequelize/remove+모델명.md",
+    "Node.js/Module/Sequelize/sequelize.query().md",
+    "Node.js/Module/Sequelize/get+모델명.md",
+    "Node.js/Module/Sequelize/set+모델명.md",
+    "Node.js/Module/Sequelize/모델.create().md",
+    "Node.js/Module/Sequelize/include.md",
+    "Node.js/Module/Sequelize/시퀄라이즈(Sequelize).md",
+    "Node.js/모델(model).md",
+    "SQL/다대다(ManyToMany).md",
+    "Node.js/Module/Sequelize",
     "OFFSET.md",
-    "Node.js/Module/시퀄라이즈(Sequelize).md",
     "SQL/행(Row).md",
     "SQL/대리키(Surrogate Key).md",
     "SQL/쿼리(query).md",
     "SQL/쿼리(Query).md",
-    "SQL/다대다(ManyToMany).md",
     "React.js/Custom Hooks.md",
     "JavaScript/값(value).md",
     "React.js/dispatch().md",
@@ -175,13 +183,6 @@
     "JavaScript/함수(Function).md",
     "React.js/Context API.md",
     "React.js/createElement().md",
-    "React.js/생명 주기(Life Cycle).md",
-    "세션(Session).md",
-    "Node.js/Module/fs.md",
-    "Node.js/next().md",
-    "res.json().md",
-    "Node.js/에러 미들웨어(Error Middleware).md",
-    "Node.js/app.use().md",
     "image/Pasted image 20240413032925.png",
     "image/Pasted image 20240413030415.png",
     "image/Pasted image 20240413030438.png",
@@ -198,7 +199,6 @@
     "Spring",
     "SQL",
     "sql/image",
-    "sql",
     "image/Pasted image 20240402174940.png",
     "image/Pasted image 20240330180401.png",
     "image/Pasted image 20240330180142.png"
