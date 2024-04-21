@@ -8,6 +8,7 @@ const dotenv = require('dotenv');
 
 dotenv.config(); // process.env안에 들어감
 const pageRouter = require('./routes/page');
+const { sequelize } = require('./models');
 
 const app = express();
 app.set('port', process.env.PORT || 8080);
@@ -16,6 +17,16 @@ nunjucks.configure('views', {
     express: app,
     watch: true,
 });
+
+// 시퀄라이즈를 실행하는 코드
+sequelize
+    .sync({ force: true }) // 개발 시에 데이터베이스 초기화
+    .then(() => {
+        console.log('데이터베이스 연결 성공');
+    })
+    .catch((err) => {
+        console.error(err);
+    });
 
 app.use(morgan('dev')); // 로깅을 개발모드로 설정 배포시에는 combine으로 설정해야함(메모리 이점)
 app.use(express.static(path.join(__dirname, 'public'))); // 프론트 연결설정

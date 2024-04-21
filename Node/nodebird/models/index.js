@@ -1,11 +1,12 @@
-const { config } = require('dotenv');
 const Sequelize = require('sequelize');
 const fs = require('fs');
+const path = require('path');
+const env = process.env.NODE_ENV || 'development';
+const config = require('../config/config')[env];
 // const Post = require('./post');
 // const User = require('./user');
 // const Hashtag = require('./hashtag');
 
-const env = require('../config/config')[env];
 const db = {};
 
 const sequelize = new Sequelize(
@@ -21,7 +22,7 @@ const basename = path.basename(__filename);
 fs.readdirSync(__dirname)
     .filter((file) => {
         return (
-            file.index('.') !== 0 &&
+            file.indexOf('.') !== 0 &&
             file !== basename &&
             file.slice(-3) === '.js'
         );
