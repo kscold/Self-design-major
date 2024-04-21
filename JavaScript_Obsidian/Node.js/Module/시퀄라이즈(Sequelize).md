@@ -47,6 +47,185 @@ module.exports = db;
 ```
 
 
+## [[SQL]]과 시퀄라이즈 [[쿼리(Query)]] 변환
+
+### [[CREATE]]
+
+- 아래 [[SQL]]은 nodejs [[데이터베이스(DataBase)]]에 users [[테이블(Table)]]에 필드([[열(Column)]])에 값을 넣는 [[쿼리(Query)]]문이다.
+
+```sql
+INSERT INTO nodejs.users (name, age, married, comment) VALUES ('zero', 24, 0, '자기소개1'); 
+```
+
+- 위의 [[쿼리(Query)]]문을 시퀄라이즈 문법으로 변환하면 다음과 같다.
+- 또한 create의 경우 [[Promise]] [[객체(Object)]]이기 때문에 [[async await]]을 붙여 사용해야 한다.
+
+```js
+const { User } = require("../models);
+
+User.create({ // insert문과 같음
+	name: 'zero',
+	age: 24,
+	married: false,
+	comment: '자기소개1',
+})
+```
+
+### [[SELECT]]
+
+- 아래는 [[테이블(Table)]]의 모든 필드([[열(Column)]])을 선택하는 경우이다.
+
+```sql
+SELECT * FROM nodejs.users;
+```
+
+```js
+const { User } = require("../models);
+
+User.findAll({});
+```
+
+- 아래는 [[테이블(Table)]]의 특정 필드([[열(Column)]])을 선택하는 경우이다.
+
+```sql
+SELECT name, married FROM nodejs.users;
+```
+
+```js
+const { User } = require("../models);
+
+User.findAll({
+	attributes: ['name', 'married'],
+});
+```
+
+### [[WHERE]]
+
+- 특수한 기능들인 경우 Sequelize.Op의 연산자를 이용한다.
+- gt(greater than), lt(less than), gte(이상) lte(이하), ne(!=), in(안에 있은 데이터 확인), or 등이 있다.
+
+- 기본적으로 같은 [[객체(Object)]]에 있으면 and 연산자로 묶인다.
+- Op.or은 or 연산일때 Op.gt는 >일 때 사용한다.
+
+- married가 0이면서 age가 30을 넘을 때이다.
+
+```sql
+SELECT name, age FROM nodejs.users WHERE married = 1 AND age > 30;
+```
+
+```js
+const { Op } = require("sequelize");
+const { User } = require("../models");
+
+User.findAll({
+	attributes: ['name', 'age'],
+	where: {
+		married: true,
+		age: { [Op.gt]: 30 },
+	}
+});
+```
+
+- married가 0이거나 age가 30을 넘을 때이다.
+- or의 경우 OP.or 연산자를 명시해준다.
+
+```sql
+SELECT id, age FROM nodejs.users WHERE married = 0 AND age > 30;
+```
+
+```js
+const { Op } = require("sequelize");
+const { User } = require("../models");
+
+User.findAll({
+	attributes: ['id', 'name'],
+	where: {
+		[Op.or]: [{ married: false }, { age: { [Op.gt]: 30} }],
+	}
+});
+```
+
+- age 내림차순으로 정렬하는 방법이다.
+
+```sql
+SELECT id, name FROM users ORDER BY age DESC;
+```
+
+```js
+const { User } = require("../models");
+
+User.findAll({
+	attributes: ['id', 'name'],
+	where: [['age', 'DESC']],
+});
+```
+
+- age 내림차순으로 정렬하는데 한개의 LIMIT을 정의하는 예시이다.
+
+```sql
+SELECT id, name FROM users ORDER BY age DESC LIMIT 1;
+```
+
+```js
+const { User } = require("../models");
+
+User.findAll({
+	attributes: ['id', 'name'],
+	where: [['age', 'DESC']],
+	limit: 1,
+});
+```
+
+- [[OFFSET]]으로 기준점이 1로 설정하는 예시이다.
+
+```sql
+SELECT id, name FROM users ORDER BY age DESC LIMIT 1;
+```
+
+```js
+const { User } = require("../models");
+
+User.findAll({
+	attributes: ['id', 'name'],
+	where: [['age', 'DESC']],
+	limit: 1,
+});
+```
+
+### [[UPDATE]]
+
+```sql
+UPDATE nodejs.users SET comment = "바꿀 내용" WHERE id = 2;
+```
+
+```js
+const { User } = require("../models");
+
+User.update({
+		comment: "바꿀 내용",
+	}, 
+	{
+		where: { id: 2 },
+	}
+);
+```
+
+### [[DELETE]]
+
+```sql
+DELETE FROM nodejs.users WHERE id = 2;
+```
+
+```js
+const { User } = require("../models");
+
+User.destory({
+		where: { id: 2 },
+	}
+);
+```
+
+
 ## 시퀄라이즈를 통한 [[SQL/스키마(Schema)|스키마(Schema)]] 선언
 
 - 아래는 models 디렉토리에 js파일을 생성하고 [[ORM(Object Relational Mapping)]]을 이용하여 
@@ -193,3 +372,4 @@ Comment.associate(db);
   
 module.exports = db;
 ```
+

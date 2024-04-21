@@ -13,10 +13,18 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "React.js/Custom Hooks.md",
+                "file": "Node.js/Module/시퀄라이즈(Sequelize).md",
                 "mode": "source",
                 "source": false
               }
+            }
+          },
+          {
+            "id": "187f6cd98e2726ba",
+            "type": "leaf",
+            "state": {
+              "type": "graph",
+              "state": {}
             }
           }
         ]
@@ -85,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "React.js/Custom Hooks.md",
+                "file": "Node.js/Module/시퀄라이즈(Sequelize).md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "React.js/Custom Hooks.md",
+                "file": "Node.js/Module/시퀄라이즈(Sequelize).md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "React.js/Custom Hooks.md"
+                "file": "Node.js/Module/시퀄라이즈(Sequelize).md"
               }
             }
           }
@@ -148,8 +156,15 @@
   },
   "active": "b5606496fbc26717",
   "lastOpenFiles": [
-    "JavaScript/값(value).md",
+    "OFFSET.md",
+    "Node.js/Module/시퀄라이즈(Sequelize).md",
+    "SQL/행(Row).md",
+    "SQL/대리키(Surrogate Key).md",
+    "SQL/쿼리(query).md",
+    "SQL/쿼리(Query).md",
+    "SQL/다대다(ManyToMany).md",
     "React.js/Custom Hooks.md",
+    "JavaScript/값(value).md",
     "React.js/dispatch().md",
     "React.js/액션(Action).md",
     "React.js/Libaray/Redux/스토어(Store).md",
@@ -167,13 +182,6 @@
     "res.json().md",
     "Node.js/에러 미들웨어(Error Middleware).md",
     "Node.js/app.use().md",
-    "Node.js/res.send().md",
-    "Node.js/res.writeHead().md",
-    "Node.js/res.write().md",
-    "Node.js/res.sendFile().md",
-    "Node.js/res.md",
-    "Node.js/res.end().md",
-    "Node.js/req.params.md",
     "image/Pasted image 20240413032925.png",
     "image/Pasted image 20240413030415.png",
     "image/Pasted image 20240413030438.png",

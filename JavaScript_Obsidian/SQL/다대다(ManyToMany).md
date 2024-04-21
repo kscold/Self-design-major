@@ -4,7 +4,7 @@
 - 만약 [[일대일(OneToOne)]] 관계의 [[테이블(Table)]]에서 다대다 관계로 [[연관 관계(Relationships)]]을 맺게 될 때에는 [[일대일(OneToOne)]] [[테이블(Table)]] 중에 하나의 [[테이블(Table)]]만 관계를 맺게 된다.
 
 
-## 게시글과 해시태그 테이블
+## 다대다의 중간 테이블
 
 - 하나의 게시글이 여러 개의 해시태그를 가질 수 있고 하나의 해시태그가 여러 개의 게시글을 가질 수 있다.
 
@@ -14,7 +14,19 @@
 - 만약 중간 [[테이블(Table)]]을 만들지 않고 [[연관 관계(Relationships)]]를 매핑하게 된다면 제 1[[정규화]]를 위반하게 된다.
 
 ![[Pasted image 20240413032925.png]]
-## 학생과 수업
+
+
+## [[시퀄라이즈(Sequelize)]]의 다대다
+
+- .belongsToMany([[테이블(Table)]], { through: "중간 [[테이블(Table)]] 이름"}) 형식으로 만든다.
+
+```js
+db.Post.belongToMany(db.Hashtag, { through: 'PostHasgtag' }):
+db.Hashtag.belongToMany(db.Post, { through: 'PostHasgtag' }):
+```
+
+
+## 다대다의 예시
 
 - 예를 들어 한명의 학생이 여러 수업을 수강하고, 한 수업은 여러 학생을 수용한다. 
 
