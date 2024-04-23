@@ -40,7 +40,7 @@ app.use(morgan('dev')); // 로깅을 개발모드로 설정 배포시에는 comb
 app.use(express.static(path.join(__dirname, 'public'))); // 프론트 연결설정
 app.use(express.json()); // req.body를 ajax json 요청을 받을 수 있게 만듬
 app.use(express.urlencoded({ extended: false })); // req.body 폼 요청을 받을 수 있게 만듬
-app.use(cookieParser(process.env.COOKIE_SECRET)); // cookie 키 설정과 쿠키 관련 설정을 할 수 있게 만듬
+app.use(cookieParser(process.env.COOKIE_SECRET)); // cookie 키 설정과 쿠키 관련 설정을 할 수 있게 만듬(쿠키가 같이 오는지 확인) { connect.sid : 1231293814312 }
 app.use(
     session({
         resave: false,
@@ -56,8 +56,10 @@ app.use(
 // passport 미들웨어는 항상 express 세션 밑에 설정해야함
 app.use(passport.initialize()); // req.user, req.login, req.isAuthenticate, req.logout이 생성됨
 app.use(passport.session()); // connect.id라는 이름으로 세션 쿠키가 브라우저로 전송
+// 브라우저의 connect.sid=1231293814312
 
 app.use('/', pageRouter); // pageRouter에 걸리면
+app.use('/auth', authRouter); // authRouter에 걸리면
 
 // 404 NOT FOUND라면 마주하게 되는 미들웨어
 app.use((req, res, next) => {
