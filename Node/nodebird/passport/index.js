@@ -1,6 +1,7 @@
 const passport = require('passport');
 const local = require('./localStrategy');
 const User = require('../models/user');
+const kako = require('./kakoStrategy');
 
 module.exports = () => {
     // user === exUser
@@ -18,4 +19,5 @@ module.exports = () => {
     });
 
     local();
+    kako();
 };

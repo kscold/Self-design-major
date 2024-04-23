@@ -1,34 +1,39 @@
-const bcrypt = require('bcrypt');
 const passport = require('passport');
+const { Strategy: KakaoStrategy } = require('passport-kakao');
 const User = require('../models/user');
 
-exports.join = async (req, res, next) => {
-    const { nick, email, password } = req.body;
-    try {
-        const exUser = await User.findOne({ where: { email } }); // User가 있는지 검사
-        if (exUser) {
-            return res.redirect('/join?error=exist'); // 존재하기 때문에 에러를 냄
-        }
+module.exports = () => {
+    passport.use(
+        new KakaoStrategy(
+            {
+                clientID: process.env.KAKAO_ID,
+                callbackURL: '/auth/kakao/callback',
+            },
+            // 카카오 API를 호출할 때 accessToken, refreshToken을 사용함
+            async (accessToken, refreshToken, profile, done) => {
+                console.log('profile', profile);
 
-        const hash = await bcrypt.hash(password, 12); // 비밀번호를 보안
-        // 비밀번호를 보안해서 저장(INSERT)
-        await User.create({
-            email,
-            nick,
-            password: hash,
-        });
+                try {
+                    const exUser = await User.findOne({
+                        where: { snsId: profile.id, provider: 'kakao' },
+                    });
 
-        return res.redirect('/'); // 302, 리다이렉트
-    } catch (error) {
-        console.error(error);
-        next(error);
-    }
+                    if (exUser) {
+                        done(null, exUser);
+                    } else {
+                        const newUser = await User.create({
+                            // 이 부분이 업데이트가 자주되므로 확인이 필요함
+                            email: profile._json?.kakao_account?.email,
+                            nick: profile.displayName,
+                            snsId: profile.id,
+                            provider: 'kakao',
+                        });
+                        done(null, newUser);
+                    }
+                } catch (error) {
+                    done(error);
+                }
+            }
+        )
+    );
 };
-
-exports.login = () => [
-    passport.desrializeUser((id, done) => {
-        User.findOne({ where: { id } })
-            .then((user) => done(null, user))
-            .catch((err) => done(err));
-    }),
-];
