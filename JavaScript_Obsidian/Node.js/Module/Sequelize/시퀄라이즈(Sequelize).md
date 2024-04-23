@@ -46,6 +46,8 @@ module.exports = db;
 }
 ```
 
+- 데이터 베이스를 생성하는 명령어는 npx sequelize db:create이다.
+
 
 ## [[SQL]]과 시퀄라이즈 [[쿼리(Query)]] 변환
 
