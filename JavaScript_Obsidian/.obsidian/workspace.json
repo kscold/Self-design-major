@@ -8,26 +8,31 @@
         "type": "tabs",
         "children": [
           {
-            "id": "b5606496fbc26717",
+            "id": "187f6cd98e2726ba",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Node.js/Module/passport/done().md",
+                "file": "Node.js/Module/Sequelize/Model.findOrCreate().md",
                 "mode": "source",
                 "source": false
               }
             }
           },
           {
-            "id": "187f6cd98e2726ba",
+            "id": "76a88990f968bdcc",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "JavaScript/Promise.all().md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -93,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Node.js/Module/passport/done().md",
+                "file": "JavaScript/Promise.all().md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Node.js/Module/passport/done().md",
+                "file": "JavaScript/Promise.all().md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Node.js/Module/passport/done().md"
+                "file": "JavaScript/Promise.all().md"
               }
             }
           }
@@ -154,35 +159,38 @@
       "command-palette:명령어 팔레트 열기": false
     }
   },
-  "active": "edc002dfb78ff5ff",
+  "active": "76a88990f968bdcc",
   "lastOpenFiles": [
-    "Node.js/Module/passport",
+    "Node.js/Module/Sequelize/Model.findOrCreate().md",
+    "JavaScript/정규표현식(Regex).md",
     "Node.js/Module/passport.md",
     "Node.js/Module/passport/done().md",
-    "Node.js/세션(Session).md",
-    "Node.js/서버(Server).md",
-    "Node.js/Module/Sequelize/시퀄라이즈(Sequelize).md",
+    "Node.js/Module/passport",
     "Node.js/모델(model).md",
-    "JavaScript/스키마(schema).md",
+    "Node.js/Module/Sequelize/시퀄라이즈(Sequelize).md",
     "Node.js/Module/Sequelize/모델.create().md",
-    "Node.js/Module/Sequelize/include.md",
-    "Node.js/Module/Sequelize/get+모델명.md",
+    "Node.js/Module/Sequelize/set+모델명.md",
     "Node.js/Module/Sequelize/sequelize.query().md",
     "Node.js/Module/Sequelize/remove+모델명.md",
-    "Node.js/Module/Sequelize/set+모델명.md",
-    "SQL/다대다(ManyToMany).md",
+    "Node.js/Module/Sequelize/include.md",
+    "Node.js/Module/Sequelize/get+모델명.md",
     "Node.js/Module/Sequelize",
+    "Node.js/Module/MongoDB/mongoose.Types.md",
+    "Node.js/Module/MongoDB/findByIdAndUpdate().md",
+    "Node.js/Module/MongoDB/mongoDB.md",
+    "Node.js/Module/MongoDB/findById().md",
+    "Node.js/Module/MongoDB/find().md",
+    "Node.js/Module/MongoDB/ObjectID.md",
+    "Node.js/Module/MongoDB/exec().md",
+    "Node.js/Module/MongoDB",
     "OFFSET.md",
-    "SQL/행(Row).md",
-    "SQL/대리키(Surrogate Key).md",
-    "SQL/쿼리(query).md",
-    "SQL/쿼리(Query).md",
-    "React.js/Custom Hooks.md",
-    "JavaScript/값(value).md",
-    "React.js/dispatch().md",
-    "React.js/액션(Action).md",
-    "React.js/Libaray/Redux/스토어(Store).md",
+    "React.js/Reducer.md",
     "React.js/useReducer().md",
+    "SQL/쿼리(query).md",
+    "React.js/리듀서(Reducer).md",
+    "React.js/Libaray/Redux/useReducer().md",
+    "Node.js/Module/시퀄라이즈(Sequelize).md",
+    "Node.js/MongoDB",
     "image/Pasted image 20240413032925.png",
     "image/Pasted image 20240413030415.png",
     "image/Pasted image 20240413030438.png",
@@ -196,9 +204,6 @@
     "Node.js/Module/Express",
     "Node.js/Module",
     "Spring/SQL",
-    "Spring",
-    "SQL",
-    "sql/image",
     "image/Pasted image 20240402174940.png",
     "image/Pasted image 20240330180401.png",
     "image/Pasted image 20240330180142.png"
