@@ -12,6 +12,7 @@ dotenv.config(); // process.env안에 들어감
 
 const pageRouter = require('./routes/page');
 const authRouter = require('./routes/auth');
+const postRouter = require('./routes/post');
 
 const passportConfig = require('./passport'); // passport를 부름
 
@@ -38,6 +39,7 @@ sequelize
 
 app.use(morgan('dev')); // 로깅을 개발모드로 설정 배포시에는 combine으로 설정해야함(메모리 이점)
 app.use(express.static(path.join(__dirname, 'public'))); // 프론트 연결설정
+app.use('/img', express.static(path.join(__dirname, 'uploads'))); // 프론트 연결설정
 app.use(express.json()); // req.body를 ajax json 요청을 받을 수 있게 만듬
 app.use(express.urlencoded({ extended: false })); // req.body 폼 요청을 받을 수 있게 만듬
 app.use(cookieParser(process.env.COOKIE_SECRET)); // cookie 키 설정과 쿠키 관련 설정을 할 수 있게 만듬(쿠키가 같이 오는지 확인) { connect.sid : 1231293814312 }
@@ -60,6 +62,7 @@ app.use(passport.session()); // connect.id라는 이름으로 세션 쿠키가 �
 
 app.use('/', pageRouter); // pageRouter에 걸리면
 app.use('/auth', authRouter); // authRouter에 걸리면
+app.use('/post', postRouter);
 
 // 404 NOT FOUND라면 마주하게 되는 미들웨어
 app.use((req, res, next) => {

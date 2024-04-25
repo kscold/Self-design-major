@@ -20,6 +20,11 @@ module.exports = () => {
 
                     if (exUser) {
                         done(null, exUser);
+                        /* const tokenUser = {
+                            user: exUser,
+                            accessToken: accessToken || '',
+                        };
+                        done(null, tokenUser); */
                     } else {
                         const newUser = await User.create({
                             // 이 부분이 업데이트가 자주되므로 확인이 필요함
@@ -29,6 +34,12 @@ module.exports = () => {
                             provider: 'kakao',
                         });
                         done(null, newUser);
+
+                        /* const tokenUser = {
+                            user: newUser,
+                            accessToken: accessToken || '',
+                        };
+                        done(null, tokenUser); */
                     }
                 } catch (error) {
                     done(error);

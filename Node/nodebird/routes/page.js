@@ -10,6 +10,7 @@ const { isLoggedIn, isNotLoggedIn } = require('../middlewares');
 // 라우터에서 공통적으로 쓰는 미들웨어를 선언
 router.use((req, res, next) => {
     // 공통적으로 쓸 수 있도록 res.locals로 선언(미들웨어끼리 공유함)
+    // console.log('req.user의 데이터', req.user);
     res.locals.user = req.user;
     res.locals.followerCount = 0;
     res.locals.followingCount = 0;
