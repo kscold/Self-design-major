@@ -23,9 +23,12 @@ for(let i = 0; i<10; i++){
 
 - 그러나 위의 기본적인 for문 문법을 브라우저에서 사용할 경우 [[prototype]]와 같은 [[객체(Object)]] [[속성(Property)]]까지 전부 순회하는 문제가 발생할 수 있다.
 - 따라서 밑에 나오는 for ... in 문법에 .hasOwnProperty() [[메서드(Method)]]를 사용해주면 해결된다.
+
+
 ## for ... in
 
-- for in문은 [[객체(Object)]] 에 사용할 수 있는 반복분이다.  
+- for in문은 [[객체(Object)]]에 사용할 수 있는 반복분이다.  
+- [[객체(Object)]] [[속성(Property)]]을 따라서 반복한다.
 - [[배열(Array)]]에도 사용할 수 있지만 배열 반복에는 추천되지 않는다.
 
 ```js
@@ -73,6 +76,7 @@ for (let i in obj2) {
 	}
 }
 ```
+
 
 ## for...of
 

@@ -8,31 +8,43 @@
         "type": "tabs",
         "children": [
           {
-            "id": "187f6cd98e2726ba",
+            "id": "76a88990f968bdcc",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Node.js/Module/Sequelize/Model.findOrCreate().md",
+                "file": "JavaScript/Math.md",
                 "mode": "source",
                 "source": false
               }
             }
           },
           {
-            "id": "76a88990f968bdcc",
+            "id": "0bf37279295adc32",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "JavaScript/Promise.all().md",
+                "file": "JavaScript/for.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "256f244e33383b11",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "JavaScript/length.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -98,7 +110,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "JavaScript/Promise.all().md",
+                "file": "JavaScript/length.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +127,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "JavaScript/Promise.all().md",
+                "file": "JavaScript/length.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +150,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "JavaScript/Promise.all().md"
+                "file": "JavaScript/length.md"
               }
             }
           }
@@ -159,8 +171,25 @@
       "command-palette:명령어 팔레트 열기": false
     }
   },
-  "active": "76a88990f968bdcc",
+  "active": "256f244e33383b11",
   "lastOpenFiles": [
+    "JavaScript/length.md",
+    "JavaScript/forEach().md",
+    "JavaScript/for.md",
+    "JavaScript/템플릿 리터럴(Template Literals).md",
+    "JavaScript/typeof.md",
+    "JavaScript/Math.md",
+    "JavaScript/형변환(Type Casting).md",
+    "SQL/TO_CHAR.md",
+    "JavaScript/변수(Variable).md",
+    "JavaScript/참조 타입(Reference Type).md",
+    "JavaScript/원시 타입(Primitive type).md",
+    "JavaScript/얕은 복사.md",
+    "JavaScript/호이스팅(variable hoisting).md",
+    "JavaScript/클래스(Class).md",
+    "JavaScript/식별자(Identifier).md",
+    "JavaScript/var.md",
+    "JavaScript/Promise.all().md",
     "Node.js/Module/Sequelize/Model.findOrCreate().md",
     "JavaScript/정규표현식(Regex).md",
     "Node.js/Module/passport.md",
@@ -171,25 +200,8 @@
     "Node.js/Module/Sequelize/모델.create().md",
     "Node.js/Module/Sequelize/set+모델명.md",
     "Node.js/Module/Sequelize/sequelize.query().md",
-    "Node.js/Module/Sequelize/remove+모델명.md",
-    "Node.js/Module/Sequelize/include.md",
-    "Node.js/Module/Sequelize/get+모델명.md",
     "Node.js/Module/Sequelize",
-    "Node.js/Module/MongoDB/mongoose.Types.md",
-    "Node.js/Module/MongoDB/findByIdAndUpdate().md",
-    "Node.js/Module/MongoDB/mongoDB.md",
-    "Node.js/Module/MongoDB/findById().md",
-    "Node.js/Module/MongoDB/find().md",
-    "Node.js/Module/MongoDB/ObjectID.md",
-    "Node.js/Module/MongoDB/exec().md",
     "Node.js/Module/MongoDB",
-    "OFFSET.md",
-    "React.js/Reducer.md",
-    "React.js/useReducer().md",
-    "SQL/쿼리(query).md",
-    "React.js/리듀서(Reducer).md",
-    "React.js/Libaray/Redux/useReducer().md",
-    "Node.js/Module/시퀄라이즈(Sequelize).md",
     "Node.js/MongoDB",
     "image/Pasted image 20240413032925.png",
     "image/Pasted image 20240413030415.png",
