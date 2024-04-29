@@ -11,24 +11,8 @@
             "id": "76a88990f968bdcc",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "JavaScript/Math.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "0bf37279295adc32",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "JavaScript/for.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "graph",
+              "state": {}
             }
           },
           {
@@ -37,14 +21,14 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "JavaScript/length.md",
+                "file": "JavaScript/DOM/document.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -110,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "JavaScript/length.md",
+                "file": "JavaScript/DOM/document.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -127,7 +111,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "JavaScript/length.md",
+                "file": "JavaScript/DOM/document.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -150,7 +134,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "JavaScript/length.md"
+                "file": "JavaScript/DOM/document.md"
               }
             }
           }
@@ -173,12 +157,22 @@
   },
   "active": "256f244e33383b11",
   "lastOpenFiles": [
+    "JavaScript/이벤트(event).md",
+    "JavaScript/DOM/document.md",
+    "JavaScript/DOM/window.document.md",
+    "JavaScript/DOM/DOM(Document Object Model).md",
+    "HTML/HTML(Hyper Text Markup Language).md",
+    "JavaScript/DOM",
+    "JavaScript/Math.md",
+    "image/Pasted image 20240430002056.png",
+    "JavaScript/window.md",
+    "React.js/BOM(Browser Object Model).md",
+    "JavaScript/전역 객체(Global Object).md",
     "JavaScript/length.md",
     "JavaScript/forEach().md",
     "JavaScript/for.md",
     "JavaScript/템플릿 리터럴(Template Literals).md",
     "JavaScript/typeof.md",
-    "JavaScript/Math.md",
     "JavaScript/형변환(Type Casting).md",
     "SQL/TO_CHAR.md",
     "JavaScript/변수(Variable).md",
@@ -191,15 +185,7 @@
     "JavaScript/var.md",
     "JavaScript/Promise.all().md",
     "Node.js/Module/Sequelize/Model.findOrCreate().md",
-    "JavaScript/정규표현식(Regex).md",
-    "Node.js/Module/passport.md",
-    "Node.js/Module/passport/done().md",
     "Node.js/Module/passport",
-    "Node.js/모델(model).md",
-    "Node.js/Module/Sequelize/시퀄라이즈(Sequelize).md",
-    "Node.js/Module/Sequelize/모델.create().md",
-    "Node.js/Module/Sequelize/set+모델명.md",
-    "Node.js/Module/Sequelize/sequelize.query().md",
     "Node.js/Module/Sequelize",
     "Node.js/Module/MongoDB",
     "Node.js/MongoDB",
@@ -215,9 +201,7 @@
     "Node.js/Module/http",
     "Node.js/Module/Express",
     "Node.js/Module",
-    "Spring/SQL",
     "image/Pasted image 20240402174940.png",
-    "image/Pasted image 20240330180401.png",
-    "image/Pasted image 20240330180142.png"
+    "image/Pasted image 20240330180401.png"
   ]
 }

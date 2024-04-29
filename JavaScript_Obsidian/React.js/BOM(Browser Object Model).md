@@ -3,7 +3,7 @@
 
 - 웹 페이지 내용을 제외한 [[웹(web)]] 브라우저 창에 포함된 모든 [[객체(Object)]] 요소들을 의미한다.
 
-- [[window]] 속성에 속하며 document 문서가 아닌, window를 제어한다.
+- [[window]] [[속성(Property)]]에 속하며 document 문서가 아닌, window를 제어한다.
 
 ## BOM의 종류
 
