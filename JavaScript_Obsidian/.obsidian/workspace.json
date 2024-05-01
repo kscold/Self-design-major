@@ -11,8 +11,12 @@
             "id": "76a88990f968bdcc",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "JavaScript/function.md",
+                "mode": "source",
+                "source": false
+              }
             }
           },
           {
@@ -21,14 +25,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "JavaScript/DOM/document.md",
+                "file": "JavaScript/이벤트 위임(Event Delegation).md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -94,7 +97,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "JavaScript/DOM/document.md",
+                "file": "JavaScript/function.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -111,7 +114,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "JavaScript/DOM/document.md",
+                "file": "JavaScript/function.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -134,7 +137,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "JavaScript/DOM/document.md"
+                "file": "JavaScript/function.md"
               }
             }
           }
@@ -155,13 +158,23 @@
       "command-palette:명령어 팔레트 열기": false
     }
   },
-  "active": "256f244e33383b11",
+  "active": "76a88990f968bdcc",
   "lastOpenFiles": [
+    "JavaScript/생성자 함수(Constructor Function).md",
+    "JavaScript/이벤트 위임(Event Delegation).md",
+    "HTML/<Tr>.md",
+    "HTML/<table>.md",
+    "이벤트 버블링(Event Bubbling).md",
+    "이벤트 캡처링(Event Capturing).md",
+    "image/Pasted image 20240501134435.png",
+    "JavaScript/addEventListener().md",
     "JavaScript/이벤트(event).md",
+    "JavaScript/DOM/document.createElement().md",
+    "HTML/HTML(Hyper Text Markup Language).md",
     "JavaScript/DOM/document.md",
+    "JavaScript/소스코드의 평가 과정.md",
     "JavaScript/DOM/window.document.md",
     "JavaScript/DOM/DOM(Document Object Model).md",
-    "HTML/HTML(Hyper Text Markup Language).md",
     "JavaScript/DOM",
     "JavaScript/Math.md",
     "image/Pasted image 20240430002056.png",
@@ -176,15 +189,6 @@
     "JavaScript/형변환(Type Casting).md",
     "SQL/TO_CHAR.md",
     "JavaScript/변수(Variable).md",
-    "JavaScript/참조 타입(Reference Type).md",
-    "JavaScript/원시 타입(Primitive type).md",
-    "JavaScript/얕은 복사.md",
-    "JavaScript/호이스팅(variable hoisting).md",
-    "JavaScript/클래스(Class).md",
-    "JavaScript/식별자(Identifier).md",
-    "JavaScript/var.md",
-    "JavaScript/Promise.all().md",
-    "Node.js/Module/Sequelize/Model.findOrCreate().md",
     "Node.js/Module/passport",
     "Node.js/Module/Sequelize",
     "Node.js/Module/MongoDB",
@@ -201,7 +205,6 @@
     "Node.js/Module/http",
     "Node.js/Module/Express",
     "Node.js/Module",
-    "image/Pasted image 20240402174940.png",
-    "image/Pasted image 20240330180401.png"
+    "image/Pasted image 20240402174940.png"
   ]
 }
