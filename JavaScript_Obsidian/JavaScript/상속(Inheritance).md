@@ -91,7 +91,7 @@ var kor1 = new Korean("지수");
 console.log(kor1.name);  // 지수
 ```
 
-- 위의 코드를 보면 Korean [[함수(Function)]] 내부에서 [[prototype.apply()]] 함수를 이용한다.
+- 위의 코드를 보면 Korean [[함수(Function)]] 내부에서 [[apply()]] 함수를 이용한다.
 - 부모 객체인 Person [[함수(Function)]] 영역의 this를 Korean [[함수(Function)]] 안의 [[this]]로 [[바인딩(binding)]]한다. 
 
 - 이것은 부모의 [[속성(Property)]]을 자식 [[함수(Function)]] 안에 모두 복사한다.

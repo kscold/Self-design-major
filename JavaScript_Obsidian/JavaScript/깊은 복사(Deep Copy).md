@@ -143,3 +143,21 @@ console.log(object.arr === copy.arr); // false
 console.log(object); // { a: 'a', number: { one: 1, two: 2 }, arr: [ 1, 2, [ 3, 4 ] ] }
 console.log(copy); // { a: 'a', number: { one: 3, two: 2 }, arr: [ 1, 2, [ 3, 4, 5 ] ] }
 ```
+
+### structuredClone() 메서드 사용
+
+- 비교적 최근에 추가된 바닐라 자바스크립트 [[메서드(Method)]]로  structuredClone()를 사용하면 한번에 깊은 복사를 할 수 있다.
+
+```js
+const mushrooms1 = {
+	amanita: ["muscaria", "viros"],
+}
+
+const mushrooms2 = structuredClone(mushrooms1);
+
+mushrooms2.amanita.push("pantherina");
+mushrooms1.amanita.pop();
+
+console.log(mushrooms2.amanita) // ['muscaria', 'viros', 'pantherina']
+console.log(mushrooms1.amanita) // ['muscaria']
+```

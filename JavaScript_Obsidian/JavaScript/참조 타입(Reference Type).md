@@ -53,3 +53,16 @@ console.log(copyArr); // ["hello"]
 - 따라서 [[객체(Object)]]를 복사할 때  =  키워드나 push 같은 [[메서드(Method)]] 사용해서 복사하면 얕은 복사가 돼서 기존 변수 또한 수정되기 떄문에 [[확산 연산자(spread operator)]], [[map()]], [[filter()]], [[slice()]], reduce 등등 새로운 [[배열(Array)]]을 반환하는 [[메서드(Method)]]들을 활용해야 한다.
 
 - 만일 이러한 특성을 고려하지 않은 채 중요한 정보를 담고있는 [[객체(Object)]]나 [[배열(Array)]]에 수정 및 복사를 가하게되면 원본 데이터가 예상치 못한 방향 으로 변경될 수 있으므로 항상 이를 고려하자.
+
+
+## 참조 타입을 [[원시 타입(Primitive type)]]처럼 값으로 비교하는 방법
+
+- [[얕은 복사]]와 달리 [[깊은 복사(Deep Copy)]]는 [[객체(Object)]]의 경우에도 값으로 비교할 수 있다.
+- [[객체(Object)]] 깊이(depth)가 깊은 경우는 lodash 라이브러리의 isEqual() [[메서드(Method)]]를 사용하면 된다.
+
+```js
+const obj1 = { a: 1, b:2 };
+const obj2 = { a: 1, b:2 };
+
+console.log(JSON.stringify(obj1) === JSON.stringify(obj2)); // true
+```
