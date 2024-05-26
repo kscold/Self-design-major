@@ -16,7 +16,7 @@
 
 - 이래야 두 [[테이블(Table)]]이 서로 연관된 [[테이블(Table)]]이라는 것을 알 수 있고, 두 [[테이블(Table)]]을 [[JOIN]]할 수 있다.
 
-- 아래 [[쿼리(Query)]]문은 country 테이블과 city [[테이블(Table)]]을 생성한다.
+- 아래 쿼리(Query)문은 country 테이블과 city [[테이블(Table)]]을 생성한다.
 
 ```sql
 CREATE TABLE country (  
@@ -95,7 +95,7 @@ CREATE TABLE city (
 - 아래는 예시이다.
 - 빈 테이블뿐이라 테이블 안에 같은 값들을 집어넣으려고 한다.
 
-- 아래 [[쿼리(Query)]]문은 아무런 문제 없이 정상적으로 실행될 것이다.
+- 아래 쿼리(Query)문은 아무런 문제 없이 정상적으로 실행될 것이다.
 
 - 그 이유는, 자식 테이블에 새로 넣어준 값이 부모 테이블에 존재하기 때문이다.
 
@@ -192,7 +192,7 @@ CREATE TABLE city (
 | Susan Bod    | Exact-24 | Diamond   | 06/10/2015    |
 | Marian Doyle | Classic  | City      | 03/12/2019    |
 
-- 아래는 지금까지 이야기한 watch 테이블과 owner 테이블에 여러 개의 기본 키 및 외래 키를 생성할 [[쿼리(Query)]]문이다.
+- 아래는 지금까지 이야기한 watch 테이블과 owner 테이블에 여러 개의 기본 키 및 외래 키를 생성할 쿼리(Query)문이다.
 
 ```sql
 -- 1. 부모 테이블 watch 테이블에 다수의 기본 키 생성

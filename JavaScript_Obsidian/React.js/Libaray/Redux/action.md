@@ -35,7 +35,7 @@
 
 - action을 만드는 함수로 사용할 수 있다.
 
-- 단순히 [[매개변수(parameter)]]를 받아와서 [[액션(Action)]] 객체 형태로 만든다.
+- 단순히 [[매개변수(parameter)]]를 받아와서 [[action]] 객체 형태로 만든다.
 - 즉, [[매개변수(parameter)]]를 payload와 연결시킨다.
 
 ```jsx

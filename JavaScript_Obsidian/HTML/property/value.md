@@ -1,5 +1,7 @@
 - value [[속성(Property)]]은 [[<input>]] 태그의 사용자 초깃값(value)을 명시한다.
 
+- [[Context.Provider]]에서는 value [[props]]를 사용하여 초기값을 정의한다.
+
 
 ## type 속성에 따른 value 속성의 용도
 

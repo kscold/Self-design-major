@@ -8,20 +8,24 @@
         "type": "tabs",
         "children": [
           {
-            "id": "76a88990f968bdcc",
-            "type": "leaf",
-            "state": {
-              "type": "graph",
-              "state": {}
-            }
-          },
-          {
             "id": "256f244e33383b11",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "JavaScript/깊은 복사(Deep Copy).md",
+                "file": "React.js/Context API.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "700fb5a6386461df",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "React.js/useContext().md",
                 "mode": "source",
                 "source": false
               }
@@ -94,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "JavaScript/깊은 복사(Deep Copy).md",
+                "file": "React.js/useContext().md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -111,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "JavaScript/깊은 복사(Deep Copy).md",
+                "file": "React.js/useContext().md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -134,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "JavaScript/깊은 복사(Deep Copy).md"
+                "file": "React.js/useContext().md"
               }
             }
           }
@@ -155,36 +159,36 @@
       "command-palette:명령어 팔레트 열기": false
     }
   },
-  "active": "256f244e33383b11",
+  "active": "700fb5a6386461df",
   "lastOpenFiles": [
-    "JavaScript/참조 타입(Reference Type).md",
-    "JavaScript/null.md",
-    "JavaScript/filter().md",
-    "JavaScript/undefined.md",
-    "JavaScript/reduce().md",
-    "React.js/불변성 유지.md",
-    "JavaScript/클로저(Closure).md",
-    "JavaScript/확산 연산자(spread operator).md",
-    "JavaScript/bind().md",
-    "JavaScript/렉시컬 환경(Lexical Environment).md",
-    "JavaScript/일급 함수(First Class Function).md",
+    "React.js/Context.Consumer.md",
+    "React.js/useContext().md",
+    "React.js/Context API.md",
+    "React.js/Context.Provider.md",
+    "React.js/createContext().md",
+    "React.js/Libaray/Redux/action.md",
+    "React.js/Libaray/Redux/useReducer().md",
+    "React.js/createElement().md",
+    "React.js/Libaray/Redux/Reducer.md",
+    "React.js/Libaray/Redux/리덕스(Redux).md",
+    "HTML/property/value.md",
+    "JavaScript/속성(Property).md",
     "JavaScript/function.md",
-    "JavaScript/바인딩(binding).md",
-    "JavaScript/call().md",
-    "JavaScript/apply().md",
-    "JavaScript/이벤트 캡처링(Event Capturing).md",
-    "JavaScript/이벤트 버블링(Event Bubbling).md",
-    "JavaScript/이벤트 위임(Event Delegation).md",
+    "JavaScript/함수(Function).md",
+    "JavaScript/화살표 함수(Arrow function).md",
+    "JavaScript/템플릿 리터럴(Template Literals).md",
+    "JavaScript/strict mode.md",
+    "SQL/외래 키(Foreign Key).md",
+    "JavaScript/깊은 복사(Deep Copy).md",
+    "JavaScript/커링 함수(Curry Fuction).md",
+    "JavaScript/리터럴(literal).md",
+    "JavaScript/순수 함수(Pure function).md",
+    "React.js/Jest/테스트.md",
+    "JavaScript/함수형 프로그래밍(Functional Programming).md",
+    "JavaScript/IntersectionObserver.md",
+    "JavaScript/익명 함수.md",
     "무제 파일.canvas",
-    "JavaScript/생성자 함수(Constructor Function).md",
-    "HTML/<Tr>.md",
-    "HTML/<table>.md",
-    "이벤트 버블링(Event Bubbling).md",
-    "이벤트 캡처링(Event Capturing).md",
     "image/Pasted image 20240501134435.png",
-    "JavaScript/addEventListener().md",
-    "JavaScript/이벤트(event).md",
-    "JavaScript/DOM/document.createElement().md",
     "JavaScript/DOM",
     "image/Pasted image 20240430002056.png",
     "Node.js/Module/passport",

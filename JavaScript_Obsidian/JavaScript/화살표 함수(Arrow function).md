@@ -103,7 +103,6 @@ function twice(value) {
 	return value * 2;
 }
 
-
 const triple = (value) => (value * 3) // () 생략 안한 코드
 
 const triple = (value) => value * 3; // () 생략 한 코드
