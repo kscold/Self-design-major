@@ -2,6 +2,8 @@
 
 - 이는, 하나의 [[객체(Object)]]로 표현된다.
 
+- 어떤 변화를 일으켜야 할 때마다 action [[객체(Object)]]를 만들어야 하기 때문에 [[액션 생성함수(Action Creator)]]를 사용한다.
+
 
 ## 문법
 
@@ -16,7 +18,7 @@
 ```jsx
 {
 	type: "ADD_TODO", // action 객체의 type 속성은 필수적으로 가지고 있어야 함
-	payload: { // 보통 데이터의 이름은 payload로 선언
+	payload: { // 보통 데이터의 이름은 payload 또는 data로 선언
 		id: 0,
 		text: "리덕스 배우기"
 	}
@@ -29,32 +31,3 @@
 	text: "안녕하세요" // 개발자가 마음대로 이름을 정의
 }
 ```
-
-
-## 액션 생성함수 (Action Creator)
-
-- action을 만드는 함수로 사용할 수 있다.
-
-- 단순히 [[매개변수(parameter)]]를 받아와서 [[action]] 객체 형태로 만든다.
-- 즉, [[매개변수(parameter)]]를 payload와 연결시킨다.
-
-```jsx
-export function addTodo(data) {
-	return {
-	    type: "ADD_TODO",
-	    payload: data
-	};
-}
-
-// 화살표 함수로도 만들 수 있음
-export const changeInput = text => ({ 
-	type: "CHANGE_INPUT",
-	payload: text
-});
-```
-
-- 이러한 액션 생성함수를 만들어서 사용하는 이유는 나중에 [[컴포넌트(Component)]]에서 더욱 쉽게 액션을 발생시키기 위함이다.
-- 그래서 보통 함수 앞에 export [[키워드(Keyword)]]를 붙여서 다른 파일에서 불러와서 사용한다.
-
-- [[리덕스(Redux)]]를 사용 할 때 acition 생성함수를 사용하는것이 필수적이진 않다.
-- action을 발생 시킬 때마다 직접 aciton 객체를 작성할수도 있다.

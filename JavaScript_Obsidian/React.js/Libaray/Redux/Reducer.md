@@ -1,5 +1,14 @@
-- 변화를 일으키는 [[함수(Function)]]로 현재의 상태([[state]])와 [[action]]을 참조하여 새로운 상태([[state]])를 반환한다.
+- [[action]]을 [[스토어(Store)]]에 바로 전달하는 것이 아니고 리듀서([[Reducer]])에 전달해야한다.
 
+- 따라서 리듀서([[Reducer]])가 주문을 보고 [[스토어(Store)]]의 상태([[state]])를 업데이트하는 것이다.
+
+- [[action]]을 [[Reducer]]에 전달하기 위해서는 [[dispatch()]] [[메서드(Method)]]를 사용해야한다.
+- [[action]] [[객체(Object)]]가 [[dispatch()]] [[메서드(Method)]]에 전달된다.
+- dispatch([[action]])를 통해 [[Reducer]]를 호출한다.
+
+- [[Reducer]]는 새로운 [[스토어(Store)]]를 생성한다.
+
+- 즉, 리듀서는 변화를 일으키는 [[함수(Function)]]로 현재의 상태([[state]])와 [[action]]을 참조하여 새로운 상태([[state]])를 반환한다.
 
 ## 문법
 
