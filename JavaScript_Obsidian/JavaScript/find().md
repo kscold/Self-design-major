@@ -12,12 +12,22 @@
 ```js
 arr.find(callback(element, index, array), thisArg)
 ```
+### arr 
 
-- arr 순회하고자 하는 배열이다.
-- element(Optional) 현재 배열의 요소이다.
-- index(Optional) 현재 배열 요소의 index이다.
+- 순회하고자 하는 [[배열(Array)]]이다.
+### element
 
-- thisArg(Optional) callbackFn 함수 내부에서 사용할 [[this]] 값으로 사용할 값이다.
+- 옵션이다.
+- 현재 배열의 요소이다.
+### index
+
+- 옵션이다.
+- 현재 배열 요소의 index이다.
+
+### thisArg
+
+- 옵션이다. 
+- callbackFn 함수 내부에서 사용할 [[this]] 값으로 사용할 값이다.
 
 
 ## 예시
@@ -38,7 +48,7 @@ console.log(found); // 출력: 3
 
 ### 객체 속성 기반 검색
 
-- [[객체(Object)]] [[배열(Array)]]에서 특정 속성 값에 따라 [[객체(Object)]]를 검색할 때 유용하다.
+- [[객체(Object)]] [[배열(Array)]]에서 특정 [[속성(Property)]] 값에 따라 [[객체(Object)]]를 검색할 때 유용하다.
 
 ```javascript
 const people = [
@@ -56,7 +66,8 @@ console.log(person); // 출력: {name: "Bob", age: 25}
 
 ### 사용자 지정 조건에 따른 검색
 
-- 사용자 지정 조건 [[함수(Function)]]를 만들어 배열 요소 검색에 활용할 수 있다.
+- 사용자 지정 조건 [[함수(Function)]]를 만들어 [[배열(Array)]] 요소 검색에 활용할 수 있다.
+- 만족하는 가장 첫번째 요소를 반환한다는 사실을 유의해야 한다.
 
 ```javascript
 const products = [

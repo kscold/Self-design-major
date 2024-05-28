@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "React.js/Context API.md",
+                "file": "React.js/Libaray/Redux/connect().md",
                 "mode": "source",
                 "source": false
               }
@@ -23,12 +23,8 @@
             "id": "700fb5a6386461df",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "React.js/Libaray/Redux/액션 생성함수(Action Creator).md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "graph",
+              "state": {}
             }
           }
         ],
@@ -98,7 +94,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "React.js/Libaray/Redux/액션 생성함수(Action Creator).md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +110,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "React.js/Libaray/Redux/액션 생성함수(Action Creator).md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -137,9 +131,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "React.js/Libaray/Redux/액션 생성함수(Action Creator).md"
-              }
+              "state": {}
             }
           }
         ]
@@ -159,34 +151,34 @@
       "command-palette:명령어 팔레트 열기": false
     }
   },
-  "active": "edc002dfb78ff5ff",
+  "active": "700fb5a6386461df",
   "lastOpenFiles": [
-    "React.js/Libaray/Redux/mapDispatchToProps.md",
-    "React.js/connect().md",
-    "React.js/Libaray/Redux/mapStateToProps.md",
-    "React.js/Libaray/Redux/스토어(Store).md",
-    "React.js/Libaray/Redux/리덕스(Redux).md",
-    "React.js/Libaray/Redux/Reducer.md",
-    "React.js/state.md",
-    "React.js/Libaray/Redux/dispatch().md",
-    "JavaScript/순수 함수(Pure function).md",
-    "React.js/Libaray/Redux/action.md",
     "React.js/Libaray/Redux/액션 생성함수(Action Creator).md",
+    "React.js/Libaray/Redux/connect().md",
+    "React.js/Libaray/Redux/mapStateToProps.md",
+    "React.js/Libaray/Redux/handleActions().md",
+    "React.js/Libaray/Redux/createAction().md",
+    "React.js/Libaray/Redux/useSelector().md",
+    "React.js/Libaray/immer.md",
+    "JavaScript/find().md",
+    "JavaScript/findIndex().md",
+    "React.js/Libaray/Redux/스토어(Store).md",
+    "JavaScript/push().md",
+    "JavaScript/splice().md",
+    "React.js/Libaray/Redux/Reducer.md",
+    "React.js/Libaray/Redux/dispatch().md",
+    "React.js/Libaray/Redux/action.md",
+    "React.js/Context API.md",
+    "React.js/createContext().md",
+    "JavaScript/메서드(Method).md",
+    "React.js/Libaray/Redux/mapDispatchToProps.md",
+    "React.js/Libaray/Redux/리덕스(Redux).md",
+    "React.js/state.md",
+    "JavaScript/순수 함수(Pure function).md",
     "Node.js/export.md",
     "React.js/useContext().md",
     "React.js/Context.Consumer.md",
-    "React.js/Context API.md",
     "React.js/Context.Provider.md",
-    "React.js/createContext().md",
-    "React.js/Libaray/Redux/useReducer().md",
-    "React.js/createElement().md",
-    "HTML/property/value.md",
-    "JavaScript/속성(Property).md",
-    "JavaScript/function.md",
-    "JavaScript/함수(Function).md",
-    "JavaScript/화살표 함수(Arrow function).md",
-    "JavaScript/템플릿 리터럴(Template Literals).md",
-    "JavaScript/strict mode.md",
     "무제 파일.canvas",
     "image/Pasted image 20240501134435.png",
     "JavaScript/DOM",

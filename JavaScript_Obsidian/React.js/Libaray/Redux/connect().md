@@ -5,6 +5,8 @@
 
 - 따라서 [[컴포넌트(Component)]]를 [[스토어(Store)]]에 연결(connect)시킬 때 connect()를 사용한다.
 
+- connect()와 [[mapStateToProps]], [[mapDispatchToProps]]를 사용하는 방법 대신 [[useSelector()]]를 사용할 수 있다.
+
 
 ## 문법
 
