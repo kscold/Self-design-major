@@ -26,7 +26,7 @@ exports.uploadPost = async (req, res, next) => {
                     return Hashtag.findOrCreate({
                         where: { title: tag.slice(1).toLowerCase() }, // 저장할 때 #을 때고 소문자로 만들어서 저장함
                     });
-                })
+                }),
             );
 
             console.log(result); // Promise.all로 실행하면 [[모델, bool], [모델, bool], [모델, bool]] 형식으로 나옴

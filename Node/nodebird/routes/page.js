@@ -4,9 +4,9 @@ const {
     renderJoin,
     renderMain,
     renderProfile,
-    renderHashtag
+    renderHashtag,
 } = require('../controllers/page');
-const {isLoggedIn, isNotLoggedIn} = require('../middlewares');
+const { isLoggedIn, isNotLoggedIn } = require('../middlewares');
 
 // 라우터에서 공통적으로 쓰는 미들웨어를 선언
 router.use((req, res, next) => {
