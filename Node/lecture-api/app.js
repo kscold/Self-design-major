@@ -12,6 +12,7 @@ dotenv.config(); // process.env안에 들어감
 
 const authRouter = require('./routes/auth');
 const indexRouter = require('./routes');
+const v1Router = require('./routes/v1');
 
 const passportConfig = require('./passport'); // passport를 부름
 
@@ -61,6 +62,7 @@ app.use(passport.session()); // connect.id라는 이름으로 세션 쿠키가 �
 
 app.use('/auth', authRouter); // authRouter에 걸리면
 app.use('/', indexRouter);
+app.use('/v1', v1Router);
 
 // 404 NOT FOUND라면 마주하게 되는 미들웨어
 app.use((req, res, next) => {

@@ -1016,7 +1016,7 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
     </schema>
     <schema id="294" parent="1" name="nodebird">
       <Current>1</Current>
-      <LastIntrospectionLocalTimestamp>2024-06-01.17:21:22</LastIntrospectionLocalTimestamp>
+      <LastIntrospectionLocalTimestamp>2024-06-02.10:38:38</LastIntrospectionLocalTimestamp>
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </schema>
     <user id="295" parent="1" name="mysql.infoschema">
