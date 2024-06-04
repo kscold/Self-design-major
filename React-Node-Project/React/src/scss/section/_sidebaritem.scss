@@ -1,0 +1,50 @@
+.sidebar-sub-container {
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.3s ease-out;
+
+    &.open {
+        max-height: 1000px; /* 충분히 큰 값으로 설정 */
+        transition: max-height 0.3s ease-in;
+    }
+}
+
+.sidebar-title {
+    display: flex;
+    align-items: center;
+    height: 40px; /* 사이드바 항목 높이 */
+    padding-left: 16px; /* 사이드바 항목 좌측 여백 */
+    font-weight: bold; /* 사이드바 항목 폰트 굵기 */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+        background-color: #e6e6e0; /* 사이드바 항목 호버 시 배경색 */
+    }
+
+    &.active {
+        background-color: #dcdcd2; /* 선택된 사이드바 항목 배경색 */
+        border-right: 5px solid #007bff; /* 선택된 사이드바 항목 우측 테두리 */
+    }
+}
+
+.sidebar-link {
+    color: inherit;
+    text-decoration: inherit;
+}
+
+.depth-0 {
+    padding-left: 16px;
+}
+.depth-1 {
+    padding-left: 32px;
+}
+.depth-2 {
+    padding-left: 48px;
+}
+.depth-3 {
+    padding-left: 64px;
+}
+.depth-4 {
+    padding-left: 80px;
+}

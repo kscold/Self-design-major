@@ -1,0 +1,26 @@
+[
+    {
+        "sidebarId": "1",
+        "sidebarName": "Java",
+        "depth": 0,
+        "url": "/coding/java"
+    },
+    {
+        "sidebarId": "2",
+        "sidebarName": "Node",
+        "depth": 0,
+        "url": "/coding/node"
+    },
+    {
+        "sidebarId": "3",
+        "sidebarName": "JavaScript",
+        "depth": 0,
+        "url": "/coding/javascript",
+        "chidren": {
+            "sidebarId": "4",
+            "sidebarName": "React",
+            "depth": "1",
+            "url": "/coding/react"
+        }
+    }
+]

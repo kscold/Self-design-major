@@ -1,0 +1,26 @@
+.coding-page-list-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.coding-page-list-section-name {
+    margin-bottom: 1rem;
+}
+
+.coding-page-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.coding-page-list li {
+    margin-bottom: 0.5rem;
+}
+
+.coding-page-detail-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}

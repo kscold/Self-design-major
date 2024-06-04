@@ -1,0 +1,40 @@
+// _common.scss
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppin", sans-serif;
+    src: url("../../assets/Poppin.ttf") format("truetype");
+}
+
+// .hero {
+//     // 세로로 정렬
+//     width: 100%;
+//     height: 100vh;
+//     position: relative;
+//     padding: 0;
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+
+//     @media only screen and (min-width: 375px) {
+//         width: 100%;
+//         height: 100vh;
+//     }
+// }
+
+.main-hero {
+    background-image: linear-gradient(rgba(12, 3, 51, 0.3), rgba(12, 3, 51, 0.3));
+
+    nav ul li a {
+        color: #fff; // 메인 페이지의 텍스트 색상
+    }
+}
+
+.other-hero {
+    background-color: #ffffff;
+}
+
+button {
+    cursor: pointer;
+}

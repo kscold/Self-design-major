@@ -1,0 +1,19 @@
+// .sidebar-container {
+//     position: absolute;
+//     left: 0;
+//     min-width: 16rem;
+//     width: auto;
+//     height: auto;
+//     min-height: 10vh;
+// }
+
+.sidebar-container {
+    position: absolute;
+    left: 0;
+    min-width: 16rem;
+    width: auto;
+    height: auto;
+    min-height: 10vh;
+    background-color: #f6f6f2; /* 사이드바 배경색 */
+    border-right: 1px solid #ddd; /* 사이드바 우측 테두리 */
+}
