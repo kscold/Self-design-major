@@ -1,6 +1,6 @@
 const User = require('../models/user');
 const bcrypt = require('bcrypt');
-const passport = require('passport');
+const jwt = require('jsonwebtoken');
 
 exports.join = async (req, res, next) => {
     const { loginId, password, email = null, nickname } = req.body;

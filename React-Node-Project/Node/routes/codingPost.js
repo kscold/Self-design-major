@@ -1,13 +1,14 @@
 const express = require('express');
 const router = express.Router();
-const { isLoggedIn, isNotLoggedIn } = require('../middlewares');
+const { verifyToken } = require('../middlewares');
 const fs = require('fs');
 const multer = require('multer');
 const path = require('path');
 const {
-    afterUploadImage,
     uploadPost,
     showPosts,
+    afterUploadImages,
+    getImage,
 } = require('../controllers/codingPost');
 
 try {
@@ -22,18 +23,28 @@ const upload = multer({
             cb(null, 'uploads/');
         },
         filename(req, file, cb) {
-            console.log(file);
             const ext = path.extname(file.originalname);
-            cb(null, path.basename(file.originalname, ext) + Date.now() + ext);
+            const fileName = file.originalname.replace(/\s/g, '_'); // 띄어쓰기를 '_'로 대체
+            cb(null, path.basename(fileName, ext) + Date.now() + ext);
         },
     }),
     limits: { fileSize: 5 * 1024 * 1024 },
 });
 
-router.post('/img', isLoggedIn, upload.single('img'), afterUploadImage);
+router.post(
+    '/uploads',
+    verifyToken,
+    upload.array('images', 10), // 최대 10개의 파일 업로드 허용
+    afterUploadImages,
+    uploadPost,
+);
 
-const upload2 = multer();
-router.post('/', isLoggedIn, upload2.none(), uploadPost);
+router.get('/uploads/:image', (req, res) => {
+    const imageName = decodeURIComponent(req.params.image); // 파일 이름 디코딩
+    console.log(imageName);
+    const imagePath = path.join(__dirname, '../uploads', imageName);
+    res.sendFile(imagePath);
+});
 
 router.get('/', showPosts);
 

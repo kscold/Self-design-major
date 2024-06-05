@@ -17,8 +17,12 @@ class CodingPost extends Sequelize.Model {
                     type: Sequelize.TEXT,
                     allowNull: false,
                 },
-                img: {
-                    type: Sequelize.STRING(200),
+                images: {
+                    type: Sequelize.JSON,
+                    allowNull: true,
+                },
+                hashtags: {
+                    type: Sequelize.JSON,
                     allowNull: true,
                 },
                 createdAt: {
@@ -36,7 +40,7 @@ class CodingPost extends Sequelize.Model {
                 timestamps: false,
                 underscored: false,
                 modelName: 'CodingPost',
-                tableName: 'posts',
+                tableName: 'codingposts',
                 paranoid: false,
                 charset: 'utf8',
                 collate: 'utf8_general_ci',
@@ -46,7 +50,9 @@ class CodingPost extends Sequelize.Model {
 
     static associate(db) {
         db.CodingPost.belongsTo(db.User, { foreignKey: 'userId' });
-        db.CodingPost.belongsToMany(db.Hashtag, { through: 'PostHashtag' });
+        db.CodingPost.belongsToMany(db.Hashtag, {
+            through: 'CodingPostHashtag',
+        });
     }
 }
 

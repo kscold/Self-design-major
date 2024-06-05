@@ -24,7 +24,9 @@ class Hashtag extends Sequelize.Model {
     }
 
     static associate(db) {
-        db.Hashtag.belongsToMany(db.CodingPost, { through: 'PostHashtag' });
+        db.Hashtag.belongsToMany(db.CodingPost, {
+            through: 'CodingPostHashtag',
+        });
     }
 }
 

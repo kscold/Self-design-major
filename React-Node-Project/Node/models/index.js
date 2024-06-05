@@ -3,9 +3,6 @@ const fs = require('fs');
 const path = require('path');
 const env = process.env.NODE_ENV || 'development';
 const config = require('../config/config')[env];
-// const Post = require('./post');
-// const User = require('./user');
-// const Hashtag = require('./hashtag');
 
 const db = {};
 
@@ -13,7 +10,7 @@ const sequelize = new Sequelize(
     config.database,
     config.username,
     config.password,
-    config
+    config,
 );
 
 db.sequelize = sequelize; // 시퀄라이즈 설정 불러옴
@@ -43,19 +40,3 @@ Object.keys(db).forEach((modelName) => {
 });
 
 module.exports = db;
-
-// 자동화 시 밑에 코드들이 필요가 없어짐
-// // 테이블 스키마 연결
-// db.User = User;
-// db.Post = Post;
-// db.Hashtag = Hashtag;
-
-// // 테이블 생성
-// User.initiate(sequelize);
-// Post.initiate(sequelize);
-// Hashtag.initiate(sequelize);
-
-// // 연관 관계 설정
-// User.associate(db);
-// Post.associate(db);
-// Hashtag.associate(db);
