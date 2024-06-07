@@ -1,7 +1,6 @@
 const passport = require('passport');
 const local = require('./localStrategy');
 const User = require('../models/user');
-const kako = require('./kakoStrategy');
 
 module.exports = () => {
     // user === exUser
@@ -16,20 +15,6 @@ module.exports = () => {
         // id만 가지고 유저 정보를 복원
         User.findOne({
             where: { id },
-            include: [
-                // 팔로잉
-                {
-                    model: User,
-                    attributes: ['id', 'nick'],
-                    as: 'Followers',
-                },
-                // 팔로워
-                {
-                    model: User,
-                    attributes: ['id', 'nick'],
-                    as: 'Followings',
-                },
-            ],
         })
             // 따라서 이때부터 req.user를 사용할 수 있음
             .then((user) => done(null, user)) // req.user, req.session
@@ -37,5 +22,4 @@ module.exports = () => {
     });
 
     local();
-    kako();
 };

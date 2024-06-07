@@ -15,8 +15,7 @@ exports.isNotLoggedIn = (req, res, next) => {
         // passport를 통해서 로그인 안한 경우를 판단
         next();
     } else {
-        const message = encodeURIComponent('로그인한 상태입니다.');
-        res.redirect(`/?error=${message}}`);
+        res.status(409).send('로그인한 상태입니다.');
     }
 };
 

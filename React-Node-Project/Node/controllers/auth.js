@@ -9,7 +9,7 @@ exports.join = async (req, res, next) => {
         const exUser = await User.findOne({ where: { loginId } });
         if (exUser) {
             return res
-                .status(400)
+                .status(409)
                 .json({ error: '이미 존재하는 아이디입니다.' });
         }
 
@@ -17,7 +17,7 @@ exports.join = async (req, res, next) => {
             const exEmail = await User.findOne({ where: { email } });
             if (exEmail) {
                 return res
-                    .status(400)
+                    .status(409)
                     .json({ error: '이미 존재하는 이메일입니다.' });
             }
         }
@@ -30,7 +30,7 @@ exports.join = async (req, res, next) => {
             nickname,
         });
 
-        return res.status(201).json({ message: '회원가입이 완료되었습니다.' });
+        return res.status(200).json({ message: '회원가입이 완료되었습니다.' });
     } catch (error) {
         console.error(error);
         if (error.name === 'SequelizeValidationError') {
@@ -62,7 +62,8 @@ exports.login = async (req, res, next) => {
             expiresIn: '1h',
         });
 
-        return res.json({ token });
+        // Include nickname in the response
+        return res.status(200).json({ nickname: user.nickname, token });
     } catch (error) {
         console.error(error);
         next(error);
@@ -71,6 +72,6 @@ exports.login = async (req, res, next) => {
 
 exports.logout = (req, res, next) => {
     req.logout(() => {
-        res.json({ message: '로그아웃되었습니다.' });
+        res.status(200).json({ message: '로그아웃되었습니다.' });
     });
 };
