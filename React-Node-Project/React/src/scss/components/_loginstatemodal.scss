@@ -1,0 +1,16 @@
+.login-state-modal-container {
+    position: fixed;
+    bottom: 1rem; /* Adjust this value as needed */
+    right: 1rem; /* Adjust this value as needed */
+    background-color: rgba(31, 32, 41, 0.8); /* Semi-transparent background */
+    color: white; /* Text color */
+    padding: 10px; /* Padding */
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%; /* Rounded corners */
+    z-index: 1000; /* Ensure it is on top */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}

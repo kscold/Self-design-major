@@ -8,8 +8,9 @@ import Loading from '../components/Loading';
 const Main = lazy(() => import('../page/main'));
 const Life = lazy(() => import('../page/life'));
 const Coding = lazy(() => import('../page/coding'));
-const Poto = lazy(() => import('../page/poto'));
+const Poto = lazy(() => import('../page/photo'));
 const Info = lazy(() => import('../page/info'));
+const Auth = lazy(() => import('../page/auth'));
 
 const router = createBrowserRouter([
   {
@@ -20,6 +21,14 @@ const router = createBrowserRouter([
         element: (
           <Suspense fallback={<Loading />}>
             <Main />
+          </Suspense>
+        ),
+      },
+      {
+        path: 'login',
+        element: (
+          <Suspense fallback={<Loading />}>
+            <Auth />
           </Suspense>
         ),
       },
@@ -41,7 +50,7 @@ const router = createBrowserRouter([
         children: condingRouter,
       },
       {
-        path: 'poto',
+        path: 'photo',
         element: (
           <Suspense fallback={<Loading />}>
             <Poto />

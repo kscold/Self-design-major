@@ -1,0 +1,251 @@
+/* src/components/Login.scss */
+
+.login-content {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, #aaadb1, #0c1f3a);
+}
+
+.login-section {
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 1.7;
+    color: #ffffff;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.login-form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-title-selection {
+    width: 200px;
+    display: flex;
+    justify-content: space-between;
+}
+
+// 로그인 인풋창 폼
+.login-input-form {
+    margin-top: 20px;
+}
+
+.login-input-form input {
+    margin-top: 20px;
+}
+
+.login-input-form :last-child {
+    margin-top: 10px;
+}
+
+// input만 설정
+.login-input-form input::-webkit-input-placeholder {
+    color: #c4c3ca;
+    opacity: 0.7;
+    transition: all 200ms linear;
+}
+
+.login-input-form-style {
+    padding: 13px 20px;
+    padding-left: 55px;
+    height: 48px;
+    width: 100%;
+    font-weight: 500;
+    border-radius: 4px;
+    font-size: 14px;
+    line-height: 22px;
+    letter-spacing: 0.5px;
+    outline: none;
+    color: #c4c3ca;
+    background-color: #1f2029;
+    border: none;
+    transition: all 200ms linear;
+    box-shadow: 0 4px 8px 0 rgba(21, 21, 21, 0.2);
+}
+.login-input-form-style:focus,
+.login-input-form-style:active {
+    border: none;
+    outline: none;
+    box-shadow: 0 4px 8px 0 rgba(21, 21, 21, 0.2);
+}
+
+.login-form-item-container {
+    // position: absolute;
+    position: relative;
+    width: 100%;
+    padding: 0 35px;
+    top: 50%;
+    left: 0;
+    transform: translate3d(0, -50%, 35px) perspective(100px);
+    z-index: 20;
+    display: block;
+}
+
+.login-button-container {
+    display: flex;
+    justify-content: center;
+}
+
+.login-button {
+    border-radius: 4px;
+    height: 44px;
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: all 200ms linear;
+    padding: 0 30px;
+    letter-spacing: 1px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border: none;
+    border-radius: 10px;
+    // background-color: #ffeba7;
+    background-color: #8c91a9;
+    // color: #102770;
+    color: #ffffff;
+    // box-shadow: 0 8px 24px 0 rgba(21, 111, 222, 0.2);
+}
+.login-button:active,
+.login-button:focus {
+    background-color: #404b5e;
+    color: #ffffff;
+    // color: #ffeba7;
+    // box-shadow: 0 8px 24px 0 rgba(16, 39, 112, 0.2);
+}
+.login-button:hover {
+    background-color: #404b5e;
+    color: #ffffff;
+    // color: #ffeba7;
+    // box-shadow: 0 8px 24px 0 rgba(16, 39, 112, 0.2);
+}
+
+.login-button {
+    cursor: pointer;
+    transition: all 200ms linear;
+}
+.login-button:hover {
+    text-decoration: none;
+}
+
+.login-title {
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+[type="checkbox"]:checked,
+[type="checkbox"]:not(:checked) {
+    position: absolute;
+    left: -9999px;
+}
+.checkbox:checked + label,
+.checkbox:not(:checked) + label {
+    position: relative;
+    display: block;
+    text-align: center;
+    width: 60px;
+    height: 16px;
+    border-radius: 8px;
+    padding: 0;
+    margin-top: 30px;
+    cursor: pointer;
+    // background-color: #ffeba7;
+    background-color: #8c91a9;
+}
+.checkbox:checked + label:before,
+.checkbox:not(:checked) + label:before {
+    position: absolute;
+    display: block;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    // color: #ffeba7;
+    color: #8c91a9;
+    background-color: #2a2b38;
+    content: "\eb4f";
+    z-index: 20;
+    top: -10px;
+    left: -10px;
+    line-height: 36px;
+    text-align: center;
+    font-size: 24px;
+    transition: all 0.5s ease;
+}
+.checkbox:checked + label:before {
+    transform: translateX(44px) rotate(-270deg);
+}
+
+.login-card-3d-wrap {
+    position: relative;
+    width: 440px;
+    max-width: 100%;
+    height: 400px;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    perspective: 800px;
+    margin-top: 60px;
+}
+.login-card-3d-wrapper {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    transition: all 800ms ease-out;
+    border-radius: 6px;
+}
+
+.login-card-front,
+.login-card-back {
+    width: 100%;
+    height: 100%;
+    background-color: #2a2b38;
+    // background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/1462889/pat.svg");
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    background-size: 300%;
+    position: absolute;
+    border-radius: 6px;
+    left: 0;
+    top: 0;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -o-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.login-card-back {
+    transform: rotateY(180deg);
+}
+.checkbox:checked ~ .login-card-3d-wrap .login-card-3d-wrapper {
+    transform: rotateY(180deg);
+}
+
+.login-error-message {
+    color: rgb(255, 0, 30);
+    margin-top: 10px;
+    font-size: 0.8rem;
+}
+
+// .input-icon {
+//     position: absolute;
+//     top: 0;
+//     left: 18px;
+//     height: 48px;
+//     font-size: 24px;
+//     line-height: 48px;
+//     text-align: left;
+//     color: #ffeba7;
+//     transition: all 200ms linear;
+// }

@@ -29,7 +29,7 @@ const Nav = () => {
           <Link to="/coding">coding</Link>
         </li>
         <li className="list-item">
-          <Link to="/poto">poto</Link>
+          <Link to="/photo">photo</Link>
         </li>
         <li className="list-item">
           <Link to="/info">info</Link>

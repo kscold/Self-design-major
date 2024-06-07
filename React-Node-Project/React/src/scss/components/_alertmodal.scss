@@ -1,0 +1,41 @@
+.alert-modal-container {
+    position: fixed; // fixed로 변경하여 화면 중앙에 배치
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); // 화면 중앙에 정렬
+    z-index: 1000; // 높은 z-index 설정
+}
+
+.alert-modal {
+    background: #2a2b38; /* 불투명한 배경색 */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    color: #ffffff;
+    z-index: 1001; /* 배경보다 높은 z-index 설정 */
+}
+
+.alert-modal-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.alert-modal-content p {
+    margin-bottom: 20px;
+}
+
+.alert-modal-content button {
+    padding: 10px 20px;
+    background: #8c91a9;
+    border: none;
+    color: #ffffff;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.alert-modal-content button:hover {
+    background: #404b5e;
+}

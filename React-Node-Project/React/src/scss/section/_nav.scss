@@ -16,6 +16,7 @@
         height: auto; // 유효한 height 값 사용
         @media (max-width: 430px) {
             width: 50px; // 작은 화면에서도 비율 유지
+            margin-left: 0.7rem;
         }
     }
 
@@ -37,6 +38,7 @@
             @media (max-width: 430px) {
                 margin: 1vw; // 작은 화면에서 여백 줄이기
                 font-size: 0.875rem; // 작은 화면에서 글씨 크기 줄이기
+                margin-right: 0.8rem;
             }
         }
     }
@@ -52,12 +54,12 @@
             margin-left: 40px;
 
             @media (max-width: 430px) {
-                margin-left: 20px;
+                margin-left: 1.5rem;
             }
 
             a {
                 text-decoration: none;
-                color: #000;
+                color: #ffffff;
                 font-size: 17px;
             }
         }
@@ -71,7 +73,7 @@
 
 .other-nav-container {
     // 메인 페이지가 아닐 때 nav
-    background-color: aliceblue;
+    background: linear-gradient(to right, #aaadb1, #0c1f3a); // Adjust the second color as needed
 }
 
 .back-video {
