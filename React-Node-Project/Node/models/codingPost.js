@@ -34,6 +34,10 @@ class CodingPost extends Sequelize.Model {
                     type: Sequelize.INTEGER,
                     allowNull: false,
                 },
+                sidebarId: {
+                    type: Sequelize.INTEGER,
+                    allowNull: false,
+                },
             },
             {
                 sequelize,
@@ -50,6 +54,10 @@ class CodingPost extends Sequelize.Model {
 
     static associate(db) {
         db.CodingPost.belongsTo(db.User, { foreignKey: 'userId' });
+        db.CodingPost.belongsTo(db.CodingPostSidebar, {
+            foreignKey: 'sidebarId',
+            as: 'sidebar',
+        });
         db.CodingPost.belongsToMany(db.Hashtag, {
             through: 'CodingPostHashtag',
         });

@@ -60,7 +60,7 @@ app.use(
 );
 
 app.use('/api/auth', authRouter);
-app.use('/api/codingPost', codingPostRouter);
+app.use('/api/coding', codingPostRouter);
 
 app.use((req, res, next) => {
     const error = new Error(`${req.method} ${req.url} 라우터가 없습니다.`);
