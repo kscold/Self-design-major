@@ -4,9 +4,13 @@ import { Outlet } from 'react-router-dom';
 
 const Conding = () => {
   return (
-    <div>
-      <SideBar />
-      <Outlet />
+    <div className="coding-container">
+      <div className="sidebar-container">
+        <SideBar />
+      </div>
+      <div className="coding-page-continaer">
+        <Outlet />
+      </div>
     </div>
   );
 };

@@ -19,7 +19,7 @@ const Auth = () => {
     <div className="login-content">
       <div className="login-section">
         <div className="login-form-container">
-          <h2 class="login-title-selection">
+          <h2 className="login-title-selection">
             <span>Log In </span>
             <span>Sign Up</span>
           </h2>

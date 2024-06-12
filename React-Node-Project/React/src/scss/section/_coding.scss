@@ -1,3 +1,14 @@
+.coding-container {
+    display: flex;
+    height: 100vh; /* 전체 화면 높이 */
+}
+
+.coding-page-container {
+    flex-grow: 1; /* 남은 영역을 차지하도록 설정 */
+    overflow-y: auto; /* 내용이 많을 경우 스크롤 가능 */
+    width: 100%;
+}
+
 .coding-page-list-container {
     position: absolute;
     top: 50%;

@@ -3,13 +3,15 @@
         "sidebarId": "1",
         "sidebarName": "Java",
         "depth": 0,
-        "url": "/coding/java"
+        "url": "/coding/java",
+        "chidren": {}
     },
     {
         "sidebarId": "2",
         "sidebarName": "Node",
         "depth": 0,
-        "url": "/coding/node"
+        "url": "/coding/node",
+        "chidren": {}
     },
     {
         "sidebarId": "3",

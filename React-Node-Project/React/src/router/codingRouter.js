@@ -1,9 +1,12 @@
 import React, { lazy } from 'react';
 import { Suspense } from 'react';
-import Loading from '../components/Loading'; // 로딩 컴포넌트 임포트
+import Loading from '../components/Loading';
 
 const CodingPageList = lazy(() => import('../page/coding/CodingPageList'));
 const CodingPageDetail = lazy(() => import('../page/coding/CodingPageDetail'));
+const CodingPageSidebarCreate = lazy(() =>
+  import('../page/coding/CodingPageSidebarCreate')
+);
 
 const condingRouter = [
   {
@@ -29,6 +32,14 @@ const condingRouter = [
     element: (
       <Suspense fallback={<Loading />}>
         <CodingPageDetail />
+      </Suspense>
+    ),
+  },
+  {
+    path: 'sidebar',
+    element: (
+      <Suspense fallback={<Loading />}>
+        <CodingPageSidebarCreate />
       </Suspense>
     ),
   },
