@@ -60,3 +60,24 @@
 .depth-4 {
     padding-left: 80px;
 }
+
+.sidbar-admin-button-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    .sidebar-create-button,
+    .sidebar-post-create-button {
+        margin: 5px;
+        width: 120px;
+        height: 40px;
+        background-color: #0c1f3a;
+        color: #ffffff;
+        border-radius: 8px;
+        font-size: 1rem;
+        font-weight: 500;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+}

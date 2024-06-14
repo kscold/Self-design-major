@@ -14,13 +14,32 @@ const SideBar = () => {
     dispatch(GetSidebarData());
   }, [dispatch]);
 
-  const onClickPostSidebar = () => {
+  const onClickSidebarPost = () => {
     navigate('/coding/sidebar');
+  };
+
+  const onClickCodingPost = () => {
+    navigate('/coding/post');
   };
 
   return (
     <>
-      {nickname && <button onClick={onClickPostSidebar}>+</button>}
+      {nickname && (
+        <div className="sidbar-admin-button-container">
+          <button
+            className="sidebar-create-button"
+            onClick={onClickSidebarPost}
+          >
+            +
+          </button>
+          <button
+            className="sidebar-post-create-button"
+            onClick={onClickCodingPost}
+          >
+            글쓰기 +
+          </button>
+        </div>
+      )}
       {sidebarData.length > 0 ? (
         sidebarData.map((item) => (
           <SideBarItem item={item} key={item.sidebarId} />

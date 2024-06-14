@@ -94,6 +94,23 @@ const CodingPageDetail = lazy(() => import('../page/coding/CodingPageDetail'));
 const CodingPageSidebarCreate = lazy(() =>
   import('../page/coding/CodingPageSidebarCreate')
 );
+const CodingPagePostCreate = lazy(() =>
+  import('../page/coding/CodingPagePostCreate')
+);
+
+// const detailRouter = {
+//   path: 'detail',
+//   children: [
+//     {
+//       path: ':id',
+//       element: (
+//         <Suspense fallback={<Loading />}>
+//           <CodingPageDetail />
+//         </Suspense>
+//       ),
+//     },
+//   ],
+// };
 
 const detailRouter = {
   path: 'detail/:id',
@@ -115,7 +132,7 @@ const codingRouter = [
     children: [
       detailRouter,
       {
-        path: ':section1',
+        path: ':section1?',
         element: (
           <Suspense fallback={<Loading />}>
             <CodingPageList />
@@ -124,7 +141,7 @@ const codingRouter = [
         children: [
           detailRouter,
           {
-            path: ':section2',
+            path: ':section2?',
             element: (
               <Suspense fallback={<Loading />}>
                 <CodingPageList />
@@ -163,6 +180,14 @@ const codingRouter = [
     element: (
       <Suspense fallback={<Loading />}>
         <CodingPageSidebarCreate />
+      </Suspense>
+    ),
+  },
+  {
+    path: 'post',
+    element: (
+      <Suspense fallback={<Loading />}>
+        <CodingPagePostCreate />
       </Suspense>
     ),
   },
