@@ -4,24 +4,24 @@ class CodingPost extends Sequelize.Model {
     static initiate(sequelize) {
         CodingPost.init(
             {
-                contentId: {
+                codingPostId: {
                     type: Sequelize.INTEGER,
                     autoIncrement: true,
                     primaryKey: true,
                 },
-                title: {
+                codingPostTitle: {
                     type: Sequelize.STRING(100),
                     allowNull: false,
                 },
-                content: {
+                codingPostContent: {
                     type: Sequelize.TEXT,
                     allowNull: false,
                 },
-                images: {
-                    type: Sequelize.JSON,
+                codingPostImages: {
+                    type: Sequelize.JSON, // MYSQL에서 지원을 안하기 때문에 배열 대신 JSON 형태로 변경
                     allowNull: true,
                 },
-                hashtags: {
+                codingPostHashtags: {
                     type: Sequelize.JSON,
                     allowNull: true,
                 },

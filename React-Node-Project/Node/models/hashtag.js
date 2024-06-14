@@ -6,7 +6,7 @@ class Hashtag extends Sequelize.Model {
             {
                 title: {
                     type: Sequelize.STRING(15),
-                    allowNull: false,
+                    allowNull: true,
                     unique: true,
                 },
             },

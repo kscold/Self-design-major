@@ -4,8 +4,9 @@ exports.createSidebar = async (req, res, next) => {
     try {
         const { sidebarName, parentId } = req.body;
         let depth = 0;
+        let url = `/coding/${sidebarName.replace(/\s/g, '_')}`;
 
-        // 부모 사이드바가 있을 경우 부모의 depth에 1을 더함
+        // 부모 사이드바가 있을 경우 부모의 depth에 1을 더하고 URL에 부모의 URL을 추가
         if (parentId) {
             const parentSidebar = await CodingPostSidebar.findByPk(parentId);
             if (!parentSidebar) {
@@ -14,9 +15,9 @@ exports.createSidebar = async (req, res, next) => {
                     .json({ error: '부모 사이드바가 존재하지 않습니다.' });
             }
             depth = parentSidebar.depth + 1;
+            url = `${parentSidebar.url}/${sidebarName.replace(/\s/g, '_')}`;
         }
 
-        const url = `/coding/${sidebarName.replace(/\s/g, '_')}`;
         const newSidebar = await CodingPostSidebar.create({
             sidebarName,
             depth,
@@ -54,11 +55,9 @@ exports.updateSidebar = async (req, res, next) => {
     try {
         const { id } = req.params;
         const { sidebarName, parentId } = req.body;
-
-        // parentId가 0이면 부모 사이드바가 없으므로 depth를 0으로 설정
         let depth = 0;
+        let url = `/coding/${sidebarName.replace(/\s/g, '_')}`;
 
-        // parentId가 존재하면 부모 사이드바의 depth에 1을 더함
         if (parentId) {
             const parentSidebar = await CodingPostSidebar.findByPk(parentId);
             if (!parentSidebar) {
@@ -67,9 +66,9 @@ exports.updateSidebar = async (req, res, next) => {
                     .json({ error: '부모 사이드바가 존재하지 않습니다.' });
             }
             depth = parentSidebar.depth + 1;
+            url = `${parentSidebar.url}/${sidebarName.replace(/\s/g, '_')}`;
         }
 
-        const url = `/coding/${sidebarName.replace(/\s/g, '_')}`;
         const updatedSidebar = await CodingPostSidebar.update(
             { sidebarName, depth, url, parentId },
             { where: { sidebarId: id } },
