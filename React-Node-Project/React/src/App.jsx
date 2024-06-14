@@ -2,11 +2,13 @@ import React from 'react';
 import './scss/style.scss';
 import { RouterProvider } from 'react-router-dom';
 import router from './router';
-import { createStore } from 'redux';
+import { applyMiddleware, createStore } from 'redux';
 import rootReducer from './redux';
 import { Provider } from 'react-redux';
+import { thunk } from 'redux-thunk';
 
-const store = createStore(rootReducer);
+// 리덕스에 비동기 작업도 실행시키기 위해 redux-thunk를 적용함
+const store = createStore(rootReducer, applyMiddleware(thunk));
 
 const App = () => {
   return (

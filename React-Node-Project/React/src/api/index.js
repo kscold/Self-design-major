@@ -3,9 +3,7 @@ import Cookies from 'js-cookie';
 
 export const getCodingSidebar = async () => {
   try {
-    const response = await axios.get(
-      'http://localhost:8080/api/coding/sidebar'
-    );
+    const response = await axios.get('/api/coding/sidebar');
     return response.data;
   } catch (error) {
     console.error('코딩 페이지 사이드바 GET 오류:', error);
@@ -23,7 +21,7 @@ export const postCodingSidebar = async ({ sidebarName, parentId }) => {
 
   try {
     const response = await axios.post(
-      'http://localhost:8080/api/coding/sidebar',
+      '/api/coding/sidebar',
       { sidebarName, parentId },
       { headers: { Authorization: `Bearer ${token}` } }
     );
