@@ -7,7 +7,7 @@ const Coding = () => {
       <div className="sidebar-container">
         <SideBar />
       </div>
-      <div className="coding-page-continaer">
+      <div className="coding-page-container">
         <Outlet />
       </div>
     </div>

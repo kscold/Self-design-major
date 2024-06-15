@@ -1,4 +1,5 @@
 .coding-container {
+    position: relative;
     display: flex;
     height: 100vh;
     width: 100%;
@@ -7,16 +8,13 @@
 
 .coding-page-container {
     position: relative;
-    flex-grow: 1; /* 남은 영역을 차지하도록 설정 */
-    overflow-y: auto; /* 내용이 많을 경우 스크롤 가능 */
+    flex-grow: 1; // 남은 영역을 차지하도록 설정
+    overflow-y: auto; // 내용이 많을 경우 스크롤 가능
     width: 100%;
 }
 
 .coding-page-list-container {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    position: relative;
     text-align: center;
 }
 
@@ -36,7 +34,11 @@
 .coding-page-detail-container {
     position: absolute;
     top: 50%;
-    left: 50%;
+    left: 50%; /* 부모 컨테이너의 중앙으로 이동 */
+    transform: translate(-50%, -50%);
+    max-width: 90%; /* 화면에 따라 크기 조정 */
+    max-height: 90%; /* 화면에 따라 크기 조정 */
+    overflow: auto; /* 내용이 많을 경우 스크롤 */
 }
 
 .coding-page-post-create-button:hover {
@@ -92,132 +94,35 @@
     background-color: #1a3a5f;
 }
 
-// .coding-container {
-//     display: flex;
-//     height: 100vh;
-//     width: 100%;
-//     background-color: #f5f5f5;
-// }
+.markdown-preview {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
 
-// .sidebar-container {
-//     background-color: #0c1f3a;
-//     width: 200px;
-//     padding: 20px;
-// }
+.coding-page-post-create-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
 
-// .coding-page-container {
-//     position: relative;
-//     display: flex;
-//     justify-content: center;
-//     flex-grow: 1;
-//     overflow-y: auto;
-//     width: 100%;
-//     padding: 30px;
-// }
+.form-container,
+.markdown-preview-container {
+    width: 45%;
+}
 
-// .coding-page-list-container {
-//     position: absolute;
-//     top: 50%;
-//     left: 50%;
-//     transform: translate(-50%, -50%);
-//     text-align: center;
-//     background-color: #fff;
-//     padding: 30px;
-//     border-radius: 8px;
-//     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-// }
+.markdown-preview-container {
+    padding-left: 20px;
+}
 
-// .coding-page-list-section-name {
-//     margin-bottom: 1.5rem;
-//     font-size: 1.8rem;
-//     font-weight: 600;
-//     color: #0c1f3a;
-// }
-
-// .coding-page-list {
-//     list-style-type: none;
-//     padding: 0;
-// }
-
-// .coding-page-list li {
-//     margin-bottom: 1rem;
-//     font-size: 1.1rem;
-//     color: #333;
-// }
-
-// .coding-page-detail-container {
-//     position: absolute;
-//     top: 50%;
-//     left: 50%;
-//     background-color: #fff;
-//     padding: 30px;
-//     border-radius: 8px;
-//     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-// }
-
-// .coding-page-post-create-button {
-//     margin-top: 10px;
-//     margin-bottom: 10px;
-//     width: 120px;
-//     height: 40px;
-//     background-color: #0c1f3a;
-//     color: #ffffff;
-//     border-radius: 8px;
-//     font-size: 1rem;
-//     font-weight: 500;
-//     cursor: pointer;
-//     transition: background-color 0.3s ease;
-// }
-
-// .coding-page-post-create-button:hover {
-//     background-color: #1a3a5f;
-// }
-
-// .coding-page-post-create-container {
-//     background-color: #fff;
-//     padding: 30px;
-//     border-radius: 8px;
-//     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-// }
-
-// .form-group {
-//     margin-bottom: 1.5rem;
-// }
-
-// .form-group label {
-//     display: block;
-//     font-size: 1.1rem;
-//     font-weight: 500;
-//     color: #0c1f3a;
-//     margin-bottom: 0.5rem;
-// }
-
-// .form-group input,
-// .form-group textarea {
-//     width: 100%;
-//     padding: 10px;
-//     font-size: 1rem;
-//     border: 1px solid #ccc;
-//     border-radius: 4px;
-// }
-
-// .form-group textarea {
-//     resize: vertical;
-//     min-height: 150px;
-// }
-
-// .form-group button {
-//     width: 120px;
-//     height: 40px;
-//     background-color: #0c1f3a;
-//     color: #ffffff;
-//     border-radius: 8px;
-//     font-size: 1rem;
-//     font-weight: 500;
-//     cursor: pointer;
-//     transition: background-color 0.3s ease;
-// }
-
-// .form-group button:hover {
-//     background-color: #1a3a5f;
-// }
+.markdown-preview {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    white-space: pre-wrap;
+    word-break: break-word;
+}
