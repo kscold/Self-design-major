@@ -248,12 +248,16 @@ import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { vscDarkPlus } from 'react-syntax-highlighter/dist/esm/styles/prism';
 import ReactQuill, { Quill } from 'react-quill';
 import 'react-quill/dist/quill.snow.css'; // React Quill CSS
-import ImageResize from 'quill-image-resize';
+
 import QuillMarkdown from 'quilljs-markdown'; // Quill Markdown 추가
 import { QuillDeltaToHtmlConverter } from 'quill-delta-to-html';
 import { imageHandler, markdownOptions } from './quillSetting'; // 임포트한 모듈
 
 // Quill 모듈에 ImageResize 등록
+// Quill.register('modules/imageResize', ImageResize);
+window.Quill = Quill;
+
+const ImageResize = require('quill-image-resize-module').default;
 Quill.register('modules/imageResize', ImageResize);
 
 const CodingPagePostCreate = () => {

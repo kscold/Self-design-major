@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Link, useParams, useLocation } from 'react-router-dom';
+import { useParams, useLocation, useNavigate } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import axios from 'axios';
 import CodingPageDetail from './CodingPageDetail';
@@ -8,6 +8,7 @@ const CodingPageList = () => {
   const { section0, section1, section2, section3, section4, id } = useParams();
   const [sectionData, setSectionData] = useState([]);
   const location = useLocation();
+  const navigate = useNavigate();
   const isDetailPage = location.pathname.includes('/detail/');
   const selectedSidebarId = useSelector(
     (state) => state.coding.selectedSidebarId
@@ -35,10 +36,14 @@ const CodingPageList = () => {
       });
   }, [section0, section1, section2, section3, section4]);
 
-  // 디테일 페이지인지
+  // 디테일 페이지이면 id의 props를 넘겨줌
   if (isDetailPage) {
     return <CodingPageDetail id={id} />;
   }
+
+  const navigateDetailPage = (codingPostId) => {
+    navigate(`detail/${codingPostId}`);
+  };
 
   return (
     <div className="coding-page-list-container">
@@ -47,10 +52,12 @@ const CodingPageList = () => {
       </h2>
       <ul className="coding-page-list">
         {sectionData.map((item) => (
-          <li key={item.codingPostId}>
-            <Link to={`detail/${item.codingPostId}`}>
-              {item.codingPostTitle}
-            </Link>
+          <li
+            className="coding-page-list-item"
+            key={item.codingPostId}
+            onClick={() => navigateDetailPage(item.codingPostId)}
+          >
+            {item.codingPostTitle}
           </li>
         ))}
       </ul>
