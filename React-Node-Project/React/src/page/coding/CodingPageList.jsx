@@ -1,5 +1,3 @@
-// CodingPageList.jsx
-
 import React, { useEffect, useState } from 'react';
 import { Link, useParams, useLocation } from 'react-router-dom';
 import { useSelector } from 'react-redux';
@@ -45,7 +43,7 @@ const CodingPageList = () => {
   return (
     <div className="coding-page-list-container">
       <h2 className="coding-page-list-section-name">
-        {section4 || section3 || section2 || section1 || section0}
+        {section4 || section3 || section2 || section1 || section0} 포스트
       </h2>
       <ul className="coding-page-list">
         {sectionData.map((item) => (
