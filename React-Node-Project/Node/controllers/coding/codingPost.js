@@ -10,8 +10,27 @@
 //
 // // 이미지 파일 이름 디코딩 함수
 // function decodeFileName(encodedFileName) {
-//     return encodedFileName.replace(/ /g, '_');
+//     return encodedFileName.replace(/_/g, ' ');
 // }
+//
+// // 이미지를 업로드하는 API
+// exports.postImage = async (req, res, next) => {
+//     try {
+//         const images = req.files.map((file) => file.filename); // 파일명만 추출
+//
+//         // 이미지 데이터베이스에 저장
+//         const newImages = await CodingPost.create({
+//             codingPostImages: images, // 이미지 URL 배열 저장
+//         });
+//
+//         // getImage를 실행하여 getImage의 response를 반환
+//         // 클라이언트에게 이미지 파일명 배열을 응답
+//         res.status(200).json(newImages);
+//     } catch (error) {
+//         console.error(error);
+//         next(error);
+//     }
+// };
 //
 // // 이미지를 가져오는 API
 // exports.getImage = async (req, res, next) => {
@@ -19,20 +38,22 @@
 //         const { image } = req.params;
 //         const imagePath = path.join(
 //             __dirname,
+//             '..', // 프로젝트 구조에 맞게 조정 필요
 //             '..',
-//             '..', // 이 부분은 프로젝트 구조에 따라 조정해야 합니다
 //             'uploads',
-//             decodeFileName(image),
+//             encodeFileName(image), // 파일명 인코딩
 //         );
 //
-//         console.log('Requested image path:', imagePath); // 경로가 정확한지 확인하기 위한 로그
+//         console.log('Requested image path:', imagePath); // 요청된 이미지 경로 로깅
 //
-//         fs.access(imagePath, fs.constants.F_OK, (err) => {
+//         // 파일 존재 여부 확인
+//         fs.access(imagePath, fs.constants.F_OK, async (err) => {
 //             if (err) {
 //                 console.error('Error accessing file:', err);
 //                 return res.status(404).json({ error: 'Image not found' });
 //             }
 //
+//             // 파일이 존재할 경우 클라이언트에게 파일 전송
 //             res.sendFile(imagePath);
 //         });
 //     } catch (error) {
@@ -45,7 +66,6 @@
 // exports.createPostWithSidebar = async (req, res, next) => {
 //     try {
 //         const { title, content, sidebarId } = req.body;
-//         const images = req.files.map((file) => file.filename); // 파일명만 추출
 //
 //         // 필수 정보인 title, content, sidebarId가 없는 경우 에러 처리
 //         if (!title || !content || !sidebarId) {
@@ -63,7 +83,6 @@
 //         const newPost = await CodingPost.create({
 //             codingPostTitle: title,
 //             codingPostContent: content,
-//             codingPostImages: imageUrls, // 이미지 URL 배열 저장
 //             userId: req.user.id, // Passport에서 인증된 사용자의 id를 가져옴
 //             sidebarId: parseInt(sidebarId),
 //         });
@@ -75,7 +94,7 @@
 //     }
 // };
 //
-// // 사이드바 ID에 해당하는 게시물 리스트를 조회하는 API
+// // 사이드바 ID에 해당하는 게시물 리스트 조회하는 API
 // exports.getPostsBySidebar = async (req, res, next) => {
 //     try {
 //         const { sidebarId } = req.params;
@@ -114,7 +133,7 @@
 //     }
 // };
 //
-// // 사이드바 ID에 해당하는 게시물을 조회하는 API
+// // 사이드바 ID와 게시물 ID에 해당하는 게시물 상세 정보 조회하는 API
 // exports.getPostDetailBySidebar = async (req, res, next) => {
 //     try {
 //         const { sidebarId, postId } = req.params;
@@ -131,9 +150,9 @@
 //                 .json({ error: '사이드바를 찾을 수 없습니다.' });
 //         }
 //
-//         // 사이드바 ID에 해당하는 게시물 목록 조회
+//         // 사이드바 ID와 게시물 ID에 해당하는 게시물 상세 정보 조회
 //         const post = await CodingPost.findOne({
-//             where: { sidebarId },
+//             where: { codingPostId: postId },
 //         });
 //
 //         // 클라이언트가 요구하는 형식으로 데이터를 가공
@@ -207,6 +226,25 @@ function decodeFileName(encodedFileName) {
     return encodedFileName.replace(/_/g, ' ');
 }
 
+// 이미지를 업로드하는 API
+exports.postImage = async (req, res, next) => {
+    try {
+        const images = req.files.map((file) => file.filename); // 파일명만 추출
+
+        // 이미지 URL 배열 생성
+        const imageUrls = images.map(
+            (filename) =>
+                `${process.env.DOMAIN}/api/coding/image/${encodeFileName(filename)}`,
+        );
+
+        // 클라이언트에게 이미지 URL 배열을 응답
+        res.status(200).json({ images: imageUrls });
+    } catch (error) {
+        console.error(error);
+        next(error);
+    }
+};
+
 // 이미지를 가져오는 API
 exports.getImage = async (req, res, next) => {
     try {
@@ -241,7 +279,6 @@ exports.getImage = async (req, res, next) => {
 exports.createPostWithSidebar = async (req, res, next) => {
     try {
         const { title, content, sidebarId } = req.body;
-        const images = req.files.map((file) => file.filename); // 파일명만 추출
 
         // 필수 정보인 title, content, sidebarId가 없는 경우 에러 처리
         if (!title || !content || !sidebarId) {
@@ -250,16 +287,9 @@ exports.createPostWithSidebar = async (req, res, next) => {
             });
         }
 
-        // 이미지 URL을 배열 형태로 저장
-        const imageUrls = images.map(
-            (filename) =>
-                `${process.env.DOMAIN}/api/coding/image/${encodeFileName(filename)}`, // 파일명 인코딩
-        );
-
         const newPost = await CodingPost.create({
             codingPostTitle: title,
             codingPostContent: content,
-            codingPostImages: imageUrls, // 이미지 URL 배열 저장
             userId: req.user.id, // Passport에서 인증된 사용자의 id를 가져옴
             sidebarId: parseInt(sidebarId),
         });
@@ -339,7 +369,7 @@ exports.getPostDetailBySidebar = async (req, res, next) => {
             codingPostId: post.codingPostId, // 숫자
             codingPostTitle: post.codingPostTitle,
             codingPostContent: post.codingPostContent,
-            codingPostImages: post.codingPostImages.map((image) => image),
+            // codingPostImages: post.codingPostImages.map((image) => image),
             createdAt: post.createdAt,
             codingPostHashtags: post.codingPostHashtags
                 ? post.codingPostHashtags
@@ -365,7 +395,7 @@ exports.updatePostInSidebar = async (req, res, next) => {
             {
                 codingPostTitle: title,
                 codingPostContent: content,
-                codingPostImages: images,
+                // codingPostImages: images,
             },
             { where: { codingPostId: postId } },
         );
