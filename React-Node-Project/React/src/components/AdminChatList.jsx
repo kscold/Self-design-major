@@ -25,10 +25,10 @@ const AdminChatList = ({ onSelectChat }) => {
 
   return (
     <div className="admin-chat-list">
-      <h2>Active Users</h2>
+      <h2>유저 채팅방</h2>
       <ul>
         {users.map((user) => (
-          <li key={user.id} onClick={() => onSelectChat(user.id)}>
+          <li key={user.id} onClick={() => onSelectChat(user.nickname)}>
             {user.nickname}
           </li>
         ))}

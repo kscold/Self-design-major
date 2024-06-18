@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import Cookies from 'js-cookie';
 import AlertModal from '../../components/modals/AlertModal';
-import { setNickname } from '../../redux/user';
+import { setNickname, setRole } from '../../redux/user';
 
 const Login = () => {
   const [input, setInput] = useState({
@@ -37,6 +37,7 @@ const Login = () => {
       if (response.status === 200) {
         Cookies.set('authToken', response.data.token); // Store token in cookies
         dispatch(setNickname(response.data.nickname)); // Store nickname in Redux
+        dispatch(setRole(response.data.role)); // Store role in Redux
         setShowModal(true);
       }
     } catch (error) {
