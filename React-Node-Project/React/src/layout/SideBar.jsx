@@ -6,12 +6,30 @@ import SideBarItem from './SideBarItem';
 
 const SideBar = () => {
   const dispatch = useDispatch();
-  const nickname = useSelector((state) => state.user.nickname);
+  const { role } = useSelector((state) => state.user);
   const sidebarData = useSelector((state) => state.coding.sidebarData);
   const navigate = useNavigate();
 
   useEffect(() => {
     dispatch(GetSidebarData());
+  }, [dispatch]);
+
+  useEffect(() => {
+    const refreshSidebarData = () => {
+      dispatch(GetSidebarData());
+    };
+
+    const handleVisibilityChange = () => {
+      if (!document.hidden) {
+        refreshSidebarData();
+      }
+    };
+
+    document.addEventListener('visibilitychange', handleVisibilityChange);
+
+    return () => {
+      document.removeEventListener('visibilitychange', handleVisibilityChange);
+    };
   }, [dispatch]);
 
   const onClickSidebarPost = () => {
@@ -24,13 +42,13 @@ const SideBar = () => {
 
   return (
     <>
-      {nickname && (
+      {role === 'admin' && (
         <div className="sidbar-admin-button-container">
           <button
             className="sidebar-create-button"
             onClick={onClickSidebarPost}
           >
-            +
+            사이드바 +
           </button>
           <button
             className="sidebar-post-create-button"

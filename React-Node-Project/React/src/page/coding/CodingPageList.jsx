@@ -3,6 +3,7 @@ import { useParams, useLocation, useNavigate } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import axios from 'axios';
 import CodingPageDetail from './CodingPageDetail';
+import Cookies from 'js-cookie';
 
 const CodingPageList = () => {
   const { section0, section1, section2, section3, section4, id } = useParams();
@@ -13,13 +14,14 @@ const CodingPageList = () => {
   const selectedSidebarId = useSelector(
     (state) => state.coding.selectedSidebarId
   );
+  const role = useSelector((state) => state.user.role);
 
   useEffect(() => {
-    let sectionPath = `/coding/${section0}`;
-    if (section1) sectionPath += `/${section1}`;
-    if (section2) sectionPath += `/${section2}`;
-    if (section3) sectionPath += `/${section3}`;
-    if (section4) sectionPath += `/${section4}`;
+    if (!selectedSidebarId) {
+      // 사이드바를 선택하지 않은 경우 섹션 데이터 지우기
+      setSectionData([]);
+      return;
+    }
 
     // API 호출을 위한 경로 생성
     const apiPath = `/api/coding/post/${selectedSidebarId}`;
@@ -34,7 +36,7 @@ const CodingPageList = () => {
         console.error('Error fetching section data:', error);
         setSectionData([]);
       });
-  }, [section0, section1, section2, section3, section4]);
+  }, [selectedSidebarId]);
 
   // 디테일 페이지이면 id의 props를 넘겨줌
   if (isDetailPage) {
@@ -45,6 +47,25 @@ const CodingPageList = () => {
     navigate(`detail/${codingPostId}`);
   };
 
+  const navigateUpdatePage = (codingPostId) => {
+    navigate(`/coding/update/${codingPostId}`);
+  };
+
+  const deletePost = async (codingPostId) => {
+    try {
+      await axios.delete(`/api/coding/post/${codingPostId}`, {
+        headers: {
+          Authorization: `Bearer ${Cookies.get('authToken')}`,
+        },
+      });
+      setSectionData((prevData) =>
+        prevData.filter((item) => item.codingPostId !== codingPostId)
+      );
+    } catch (error) {
+      console.error('Error deleting post:', error);
+    }
+  };
+
   return (
     <div className="coding-page-list-container">
       <h2 className="coding-page-list-section-name">
@@ -52,12 +73,26 @@ const CodingPageList = () => {
       </h2>
       <ul className="coding-page-list">
         {sectionData.map((item) => (
-          <li
-            className="coding-page-list-item"
-            key={item.codingPostId}
-            onClick={() => navigateDetailPage(item.codingPostId)}
-          >
-            {item.codingPostTitle}
+          <li className="coding-page-list-item" key={item.codingPostId}>
+            <span onClick={() => navigateDetailPage(item.codingPostId)}>
+              {item.codingPostTitle}
+            </span>
+            {role === 'admin' && (
+              <div className="admin-buttons">
+                <button
+                  className="coding-page-list-item-edit-button"
+                  onClick={() => navigateUpdatePage(item.codingPostId)}
+                >
+                  수정
+                </button>
+                <button
+                  className="coding-page-list-item-delete-button"
+                  onClick={() => deletePost(item.codingPostId)}
+                >
+                  삭제
+                </button>
+              </div>
+            )}
           </li>
         ))}
       </ul>

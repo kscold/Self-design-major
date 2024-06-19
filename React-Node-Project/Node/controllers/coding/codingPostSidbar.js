@@ -1,4 +1,5 @@
 const CodingPostSidebar = require('../../models/codingPostSidebar');
+const CodingPost = require('../../models/codingPost');
 
 exports.createSidebar = async (req, res, next) => {
     try {
@@ -51,6 +52,18 @@ exports.getSidebar = async (req, res, next) => {
     }
 };
 
+const updateChildUrls = async (parentSidebar) => {
+    const children = await CodingPostSidebar.findAll({
+        where: { parentId: parentSidebar.sidebarId },
+    });
+    for (const child of children) {
+        const newUrl = `${parentSidebar.url}/${child.sidebarName.replace(/\s/g, '_')}`;
+        const newDepth = parentSidebar.depth + 1;
+        await child.update({ url: newUrl, depth: newDepth });
+        await updateChildUrls(child); // Recursive call to update children of this child
+    }
+};
+
 exports.updateSidebar = async (req, res, next) => {
     try {
         const { id } = req.params;
@@ -73,6 +86,10 @@ exports.updateSidebar = async (req, res, next) => {
             { sidebarName, depth, url, parentId },
             { where: { sidebarId: id } },
         );
+
+        const sidebar = await CodingPostSidebar.findByPk(id);
+        await updateChildUrls(sidebar);
+
         res.status(200).json(updatedSidebar);
     } catch (error) {
         console.error(error);
@@ -80,11 +97,24 @@ exports.updateSidebar = async (req, res, next) => {
     }
 };
 
+const deleteSidebarRecursive = async (sidebarId) => {
+    const children = await CodingPostSidebar.findAll({
+        where: { parentId: sidebarId },
+    });
+    for (const child of children) {
+        await deleteSidebarRecursive(child.sidebarId);
+    }
+    await CodingPost.destroy({ where: { sidebarId } });
+    await CodingPostSidebar.destroy({ where: { sidebarId } });
+};
+
 exports.deleteSidebar = async (req, res, next) => {
     try {
         const { id } = req.params;
-        await CodingPostSidebar.destroy({ where: { sidebarId: id } });
-        res.status(200).json({ message: '게시물이 삭제되었습니다.' });
+        await deleteSidebarRecursive(id);
+        res.status(200).json({
+            message: '사이드바와 연관된 모든 항목이 삭제되었습니다.',
+        });
     } catch (error) {
         console.error(error);
         next(error);

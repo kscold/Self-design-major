@@ -1,13 +1,94 @@
+// .sidebar-container {
+//     width: 16rem; /* 사이드바 너비 */
+//     background-color: #f9f9f9;
+//     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+//     border-right: 1px solid #ddd; /* 사이드바 우측 테두리 */
+//     border: none;
+// }
+
+// .sidebar-sub-container {
+//     overflow: hidden;
+//     max-height: 0;
+//     transition: max-height 0.3s ease-out;
+
+//     &.open {
+//         max-height: 1000px; /* 충분히 큰 값으로 설정 */
+//         transition: max-height 0.3s ease-in;
+//     }
+// }
+
+// .sidebar-title {
+//     display: flex;
+//     align-items: center;
+//     height: 40px; /* 사이드바 항목 높이 */
+//     padding-left: 16px; /* 사이드바 항목 좌측 여백 */
+//     font-weight: bold; /* 사이드바 항목 폰트 굵기 */
+//     cursor: pointer;
+//     transition: background-color 0.3s ease;
+
+//     &:hover {
+//         background-color: #e6e6e0; /* 사이드바 항목 호버 시 배경색 */
+//     }
+
+//     &.active {
+//         background-color: #dcdcd2; /* 선택된 사이드바 항목 배경색 */
+//         border-right: 5px solid #007bff; /* 선택된 사이드바 항목 우측 테두리 */
+//     }
+// }
+
+// .sidebar-link {
+//     color: inherit;
+//     text-decoration: inherit;
+// }
+
+// .depth-0 {
+//     padding-left: 16px;
+// }
+// .depth-1 {
+//     padding-left: 32px;
+// }
+// .depth-2 {
+//     padding-left: 48px;
+// }
+// .depth-3 {
+//     padding-left: 64px;
+// }
+// .depth-4 {
+//     padding-left: 80px;
+// }
+
+// .sidbar-admin-button-container {
+//     display: flex;
+//     flex-direction: row;
+//     justify-content: space-between;
+//     align-items: center;
+
+//     .sidebar-create-button,
+//     .sidebar-post-create-button {
+//         margin: 5px;
+//         border: none;
+//         width: 120px;
+//         height: 40px;
+//         background-color: #0c1f3a;
+//         color: #ffffff;
+//         border-radius: 8px;
+//         font-size: 1rem;
+//         font-weight: 500;
+//         cursor: pointer;
+//         transition: background-color 0.3s ease;
+
+//         &:hover {
+//             background-color: #404b5e;
+//         }
+//     }
+// }
+
 .sidebar-container {
-    // position: absolute;
-    // left: 0;
-    // min-width: 16rem;
-    // width: auto;
-    // height: auto;
-    // min-height: 10vh;
     width: 16rem; /* 사이드바 너비 */
-    background-color: #f6f6f2; /* 사이드바 배경색 */
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     border-right: 1px solid #ddd; /* 사이드바 우측 테두리 */
+    border: none;
 }
 
 .sidebar-sub-container {
@@ -61,6 +142,42 @@
     padding-left: 80px;
 }
 
+.sidebar-item-content {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.admin-buttons {
+    display: flex;
+    gap: 10px;
+    margin-left: 10px;
+
+    .sidebar-item-edit-button,
+    .sidebar-item-delete-button {
+        background-color: #0c1f3a;
+        color: #ffffff;
+        border: none;
+        border-radius: 4px;
+        padding: 5px 10px;
+        font-size: 0.9rem;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+
+        &:hover {
+            background-color: #404b5e;
+        }
+    }
+
+    .sidebar-item-delete-button {
+        background-color: #d9534f;
+
+        &:hover {
+            background-color: #c9302c;
+        }
+    }
+}
+
 .sidbar-admin-button-container {
     display: flex;
     flex-direction: row;
@@ -70,6 +187,7 @@
     .sidebar-create-button,
     .sidebar-post-create-button {
         margin: 5px;
+        border: none;
         width: 120px;
         height: 40px;
         background-color: #0c1f3a;
@@ -79,5 +197,9 @@
         font-weight: 500;
         cursor: pointer;
         transition: background-color 0.3s ease;
+
+        &:hover {
+            background-color: #404b5e;
+        }
     }
 }

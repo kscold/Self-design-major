@@ -8,6 +8,23 @@
 // const CodingPageSidebarCreate = lazy(() =>
 //   import('../page/coding/CodingPageSidebarCreate')
 // );
+// const CodingPagePostCreate = lazy(() =>
+//   import('../page/coding/CodingPagePostCreate')
+// );
+
+// // const detailRouter = {
+// //   path: 'detail',
+// //   children: [
+// //     {
+// //       path: ':id',
+// //       element: (
+// //         <Suspense fallback={<Loading />}>
+// //           <CodingPageDetail />
+// //         </Suspense>
+// //       ),
+// //     },
+// //   ],
+// // };
 
 // const detailRouter = {
 //   path: 'detail/:id',
@@ -29,7 +46,7 @@
 //     children: [
 //       detailRouter,
 //       {
-//         path: ':section1',
+//         path: ':section1?',
 //         element: (
 //           <Suspense fallback={<Loading />}>
 //             <CodingPageList />
@@ -38,7 +55,7 @@
 //         children: [
 //           detailRouter,
 //           {
-//             path: ':section2',
+//             path: ':section2?',
 //             element: (
 //               <Suspense fallback={<Loading />}>
 //                 <CodingPageList />
@@ -80,11 +97,17 @@
 //       </Suspense>
 //     ),
 //   },
+//   {
+//     path: 'post',
+//     element: (
+//       <Suspense fallback={<Loading />}>
+//         <CodingPagePostCreate />
+//       </Suspense>
+//     ),
+//   },
 // ];
 
 // export default codingRouter;
-
-// codingRouter.js
 
 import React, { lazy, Suspense } from 'react';
 import Loading from '../components/Loading';
@@ -97,26 +120,24 @@ const CodingPageSidebarCreate = lazy(() =>
 const CodingPagePostCreate = lazy(() =>
   import('../page/coding/CodingPagePostCreate')
 );
-
-// const detailRouter = {
-//   path: 'detail',
-//   children: [
-//     {
-//       path: ':id',
-//       element: (
-//         <Suspense fallback={<Loading />}>
-//           <CodingPageDetail />
-//         </Suspense>
-//       ),
-//     },
-//   ],
-// };
+const CodingPagePostUpdate = lazy(() =>
+  import('../page/coding/CodingPagePostUpdate')
+);
 
 const detailRouter = {
   path: 'detail/:id',
   element: (
     <Suspense fallback={<Loading />}>
       <CodingPageDetail />
+    </Suspense>
+  ),
+};
+
+const updateRouter = {
+  path: 'update/:postId',
+  element: (
+    <Suspense fallback={<Loading />}>
+      <CodingPagePostUpdate />
     </Suspense>
   ),
 };
@@ -132,7 +153,7 @@ const codingRouter = [
     children: [
       detailRouter,
       {
-        path: ':section1?',
+        path: ':section1',
         element: (
           <Suspense fallback={<Loading />}>
             <CodingPageList />
@@ -141,7 +162,7 @@ const codingRouter = [
         children: [
           detailRouter,
           {
-            path: ':section2?',
+            path: ':section2',
             element: (
               <Suspense fallback={<Loading />}>
                 <CodingPageList />
@@ -191,6 +212,7 @@ const codingRouter = [
       </Suspense>
     ),
   },
+  updateRouter,
 ];
 
 export default codingRouter;

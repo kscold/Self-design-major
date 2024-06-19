@@ -31,6 +31,7 @@ const io = socketIo(server, {
         methods: ['GET', 'POST'],
         credentials: true,
     },
+    // transports: ['websocket'], // WebSocket만 사용하도록 설정, 현재하면 연결이 안됨
 });
 
 passportConfig();

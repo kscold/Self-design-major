@@ -1,27 +1,28 @@
 import React, { useState, useEffect, useRef, useMemo } from 'react';
 import axios from 'axios';
-import { useNavigate } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 import Cookies from 'js-cookie';
+import ReactQuill, { Quill } from 'react-quill';
+import 'react-quill/dist/quill.snow.css';
+import QuillMarkdown from 'quilljs-markdown';
+import { QuillDeltaToHtmlConverter } from 'quill-delta-to-html';
+import { imageHandler, markdownOptions } from './quillSetting';
+import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
+import { vscDarkPlus } from 'react-syntax-highlighter/dist/esm/styles/prism';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import rehypeRaw from 'rehype-raw';
-import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
-import { vscDarkPlus } from 'react-syntax-highlighter/dist/esm/styles/prism';
-import ReactQuill, { Quill } from 'react-quill';
-import 'react-quill/dist/quill.snow.css'; // React Quill CSS
+import { useSelector } from 'react-redux';
 
-import QuillMarkdown from 'quilljs-markdown'; // Quill Markdown 추가
-import { QuillDeltaToHtmlConverter } from 'quill-delta-to-html';
-import { imageHandler, markdownOptions } from './quillSetting'; // 임포트한 모듈
-
-// Quill 모듈에 ImageResize 등록
-// Quill.register('modules/imageResize', ImageResize);
 window.Quill = Quill;
-
 const ImageResize = require('quill-image-resize-module').default;
 Quill.register('modules/imageResize', ImageResize);
 
-const CodingPagePostCreate = () => {
+const CodingPagePostUpdate = () => {
+  const selectedSidebarId = useSelector(
+    (state) => state.coding.selectedSidebarId
+  );
+  const { postId } = useParams();
   const [formData, setFormData] = useState({
     title: '',
     content: '',
@@ -33,6 +34,33 @@ const CodingPagePostCreate = () => {
   const quillRef = useRef(null);
 
   useEffect(() => {
+    const fetchPostData = async () => {
+      try {
+        const response = await axios.get(
+          `/api/coding/post/${selectedSidebarId}/${postId}`,
+          {
+            headers: {
+              Authorization: `Bearer ${Cookies.get('authToken')}`,
+            },
+          }
+        );
+        setFormData({
+          title: response.data.codingPostTitle,
+          content: response.data.codingPostContent,
+          sidebarId: response.data.sidebarId,
+        });
+        setQuillContent(response.data.codingPostContent);
+        if (quillRef.current) {
+          const quill = quillRef.current.getEditor();
+          quill.setContents(
+            quill.clipboard.convert(response.data.codingPostContent)
+          );
+        }
+      } catch (error) {
+        console.error('Error fetching post data:', error);
+      }
+    };
+
     const fetchSidebarOptions = async () => {
       try {
         const response = await axios.get('/api/coding/sidebar');
@@ -43,8 +71,9 @@ const CodingPagePostCreate = () => {
       }
     };
 
+    fetchPostData();
     fetchSidebarOptions();
-  }, []);
+  }, [selectedSidebarId, postId]);
 
   useEffect(() => {
     if (quillRef.current) {
@@ -111,16 +140,17 @@ const CodingPagePostCreate = () => {
     const authToken = Cookies.get('authToken');
 
     try {
-      const response = await axios.post('/api/coding/post', postData, {
+      // Update the post data
+      const response = await axios.put(`/api/coding/post/${postId}`, postData, {
         headers: {
           Authorization: `Bearer ${authToken}`,
         },
       });
 
-      console.log('Post created:', response.data);
-      navigate('/coding');
+      console.log('Post updated:', response.data);
+      navigate(`/coding/${formData.sidebarId}`);
     } catch (error) {
-      console.error('Error creating post:', error);
+      console.error('Error updating post:', error);
     }
   };
 
@@ -153,7 +183,7 @@ const CodingPagePostCreate = () => {
   return (
     <div className="coding-page-post-create-container">
       <div className="coding-page-post-create-form-container">
-        <h2>글 작성</h2>
+        <h2>글 수정</h2>
         <form onSubmit={handleSubmit}>
           <div className="coding-page-post-create-form-group">
             <label htmlFor="title">제목</label>
@@ -210,12 +240,12 @@ const CodingPagePostCreate = () => {
               <option value="">사이드바 선택</option>
               {sidebarOptions.map((option) => (
                 <option key={option.sidebarId} value={option.sidebarId}>
-                  {option.sidebarName}
+                  {'-'.repeat(option.depth * 2) + ' ' + option.sidebarName}
                 </option>
               ))}
             </select>
-            <button type="submit">글 작성 완료</button>
           </div>
+          <button type="submit">글 수정 완료</button>
         </form>
       </div>
 
@@ -254,4 +284,4 @@ const CodingPagePostCreate = () => {
   );
 };
 
-export default CodingPagePostCreate;
+export default CodingPagePostUpdate;

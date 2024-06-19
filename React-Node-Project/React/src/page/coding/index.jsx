@@ -1,9 +1,12 @@
-import SideBar from '../../layout/SideBar';
+import React from 'react';
 import { Outlet, useLocation } from 'react-router-dom';
+import SideBar from '../../layout/SideBar';
 
 const Coding = () => {
   const location = useLocation();
-  const isDetailPage = location.pathname.includes('/detail/');
+  const isDetailOrSidebarPage =
+    location.pathname.includes('/detail/') ||
+    location.pathname.includes('/sidebar');
 
   return (
     <div className="coding-container">
@@ -12,10 +15,10 @@ const Coding = () => {
       </div>
       <div
         className={`${
-          isDetailPage
+          isDetailOrSidebarPage
             ? 'coding-page-container start'
             : 'coding-page-container center'
-        } `}
+        }`}
       >
         <Outlet />
       </div>
