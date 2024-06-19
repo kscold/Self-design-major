@@ -1,24 +1,3 @@
-// routes/users.js
-// const express = require('express');
-// const Users = require('../models/user');
-//
-// const router = express.Router();
-//
-// // GET /api/users
-// router.get('/', async (req, res) => {
-//     try {
-//         const users = await Users.findAll({
-//             attributes: ['id', 'nickname', 'role'], // role 추가
-//         });
-//         res.json(users);
-//     } catch (error) {
-//         console.error('사용자 목록을 가져오는 중 오류 발생:', error);
-//         res.status(500).json({ error: '사용자 목록을 가져오는 중 오류 발생' });
-//     }
-// });
-//
-// module.exports = router;
-
 const express = require('express');
 const { verifyToken } = require('../middlewares');
 const Users = require('../models/user');

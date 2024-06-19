@@ -21,7 +21,9 @@ const ChatWindow = () => {
   const [messages, setMessages] = useState([]);
   const [newMessage, setNewMessage] = useState('');
   const [selectedChatMode, setSelectedChatMode] = useState('kscold');
-  const [activeUser, setActiveUser] = useState('kscold'); // 활성화된 유저 상태
+  const [activeUser, setActiveUser] = useState(
+    role === 'admin' ? null : 'kscold'
+  ); // 활성화된 유저 상태
   const messagesEndRef = useRef(null);
 
   const handleMessageReceive = (msg) => {
@@ -31,7 +33,8 @@ const ChatWindow = () => {
   };
 
   useEffect(() => {
-    // console.log('소켓 연결 설정 부분 렌더링');
+    if (!nickname || !activeUser) return;
+
     const room = generateRoomName(nickname, activeUser || 'kscold');
     console.log('방 이름', room);
     socket.emit('joinRoom', room);
@@ -56,8 +59,7 @@ const ChatWindow = () => {
     if (newMessage.trim()) {
       const messageData = {
         message: newMessage,
-        // to: role === 'admin' ? activeUser : 'kscold', // 보내는 대상 사용자 닉네임
-        to: activeUser, // 보내는 대상 사용자 닉네임
+        to: activeUser || 'kscold', // 보내는 대상 사용자 닉네임
       };
       try {
         await axios.post(

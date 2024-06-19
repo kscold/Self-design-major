@@ -83,8 +83,21 @@ exports.login = async (req, res) => {
     }
 };
 
-exports.logout = (req, res, next) => {
-    req.logout(() => {
-        res.status(200).json({ message: '로그아웃되었습니다.' });
+// exports.logout = (req, res) => {
+//     req.logout((err) => {
+//         if (err) {
+//             return res.status(500).json({ message: '로그아웃 실패' });
+//         }
+//         res.status(200).json({ message: '로그아웃 성공' });
+//     });
+// };
+
+exports.logout = (req, res) => {
+    req.logout((err) => {
+        if (err) {
+            return res.status(500).json({ message: '로그아웃 실패' });
+        }
+        req.session.destroy();
+        res.status(200).json({ message: '로그아웃 성공' });
     });
 };

@@ -1,11 +1,10 @@
-// src/components/Login.jsx
 import React, { useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import Cookies from 'js-cookie';
 import AlertModal from '../../components/modals/AlertModal';
-import { setNickname, setRole } from '../../redux/user';
+import { setIsLoggedIn, setNickname, setRole } from '../../redux/user';
 
 const Login = () => {
   const [input, setInput] = useState({
@@ -38,6 +37,7 @@ const Login = () => {
         Cookies.set('authToken', response.data.token); // Store token in cookies
         dispatch(setNickname(response.data.nickname)); // Store nickname in Redux
         dispatch(setRole(response.data.role)); // Store role in Redux
+        dispatch(setIsLoggedIn(true));
         setShowModal(true);
       }
     } catch (error) {

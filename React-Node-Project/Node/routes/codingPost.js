@@ -5,20 +5,33 @@ const multer = require('multer');
 const path = require('path');
 const fs = require('fs');
 const {
-    createPostWithSidebar,
-    getPostsBySidebar,
-    updatePostInSidebar,
-    deletePostInSidebar,
-    getImage,
-    getPostDetailBySidebar,
-    postImage,
-} = require('../controllers/coding/codingPost');
-const {
     getSidebar,
     createSidebar,
     updateSidebar,
     deleteSidebar,
-} = require('../controllers/coding/codingPostSidbar');
+    postImage,
+    getImage,
+    createPostWithSidebar,
+    getPostsBySidebar,
+    getPostDetailBySidebar,
+    updatePostInSidebar,
+    deletePostInSidebar,
+} = require('../controllers/condingPageController');
+// const {
+//     createPostWithSidebar,
+//     getPostsBySidebar,
+//     updatePostInSidebar,
+//     deletePostInSidebar,
+//     getImage,
+//     getPostDetailBySidebar,
+//     postImage,
+// } = require('../controllers/coding/codingPost');
+// const {
+//     getSidebar,
+//     createSidebar,
+//     updateSidebar,
+//     deleteSidebar,
+// } = require('../controllers/coding/codingPostSidbar');
 
 // 이미지 업로드 설정
 try {
@@ -52,13 +65,13 @@ const upload = multer({
     fileFilter,
 });
 
-// coding 게시글 curd를 하기 위한 sidebar crud
+// sidebar CRUD
 router.get('/sidebar', getSidebar);
-router.post('/sidebar', createSidebar);
-router.put('/sidebar/:id', updateSidebar);
-router.delete('/sidebar/:id', deleteSidebar);
+router.post('/sidebar', verifyToken, createSidebar);
+router.put('/sidebar/:id', verifyToken, updateSidebar);
+router.delete('/sidebar/:id', verifyToken, deleteSidebar);
 
-// 이미지 파일 API
+// 이미지 업로드 API
 router.post('/image', upload.array('images', 10), postImage); // 이미지 파일 업로드에 대한 미들웨어 추가
 router.get('/image/:image', getImage);
 
@@ -71,9 +84,9 @@ router.get('/post/:sidebarId', getPostsBySidebar);
 router.get('/post/:sidebarId/:postId', getPostDetailBySidebar);
 
 // 사이드바에 속한 게시물을 수정하는 API
-router.put('/post/:postId', updatePostInSidebar);
+router.put('/post/:postId', verifyToken, updatePostInSidebar);
 
 // 사이드바에 속한 게시물을 삭제하는 API
-router.delete('/post/:postId', deletePostInSidebar);
+router.delete('/post/:postId', verifyToken, deletePostInSidebar);
 
 module.exports = router;

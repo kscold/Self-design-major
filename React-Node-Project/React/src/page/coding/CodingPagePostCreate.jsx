@@ -15,7 +15,6 @@ import { QuillDeltaToHtmlConverter } from 'quill-delta-to-html';
 import { imageHandler, markdownOptions } from './quillSetting'; // 임포트한 모듈
 
 // Quill 모듈에 ImageResize 등록
-// Quill.register('modules/imageResize', ImageResize);
 window.Quill = Quill;
 
 const ImageResize = require('quill-image-resize-module').default;

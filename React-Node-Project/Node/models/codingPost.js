@@ -17,10 +17,6 @@ class CodingPost extends Sequelize.Model {
                     type: Sequelize.TEXT,
                     allowNull: false,
                 },
-                // codingPostImages: {
-                //     type: Sequelize.JSON, // MYSQL에서 지원을 안하기 때문에 배열 대신 JSON 형태로 변경
-                //     allowNull: true,
-                // },
                 codingPostHashtags: {
                     type: Sequelize.JSON,
                     allowNull: true,
