@@ -15,9 +15,8 @@ const mongoose = require('mongoose');
 
 dotenv.config();
 
-const authRouter = require('./routes/auth');
-const codingPostRouter = require('./routes/codingPost');
-const usersRouter = require('./routes/users');
+const usersRouter = require('./routes/user');
+const codingPostRouter = require('./routes/codingPage');
 const chatRouter = require('./routes/chat');
 
 const passportConfig = require('./passport');
@@ -112,9 +111,8 @@ app.use((req, res, next) => {
     next();
 });
 
-app.use('/api/auth', authRouter);
+app.use('/api/', usersRouter);
 app.use('/api/chat', chatRouter);
-app.use('/api/users', usersRouter);
 app.use('/api/coding', codingPostRouter);
 
 app.use((req, res, next) => {

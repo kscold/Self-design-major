@@ -1,14 +1,6 @@
 const express = require('express');
-const router = express.Router();
 const { verifyToken } = require('../middlewares');
-const multer = require('multer');
-const path = require('path');
-const fs = require('fs');
 const {
-    getSidebar,
-    createSidebar,
-    updateSidebar,
-    deleteSidebar,
     postImage,
     getImage,
     createPostWithSidebar,
@@ -16,22 +8,16 @@ const {
     getPostDetailBySidebar,
     updatePostInSidebar,
     deletePostInSidebar,
+    createSidebar,
+    getSidebar,
+    updateSidebar,
+    deleteSidebar,
 } = require('../controllers/condingPageController');
-// const {
-//     createPostWithSidebar,
-//     getPostsBySidebar,
-//     updatePostInSidebar,
-//     deletePostInSidebar,
-//     getImage,
-//     getPostDetailBySidebar,
-//     postImage,
-// } = require('../controllers/coding/codingPost');
-// const {
-//     getSidebar,
-//     createSidebar,
-//     updateSidebar,
-//     deleteSidebar,
-// } = require('../controllers/coding/codingPostSidbar');
+const multer = require('multer');
+const path = require('path');
+const fs = require('fs');
+
+const router = express.Router();
 
 // 이미지 업로드 설정
 try {
@@ -65,28 +51,19 @@ const upload = multer({
     fileFilter,
 });
 
-// sidebar CRUD
-router.get('/sidebar', getSidebar);
-router.post('/sidebar', verifyToken, createSidebar);
-router.put('/sidebar/:id', verifyToken, updateSidebar);
-router.delete('/sidebar/:id', verifyToken, deleteSidebar);
-
 // 이미지 업로드 API
-router.post('/image', upload.array('images', 10), postImage); // 이미지 파일 업로드에 대한 미들웨어 추가
+router.post('/image', upload.array('images', 10), postImage);
 router.get('/image/:image', getImage);
 
-// 게시물과 사이드바를 함께 생성하는 API
 router.post('/post', verifyToken, createPostWithSidebar);
-
-// 사이드바 ID에 해당하는 게시물 리스트 조회하는 API
 router.get('/post/:sidebarId', getPostsBySidebar);
-
 router.get('/post/:sidebarId/:postId', getPostDetailBySidebar);
-
-// 사이드바에 속한 게시물을 수정하는 API
 router.put('/post/:postId', verifyToken, updatePostInSidebar);
-
-// 사이드바에 속한 게시물을 삭제하는 API
 router.delete('/post/:postId', verifyToken, deletePostInSidebar);
+
+router.post('/sidebar', verifyToken, createSidebar);
+router.get('/sidebar', getSidebar);
+router.put('/sidebar/:id', verifyToken, updateSidebar);
+router.delete('/sidebar/:id', verifyToken, deleteSidebar);
 
 module.exports = router;

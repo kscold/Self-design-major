@@ -1,4 +1,3 @@
-// controllers/chatController.js
 const User = require('../models/user'); // MySQL User 모델
 const Chat = require('../schemas/chat');
 

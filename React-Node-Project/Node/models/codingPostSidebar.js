@@ -38,15 +38,21 @@ class CodingPostSidebar extends Sequelize.Model {
         );
     }
 
+    // 모델 간의 관계 설정
     static associate(db) {
+        // CodingPostSidebar는 하위 사이드바들을 가질 수 있음 (1:N 관계)
         db.CodingPostSidebar.hasMany(db.CodingPostSidebar, {
             as: 'children',
             foreignKey: 'parentId',
         });
+
+        // CodingPostSidebar는 상위 사이드바를 가질 수 있음 (N:1 관계)
         db.CodingPostSidebar.belongsTo(db.CodingPostSidebar, {
             as: 'parent',
             foreignKey: 'parentId',
         });
+
+        // CodingPostSidebar는 여러 CodingPost를 가질 수 있음 (1:N 관계)
         db.CodingPostSidebar.hasMany(db.CodingPost, {
             foreignKey: 'sidebarId',
         });
